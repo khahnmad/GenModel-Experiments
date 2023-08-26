@@ -1,21 +1,21 @@
-import universal_functions as uf
+import shared_functions as sf
 import numpy as np
 import pandas as pd
 import nltk
 import string
 
 PUNCTUATION = string.punctuation
-FILES = uf.get_files_from_folder(str(uf.repo_loc / 'Experiments/gen_model_error_analysis/output'),'json')
+FILES = sf.get_files_from_folder('../output','json')
 
 def calculate_time_cost():
     summary = [['model','total_time','average','min','max','std dev']]
     for file in FILES:
-        data = uf.import_json(file)
+        data = sf.import_json(file)
         meta = data['metadata']
         title = f'{meta["model"]} {meta["prompt"]} {meta["splitter"]}'
         content = data['content']
 
-        duration = [sum(list(x['duration'].values())) for x in content]
+        duration = [sum(list(x['duration'].values())) for x in content if 'duration' in x.keys()]
 
 
         summary.append([title, sum(duration), np.mean(duration), min(duration), max(duration), np.std(duration)])
@@ -39,7 +39,7 @@ def find_perfect_matches(data):
     for i in range(len(data)):
         elt = data[i]
         for hvv in ['hero','villain','victim']:
-            if hvv not in elt:
+            if hvv not in elt or f'model_{hvv}' not in elt.keys():
                 continue
 
             if elt[hvv]=='None':
@@ -69,7 +69,7 @@ def find_noisy_matches(data):
     for i in range(len(data)):
         elt = data[i]
         for hvv in ['hero','villain','victim']:
-            if hvv not in elt:
+            if hvv not in elt or f'model_{hvv}' not in elt.keys():
                 continue
 
             if elt[hvv]=='None':
@@ -97,7 +97,7 @@ def find_partial_matches(data):
     for i in range(len(data)):
         elt = data[i]
         for hvv in ['hero','villain','victim']:
-            if hvv not in elt:
+            if hvv not in elt or f'model_{hvv}' not in elt.keys():
                 continue
 
             if elt[hvv]=='None':
@@ -125,7 +125,7 @@ def calculate_false_negatives(data):
     for i in range(len(data)):
         elt = data[i]
         for hvv in ['hero', 'villain', 'victim']:
-            if hvv not in elt:
+            if hvv not in elt or f'model_{hvv}' not in elt.keys():
                 continue
 
             if elt[hvv] == 'None':
@@ -145,7 +145,7 @@ def calculate_false_positives(data):
     for i in range(len(data)):
         elt = data[i]
         for hvv in ['hero', 'villain', 'victim']:
-            if hvv not in elt:
+            if hvv not in elt or f'model_{hvv}' not in elt.keys():
                 continue
 
             if elt[hvv] != 'None':
@@ -166,7 +166,7 @@ def calculate_false_positives(data):
 def calculate_precision():
     summary = [['model', 'precision']]
     for file in FILES:
-        data = uf.import_json(file)
+        data = sf.import_json(file)
         meta = data['metadata']
         title = f'{meta["model"]} {meta["prompt"]} {meta["splitter"]}'
         content = data['content']
@@ -180,7 +180,7 @@ def calculate_precision():
 def calculate_recall():
     summary = [['model', 'recall']]
     for file in FILES:
-        data = uf.import_json(file)
+        data = sf.import_json(file)
         meta = data['metadata']
         title = f'{meta["model"]} {meta["prompt"]} {meta["splitter"]}'
         content = data['content']
@@ -194,7 +194,7 @@ def calculate_recall():
 def calculate_true_positive_overlap():
     summary = [['model', 'perfect_matches', 'noisy_match','partial_matches','partial_gt_20', 'partial_gt_40','partial_gt_60', 'partial_gt_80']]
     for file in FILES:
-        data = uf.import_json(file)
+        data = sf.import_json(file)
         meta = data['metadata']
         title = f'{meta["model"]} {meta["prompt"]} {meta["splitter"]}'
         content = data['content']
@@ -211,47 +211,45 @@ def calculate_true_positive_overlap():
 
 
 def compare_splitters(metric:str):
-    error_analysis = uf.import_csv('Full_Error_Analysis.csv')
+    error_analysis = sf.import_csv('Full_Error_Analysis.csv')
     metric_index = [i for i in range(len(error_analysis[0])) if error_analysis[0][i]==metric][0]
     models = [x[1] for x in error_analysis[1:]]
     langchain = [x[metric_index] for x in error_analysis[1:] if 'langchain' in x[1]]
     truncated = [x[metric_index] for x in error_analysis[1:] if 'langchain' not in x[1]]
-    model_names = uf.remove_duplicates([x.replace('langchain','').replace('truncated','') for x in models])
+    model_names = sf.remove_duplicates([x.replace('langchain','').replace('truncated','') for x in models])
     df = pd.DataFrame([langchain,truncated],columns=model_names, index=['langchain','truncated'])
     return df
 
 def compare_prompts(metric:str):
-    error_analysis = uf.import_csv('Full_Error_Analysis.csv')
+    error_analysis = sf.import_csv('Full_Error_Analysis.csv')
     metric_index = [i for i in range(len(error_analysis[0])) if error_analysis[0][i] == metric][0]
     models = [x[1] for x in error_analysis[1:]]
     a = [float(x[metric_index]) for x in error_analysis[1:] if 'A' in x[1]]
     b = [float(x[metric_index]) for x in error_analysis[1:] if 'A' not in x[1]]
-    model_names = uf.remove_duplicates([x.replace('A', '').replace('B', '') for x in models])
+    model_names = sf.remove_duplicates([x.replace('A', '').replace('B', '') for x in models])
     df = pd.DataFrame([a, b], columns=model_names, index=['A', 'B'])
     return df
 
 def compare_models(metric:str):
-    error_analysis = uf.import_csv('Full_Error_Analysis.csv')
+    error_analysis = sf.import_csv('Full_Error_Analysis.csv')
     metric_index = [i for i in range(len(error_analysis[0])) if error_analysis[0][i] == metric][0]
     models = [x[1] for x in error_analysis[1:]]
     flan_base = [x[metric_index] for x in error_analysis[1:] if 'google/flan-t5-base' in x[1]]
     flan_large = [x[metric_index] for x in error_analysis[1:] if 'google/flan-t5-large' in x[1]]
     vicuna = [x[metric_index] for x in error_analysis[1:] if 'vicuna-13b-v1.3' in x[1]]
-    model_names = uf.remove_duplicates([x.replace('google/flan-t5-base', '').replace('google/flan-t5-large', '').replace('vicuna-13b-v1.3','') for x in models])
+    model_names = sf.remove_duplicates([x.replace('google/flan-t5-base', '').replace('google/flan-t5-large', '').replace('vicuna-13b-v1.3','') for x in models])
     df = pd.DataFrame([flan_base,flan_large, vicuna], columns=model_names, index=['FlanBase', 'FlanLarge','Vicuna'])
     return df
-time_df = calculate_time_cost()
 
+time_df = calculate_time_cost()
 p_df = calculate_precision()
 r_df = calculate_recall()
-
 tp_df = calculate_true_positive_overlap()
 
 all_models = pd.merge(time_df[['model','average','total_time']],  p_df, on='model')
 all_models = pd.merge(all_models, r_df, on='model')
 all_models = pd.merge(all_models, tp_df, on='model')
 all_models.to_csv('Full_Error_Analysis.csv')
-print('check')
 
 
 # for m in ['total_time','perfect_matches','noisy_match','partial_matches','precision','recall']:
