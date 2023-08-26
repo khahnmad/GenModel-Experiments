@@ -173,7 +173,7 @@ def calculate_precision():
         tp = calculate_true_positives(content)
         fn = calculate_false_negatives(content)
         fp = calculate_false_positives(content)
-        summary.append([title,tp / (fn + fp)])
+        summary.append([title,tp / (tp + fp)])
     df = pd.DataFrame(summary[1:], columns=summary[0])
     return df
 
