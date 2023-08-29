@@ -1,4 +1,4 @@
-from explore_gen_models import humans_in_social_science_pipline as h
+from run_models.support_scripts import transformer_model_load as h
 from run_models.support_scripts import fetch_data as f
 import json
 import time
@@ -28,11 +28,11 @@ def export_as_json(export_filename: str, output):
         outfile.write(json.dumps(output))
 
 
-def prep_model(MODEL_NAME='google/flan-t5-base',):
+def prep_model(MODEL_NAME='google/flan-t5-base'):
     return h.TFG(model_name=MODEL_NAME, connect_to_gpu=True, memory_saver=True)
 
+
 def run_model(data, model, MODEL_NAME='google/flan-t5-base', PROMPT_TYPE='B', SPLITTER_TYPE='langchain'):
-    # model = h.TFG(model_name=MODEL_NAME, connect_to_gpu=True, memory_saver=True)
     annotations = []
     for i in range(len(data)):
         elt = data[i]
