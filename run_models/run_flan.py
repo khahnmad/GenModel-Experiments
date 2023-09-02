@@ -1,4 +1,4 @@
-from run_models.support_scripts import transformer_model_load as h
+from run_models.support_scripts import transformer_model_load_w_langchain as h
 from run_models.support_scripts import fetch_data as f
 import json
 import time
