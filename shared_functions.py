@@ -1,6 +1,12 @@
 import json
 import glob
 import csv
+import gridfs
+from dotenv import load_dotenv
+import os
+import pymongo as pm
+from bson import json_util
+
 
 def import_json(file):
     with open(file, 'r') as j:
@@ -11,9 +17,12 @@ def import_json(file):
 def export_as_json(export_filename:str, output):
     if export_filename.endswith('.json') is not True:
         raise Exception(f"{export_filename} should be a .json file")
-
-    with open(export_filename, "w") as outfile:
-        outfile.write( json.dumps(output))
+    try:
+        with open(export_filename, "w") as outfile:
+            outfile.write( json.dumps(output))
+    except TypeError:
+        with open(export_filename, "w") as outfile:
+            outfile.write( json_util.dumps(output))
 
 
 def import_csv(csv_file:str):
@@ -37,3 +46,29 @@ def remove_duplicates(data:list)->list:
         if elt not in new_list:
             new_list.append(elt)
     return new_list
+
+
+def export_nested_list(csv_name:str, nested_list):
+    # Export a nested list as a csv with a row for each sublist
+    with open(csv_name, 'w', newline='', encoding="utf-8") as f:
+        writer = csv.writer(f)
+        for row in nested_list:
+            writer.writerow(row)
+
+def getConnection(
+    connection_string: str = "", database_name: str = "", use_dotenv: bool = False
+):
+    "Returns MongoDB and GridFS connection"
+
+    # Load config from config file
+    if use_dotenv:
+        load_dotenv()
+        connection_string = os.getenv("CONNECTION_STRING")
+        database_name = os.getenv("DATABASE_NAME")
+
+    # Use connection string
+    conn = pm.MongoClient(connection_string)
+    db = conn[database_name]
+    fs = gridfs.GridFS(db)
+
+    return fs, db

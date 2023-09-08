@@ -3,6 +3,34 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\analyze\corr_btwn_origin_mainstream.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\find_migrating_hvv_combos.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\statistics_on_output.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\subsample_statistics_on_output.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\evaluate\add_ground_truth_where_missing.py">
           <value>
             <Attribute>
@@ -18,6 +46,13 @@
           </value>
         </entry>
         <entry key="\input\get_pt_2_annotations.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\output\fetch_subsample.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
