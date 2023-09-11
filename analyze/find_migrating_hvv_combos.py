@@ -99,8 +99,8 @@ def get_hvv_combos(data, output):
     for i in heros:
         for j in villains:
             for k in victims:
-                if f"{i}</>{j}</>{k}" not in output.keys():
-                    output[f"{i}</>{j}</>{k}"] = []
+                # if f"{i}</>{j}</>{k}" not in output.keys():
+                #     output[f"{i}</>{j}</>{k}"] = []
                 output[f"{i}</>{j}</>{k}"].append([data['partisanship'],data['publish_date'],data["_id"]["$oid"]])
     return output
 
