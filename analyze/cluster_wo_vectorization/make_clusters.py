@@ -75,8 +75,8 @@ def make_clusters(title, data, cluster_size):
     sf.export_nested_list(f'{title}_clusters_{cluster_size}.csv', outcome)
 
 
-def find_mainstreamed_extremist_narratives(title):
-    df = pd.read_csv(f'{title}_clusters_7.csv')
+def find_mainstreamed_extremist_narratives(title,num):
+    df = pd.read_csv(f'{title}_clusters_{num}.csv')
     df['mainstream'] = df['mainstream'].astype(float)
     df['extremist'] = df['extremist'].astype(float)
     mainstreamed_extremist_narratives = df.loc[(df['extremist']>=-0.1) & (df['mainstream']>=-0.1) & (df['slope']<=0)]
@@ -89,5 +89,5 @@ def find_mainstreamed_extremist_narratives(title):
 
 # Cleaned Matches
 cleaned_clusters = sf.import_json('cleaned_exact_matches_4500.json')['content']
-# make_clusters('cleaned_matches', cleaned_clusters,7)
+make_clusters('cleaned_matches', cleaned_clusters,5)
 find_mainstreamed_extremist_narratives('cleaned_matches',7)

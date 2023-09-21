@@ -1,0 +1,5 @@
+,id,comparison_sentence,similarity,alt_comparison_sentence,alt_similarity
+0,64d8f2cd516b265872247602,The heroes are Europe and the villains are European Union and the victims are European Union.,tensor([[0.9245]]),Heroes: Europe; Villains: European Union; Victims: European Union,tensor([[0.9296]])
+1,64d8f1a6516b265872fdc1ed,The heroes are United Kingdom and the villains are European Union and the victims are National and Country status in the European Union.,tensor([[0.8770]]),Heroes: United Kingdom; Villains: European Union; Victims: National and Country status in the European Union,tensor([[0.8880]])
+2,64d8f2cd516b265872247616,The heroes are We the People (European Union) and the villains are Europe and the victims are Human rights.,tensor([[0.8491]]),Heroes: We the People (European Union); Villains: Europe; Victims: Human rights,tensor([[0.8496]])
+3,64d8ea28516b2658720731d6,The heroes are Schengen Area and the villains are Schengen Area and the victims are Citizenship of the European Union.,tensor([[0.7842]]),Heroes: Schengen Area; Villains: Schengen Area; Victims: Citizenship of the European Union,tensor([[0.7902]])

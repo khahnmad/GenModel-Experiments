@@ -6,6 +6,13 @@ from dotenv import load_dotenv
 import os
 import pymongo as pm
 from bson import json_util
+import pickle
+
+def import_pkl_file(file):
+    with open(file, "rb") as f:
+        pkl_file = pickle.load(f)
+        f.close()
+    return pkl_file
 
 
 def import_json(file):
@@ -72,3 +79,17 @@ def getConnection(
     fs = gridfs.GridFS(db)
 
     return fs, db
+
+def query_collection(collection, query:dict, fields:list, n=None):
+    fields = {k:1 for k in fields}
+    if n:
+        docs = list(collection.find(query, fields).limit(100))
+    else:
+        docs = list(collection.find(query, fields))
+    return docs
+
+
+def export_as_pkl(export_name:str, content):
+    with open(export_name, "wb") as f:
+        pickle.dump(content, f)
+        f.close()

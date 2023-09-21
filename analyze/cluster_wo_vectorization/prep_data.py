@@ -89,7 +89,7 @@ def prep_exact_matches(sub:bool):
 def prep_cleaned_matches(sub:bool):
     data = import_data(sub)
 
-    prev_file =  sf.import_json('cleaned_exact_matches_500.json')
+    prev_file =  sf.import_json('cleaned_exact_matches_4500.json')
     outcome = prev_file['content']
     start = prev_file['metadata']['limit']+1
     for i in range(start, len(data)):
