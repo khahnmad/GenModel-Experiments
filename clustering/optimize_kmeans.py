@@ -35,6 +35,18 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
         print(f"{n}/{end_n}")
     return n_optimization
 
+def print_missing_n(hvv):
+    files = [x for x in sf.get_files_from_folder('cluster_experiments/clustering_optimizations','json')
+             if 'kmeans' in x and hvv in x]
+    complete = {k:False for k in range(100,12000,100)}
+    for file in files:
+        numbers= file.split('optimization_')[1].split(f'_{hvv}')[0]
+        start = int(numbers.split('_')[0])
+        end = int(numbers.split('_')[1])
+        for n in range(start, end+100, 100):
+            complete[n]=True
+    missing = [x for x in complete.keys() if complete[x]==False]
+    print(missing)
 ################## SBERT EXPERIMENT #########################################
 #
 # embeddings = fetch_data('sentence_embeddings_test.pkl')
@@ -56,11 +68,12 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
 
 ############### SINGLE HVV EMBEDDINGS #######################################
 for hvv in ['hero','villain','victim']:
-    embeddings = fetch_data('cluster_experiments/input/initial_subsample_results.json', hvv)
+    print_missing_n(hvv)
+    embeddings = fetch_data('../input/initial_subsample_results.json', hvv)
 
-    start_n = 6500
+    start_n = 100
     # end_n = int(0.5 * len(embeddings))
-    end_n = 7000
+    end_n = 700
     interval = 100
     # Experiment w different cluster number
 

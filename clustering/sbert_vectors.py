@@ -38,7 +38,7 @@ def export_as_pkl(export_name:str, content):
         f.close()
 
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-data = load_data('cluster_experiments/input/initial_subsample_results.json')
+data = load_data('../input/initial_subsample_results.json')
 for temp in ['a','b']:
     sentences = apply_template(data, temp)
     sentence_embeddings = model.encode(sentences)

@@ -31,7 +31,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\analyze\create_table_mainstreamed_extremist.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\analyze\find_migrating_hvv_combos.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\make_clusters.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\plot_clusters_main_extreme.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -63,6 +84,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\clustering\cluster_experiments\visualize_cluster_num_decision.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
@@ -101,6 +129,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\clustering\recreate_optimization_on_complete_dataset.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\clustering\sbert_vectors.py">
           <value>
             <Attribute>
@@ -116,6 +151,20 @@
           </value>
         </entry>
         <entry key="\evaluate\calc_error_analysis.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\input\download_dataset.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\input\download_initial_sample.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -59,7 +59,7 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
 
 for hvv in ['villain','victim']:
     print('starting')
-    embeddings = fetch_data('cluster_experiments/input/initial_subsample_results.json', hvv)
+    embeddings = fetch_data('../input/initial_subsample_results.json', hvv)
     print('loaded embeddings')
     start_n = 1
     # end_n = int(0.5 * len(embeddings))

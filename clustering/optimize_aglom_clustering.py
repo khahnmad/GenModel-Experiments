@@ -34,6 +34,18 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
         print(f"{n}/{end_n}")
     return n_optimization
 
+def print_missing_n(hvv):
+    files = [x for x in sf.get_files_from_folder('cluster_experiments/clustering_optimizations','json')
+             if 'agglom' in x and hvv in x]
+    complete = {k:False for k in range(100,12000,100)}
+    for file in files:
+        numbers= file.split('optimization_')[1].split(f'_{hvv}')[0]
+        start = int(numbers.split('_')[0])
+        end = int(numbers.split('_')[1])
+        for n in range(start, end+100, 100):
+            complete[n]=True
+    missing = [x for x in complete.keys() if complete[x]==False]
+    print(missing)
 ################## SBERT EXPERIMENT #########################################
 #
 # embeddings = fetch_data('sentence_embeddings_test.pkl')
@@ -55,18 +67,19 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
 
 ############### HERO EMBEDDINGS EXPERIMENT #######################################
 for hvv in ['villain','victim','hero']:
+    print_missing_n(hvv)
     print('starting')
-    embeddings = fetch_data('cluster_experiments/input/initial_subsample_results.json', hvv)
+    embeddings = fetch_data('../input/initial_subsample_results.json', hvv)
     print('loaded embeddings')
-    start_n = 7500
+    start_n = 3000
     # end_n = int(0.5 * len(embeddings))
-    end_n = 8000
+    end_n = 3500
     interval = 100
     # Experiment w different cluster number
 
     print('beginning optimizaation')
     optimization = optimize_cluster_number(start_n, end_n,interval, embeddings)
-    sf.export_as_json(f'agglom_n_optimization_{start_n}_{end_n}_{hvv}.json',{'content':optimization,
+    sf.export_as_json(f'cluster_experiments/clustering_optimizations/agglom_n_optimization_{start_n}_{end_n}_{hvv}.json',{'content':optimization,
                                                                        'metadata':{'start':start_n,
                                                                                    'end':end_n,
                                                                                    'clustering':'agglomerative',

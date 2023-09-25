@@ -10,7 +10,7 @@ docs = sf.query_collection(collection=db['sampled_articles'],
                            )
 
 # Export sample
-sf.export_as_json('input/initial_subsample_results.json', docs)
+sf.export_as_json('initial_subsample_results.json', docs)
 print(f'COMPLETE, exported {len(docs)}')
 
 
