@@ -24,6 +24,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\analyze\cluster_wo_vectorization\prep_data_flatten.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\combo_hvv\connection_to_categories.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\combo_hvv\make_clusters.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\combo_hvv\plot_extremism_proportion.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\combo_hvv\slope_analysis.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\analyze\corr_btwn_origin_mainstream.py">
           <value>
             <Attribute>
@@ -53,6 +88,34 @@
           </value>
         </entry>
         <entry key="\analyze\plot_clusters_main_extreme.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\single_hvv\connection_to_categories.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\single_hvv\plot_extremism_proportion.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\single_hvv\slope_analysis.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\single_hvv\unite_single_hvvs.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

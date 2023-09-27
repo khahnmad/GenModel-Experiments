@@ -54,24 +54,24 @@ def make_clusters(title, data, cluster_size):
     cluster_count = 0
     h_count, vil_count = 0,0
     start = time.time()
-    for h in data.keys():
-        print(f"H: {h_count} / {len(data)}")
-        h_count+=1
-
-        for vil in data[h].keys():
-            # print(f"   Vil: {vil_count} / {len(data[h])}")
-            vil_count+=1
-            for vic in data[h][vil].keys():
-                if len(data[h][vil][vic])<cluster_size:
-                    continue
-                main = calc_mainstream_odds(data[h][vil][vic])
-                extreme = calc_extremist_odds(data[h][vil][vic])
-                time_v = time_vector(data[h][vil][vic])
-                outcome.append([cluster_count, f"{h}</>{vil}</>{vic}",main, extreme, time_v])
-                cluster_count+=1
-        end = time.time()
-        print(f"   {end-start} seconds")
-        start = end
+    # for h in data.keys():
+    #     print(f"H: {h_count} / {len(data)}")
+    #     h_count+=1
+    #
+    #     for vil in data[h].keys():
+    #         # print(f"   Vil: {vil_count} / {len(data[h])}")
+    #         vil_count+=1
+    #         for vic in data[h][vil].keys():
+    #             if len(data[h][vil][vic])<cluster_size:
+    #                 continue
+    #             main = calc_mainstream_odds(data[h][vil][vic])
+    #             extreme = calc_extremist_odds(data[h][vil][vic])
+    #             time_v = time_vector(data[h][vil][vic])
+    #             outcome.append([cluster_count, f"{h}</>{vil}</>{vic}",main, extreme, time_v])
+    #             cluster_count+=1
+    #     end = time.time()
+    #     print(f"   {end-start} seconds")
+    #     start = end
     sf.export_nested_list(f'{title}_clusters_{cluster_size}.csv', outcome)
 
 
@@ -88,6 +88,7 @@ def find_mainstreamed_extremist_narratives(title,num):
 # find_mainstreamed_extremist_narratives('exact_matches')
 
 # Cleaned Matches
-cleaned_clusters = sf.import_json('cleaned_exact_matches_4500.json')['content']
+cleaned_clusters = sf.import_json('cleaned_exact_matches_8000.json')['content']
+df = pd.DataFrame(cleaned_clusters)
 make_clusters('cleaned_matches', cleaned_clusters,5)
 find_mainstreamed_extremist_narratives('cleaned_matches',7)
