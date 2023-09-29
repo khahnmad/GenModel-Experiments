@@ -10,7 +10,35 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\analyze\cluster_wo_vectorization\make_clusters_from_flattened.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\cluster_wo_vectorization\num_maintreamed_narratives.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\cluster_wo_vectorization\plot_cluster_interpretation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\analyze\cluster_wo_vectorization\plot_clusters.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\cluster_wo_vectorization\plot_partisan_proportion.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -25,6 +53,13 @@
           </value>
         </entry>
         <entry key="\analyze\cluster_wo_vectorization\prep_data_flatten.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\cluster_wo_vectorization\slope_analysis.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -214,6 +249,13 @@
           </value>
         </entry>
         <entry key="\evaluate\calc_error_analysis.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\input\download_alt_triplets.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

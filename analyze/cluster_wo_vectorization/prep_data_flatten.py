@@ -5,10 +5,15 @@ from nltk.corpus import stopwords
 import nltk
 
 STOPWORDS = stopwords.words('english')
-def import_data(sub):
+def import_data(sub, version=0):
     path = "C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\output\\"
     if sub:
-        data = sf.import_json(path+'subsample_processing_results.json')['content']
+        if version==0:
+            data = sf.import_json(path+'subsample_processing_results.json')['content']
+        elif version ==1:
+            data = sf.import_json("C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\input\\initial_subsample_triplets_results.json")
+        else:
+            raise Exception(f"{version}: incorrect version number")
     else:
         data = sf.import_json(path+'sample_processing_results.json')
     return data
@@ -96,33 +101,88 @@ def flatten_existing_dict(data):
                     flattened.append([h,vil,vic]+elt)
     return flattened
 
+def alphabetize_existing_dict(data):
+    alphabetized = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g': [], 'h': [], 'i': [], 'j': [], 'k': [], 'l': [], 'm': [], 'n': [], 'o': [], 'p': [], 'q': [], 'r': [], 's': [], 't': [], 'u': [], 'v': [], 'w': [], 'x': [], 'y': [], 'z': []}
+    for h in data.keys():
+        if len(h)>0:
+            letter = h[0].lower()
+        else:
+            letter = ''
+        if letter not in alphabetized.keys():
+            alphabetized[letter] = []
 
-def prep_cleaned_matches(sub:bool):
-    data = import_data(sub)
+        for vil in data[h].keys():
+            for vic in data[h][vil]:
+                for elt in data[h][vil][vic]:
+                    alphabetized[letter].append([h,vil,vic]+elt)
+    return alphabetized
 
-    prev_file =  sf.import_json('cleaned_exact_matches_5000.json')
-    outcome = prev_file['content']
-    # flattened_outcome = flatten_existing_dict(outcome)
-    start = prev_file['metadata']['limit']+1
+def fetch_alphabetized_content():
+    alphabet = {}
+    files = [x for x in sf.get_files_from_folder('.','json') if '_cleaned_exact_matches.json' in x]
+    for file in files:
+        if len(file)==30:
+            letter = file[2]
+        else:
+            letter = ''
+        alphabet[letter] =[]
+    # import a
+    start = sf.import_json('a_cleaned_exact_matches.json')['metadata']['limit']+1
+    print(f'Starting at {start}')
+    return alphabet, start
+
+def prep_cleaned_matches(sub:bool, version=0):
+    data = import_data(sub,version)
+
+    # prev_file =  sf.import_json('cleaned_exact_matches_4500.json')
+    # outcome = prev_file['content']
+    # flattened_outcome = alphabetize_existing_dict(outcome)
+    # flattened_outcome, start  = fetch_alphabetized_content()
+    # start = prev_file['metadata']['limit']+1
+    start = 0
+    flattened_outcome = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g': [], 'h': [], 'i': [], 'j': [], 'k': [], 'l': [], 'm': [], 'n': [], 'o': [], 'p': [], 'q': [], 'r': [], 's': [], 't': [], 'u': [], 'v': [], 'w': [], 'x': [], 'y': [], 'z': []}
     for i in range(start, len(data)):
+        # print(i)
         if 'processing_result' not in data[i].keys():
             continue
-        result = data[i]['processing_result']
+        if 'denoising_result' in data[i].keys():
+            result = data[i]['denoising_result']
+        else:
+            result = data[i]['processing_result']
         hs = [clean(h) for h in sf.remove_duplicates(result['hero'])]
         vils = [clean(vil) for vil in sf.remove_duplicates(result['villain'])]
         vics = [clean(vic) for vic in sf.remove_duplicates(result['victim'])]
 
         for h in hs:
+            if len(h) > 0:
+                letter = h[0].lower()
+            else:
+                letter = ''
+            if letter not in flattened_outcome.keys():
+                flattened_outcome[letter] = []
+
             for vil in vils:
                 for vic in vics:
-                    outcome.append([h,vil, vic,data[i]["_id"], data[i]['partisanship'], data[i]['publish_date']])
+                    flattened_outcome[letter].append([h,vil, vic,data[i]["_id"], data[i]['partisanship'], data[i]['publish_date']])
 
-        if str(i).endswith('500') or str(i).endswith('000'):
-
-            sf.export_as_json(f'cleaned_exact_matches_{i}.json', {'content': outcome,
+        if str(i).endswith('000'):
+            print('Starting export')
+            start_time = time.time()
+            for l in flattened_outcome.keys():
+                filename = f'alphabet_v1/{l}_cleaned_exact_matches.json'
+                try:
+                    existing = sf.import_json(filename)['content']
+                    sf.export_as_json(filename, {'content': flattened_outcome[l]+existing,
+                                                 'metadata': {'time': time.time(),
+                                                              'limit': i}})
+                except FileNotFoundError:
+                    sf.export_as_json(filename, {'content': flattened_outcome[l],
                                                           'metadata': {'time': time.time(),
                                                                        'limit': i}})
-            print(f'Exported checkpoint {i}')
+                # print(f'exported {l}')
+            end_time = time.time()
+            print(f'Exported checkpoint {i}, took {(end_time-start_time)/60} minutes')
+            flattened_outcome = {k:[] for k in flattened_outcome.keys()} # Clean the dictionary to start over
     # pruned = {}
     # for k in outcome.keys():
 
@@ -130,8 +190,18 @@ def prep_cleaned_matches(sub:bool):
     #         for l in outcome[k][j].keys():
     #             if len(outcome[k][j][l]) > 1:
     #                 pruned[k] = outcome[k]
-    sf.export_as_json('cleaned_exact_matches.json', {'content': outcome,
-                                             'metadata': time.time()})
+    for l in flattened_outcome.keys():
+        filename = f'alphabet_v1/{l}_cleaned_exact_matches.json'
+        try:
+            existing = sf.import_json(filename)['content']
+            sf.export_as_json(filename, {'content': flattened_outcome[l] + existing,
+                                         'metadata': {'time': time.time(),
+                                                      'limit': 'complete'}})
+        except FileNotFoundError:
+            sf.export_as_json(filename, {'content': flattened_outcome[l],
+                                         'metadata': {'time': time.time(),
+                                                      'limit': 'complete'}})
+
 
 # prep_exact_matches(sub=True)
-prep_cleaned_matches(sub=True)
+prep_cleaned_matches(sub=True, version=1)

@@ -1,2 +1,4 @@
 /.env
 output/sample_processing_results.json
+/analyze/cluster_wo_vectorization/alphabet_og/
+/input/initial_subsample_triplets_results.json

@@ -88,7 +88,7 @@ def find_mainstreamed_extremist_narratives(title,num):
 # find_mainstreamed_extremist_narratives('exact_matches')
 
 # Cleaned Matches
-cleaned_clusters = sf.import_json('cleaned_exact_matches_8000.json')['content']
+cleaned_clusters = sf.import_json('cleaned_exact_matches_4500.json')['content']
 df = pd.DataFrame(cleaned_clusters)
 make_clusters('cleaned_matches', cleaned_clusters,5)
 find_mainstreamed_extremist_narratives('cleaned_matches',7)
