@@ -66,20 +66,21 @@ def print_missing_n(hvv):
 
 
 ############### HERO EMBEDDINGS EXPERIMENT #######################################
+vers =1
 for hvv in ['villain','victim','hero']:
     print_missing_n(hvv)
     print('starting')
-    embeddings = fetch_data('../input/initial_subsample_results.json', hvv)
+    embeddings = fetch_data('../input/initial_subsample_triplets_results.json', hvv)
     print('loaded embeddings')
-    start_n = 3000
+    start_n = 1500
     # end_n = int(0.5 * len(embeddings))
-    end_n = 3500
+    end_n = 1900
     interval = 100
     # Experiment w different cluster number
 
     print('beginning optimizaation')
     optimization = optimize_cluster_number(start_n, end_n,interval, embeddings)
-    sf.export_as_json(f'cluster_experiments/clustering_optimizations/agglom_n_optimization_{start_n}_{end_n}_{hvv}.json',{'content':optimization,
+    sf.export_as_json(f'cluster_experiments/clustering_optimizations/agglom_n_optimization_{start_n}_{end_n}_{hvv}_v{vers}.json',{'content':optimization,
                                                                        'metadata':{'start':start_n,
                                                                                    'end':end_n,
                                                                                    'clustering':'agglomerative',

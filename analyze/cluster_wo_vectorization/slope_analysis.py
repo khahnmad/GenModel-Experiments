@@ -15,7 +15,7 @@ def load_cluster_df(n=5):
 
 
 
-cluster_df = load_cluster_df(5)
+cluster_df = load_cluster_df(3)
 
 main_extreme_df = cluster_df.loc[(cluster_df['extreme']>=-0.5) & (cluster_df['main']>=-0.5)]
 pos_slope = len(main_extreme_df.loc[main_extreme_df['slope']>0])

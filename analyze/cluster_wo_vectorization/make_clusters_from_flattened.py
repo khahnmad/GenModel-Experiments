@@ -91,9 +91,9 @@ def get_clusters(file):
     return interpretation
 
 
-n = 3
+n = 2
 
-files = sf.get_files_from_folder('alphabet','json')
+files = sf.get_files_from_folder('alphabet_v1','json')
 # prev_data = sf.import_json('alphabet_clusters.json')
 # interpretation = prev_data['content']
 # last_file = prev_data['metadata']['last_file']
@@ -107,6 +107,6 @@ for i in range(start_id,len(files)):
     a = time.time()
     interpretation += get_clusters(file)
     b = time.time()
-    sf.export_as_json('alphabet_clusters_3.json', {'content':interpretation,
+    sf.export_as_json('alphabet_clusters_v1_2.json', {'content':interpretation,
                                                  'metadata': {'last_file':file}})
     print(f'   Took {(b-a)/60} minutes, interpretaion is {len(interpretation)} rows')

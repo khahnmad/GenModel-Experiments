@@ -4,16 +4,18 @@ import matplotlib.patches as mpatches
 import shared_functions as sf
 
 
-def load_cluster_df(n=5):
-    if n == 5:
-        data = sf.import_json('alphabet_clusters.json')['content']
-        df = pd.DataFrame(data=data[1:], columns=data[0])
+def load_cluster_df(n=5, version=0):
+    if version==0:
+        if n == 5:
+            data = sf.import_json('alphabet_clusters.json')['content']
+        else:
+            data = sf.import_json(f'alphabet_clusters_{n}.json')['content']
     else:
-        data = sf.import_json(f'alphabet_clusters_{n}.json')['content']
-        df = pd.DataFrame(data=data[1:], columns=data[0])
+            data = sf.import_json(f'alphabet_clusters_v1_{n}.json')['content']
+    df = pd.DataFrame(data=data[1:], columns=data[0])
     return df
 
-cluster_df = load_cluster_df(3)
+cluster_df = load_cluster_df(2,1)
 cluster_df = cluster_df.dropna()
 sorted = cluster_df.sort_values(by='slope')
 x = list(cluster_df['main'].values)

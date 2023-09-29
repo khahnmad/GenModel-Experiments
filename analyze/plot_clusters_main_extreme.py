@@ -2,23 +2,31 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-def load_cluster_df(hvv_temp, n_clusters, single_combo):
-    if single_combo=='single':
-        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
+    if vers==0:
+        if single_combo=='single':
+            cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        else:
+            cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
 #
 # HVV_TEMP = 'villain'
 # N_CLUSTERS = 5000
 # SINGLE_COMBO = 'single'
-HVV_TEMP = 'b'
-N_CLUSTERS = 3500
-SINGLE_COMBO = 'combo'
 
+# HVV_TEMP = 'b'
+# N_CLUSTERS = 3500
+# SINGLE_COMBO = 'combo'
 
-cluster_df = load_cluster_df(HVV_TEMP, N_CLUSTERS,SINGLE_COMBO)
+HVV_TEMP = 'villain'
+N_CLUSTERS = 2500
+SINGLE_COMBO = 'single'
+VERS = 1
+
+cluster_df = load_cluster_df(HVV_TEMP, N_CLUSTERS,SINGLE_COMBO,VERS)
 cluster_df = cluster_df.dropna()
 sorted = cluster_df.sort_values(by='time')
 x = list(cluster_df['mainstream'].values)

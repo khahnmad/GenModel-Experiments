@@ -11,10 +11,13 @@ from sklearn.cluster import KMeans, DBSCAN
 import re
 import sklearn
 
-def import_optimization( hvv, cluster_type, visualize=False):
+def import_optimization( hvv, cluster_type, visualize=False, vers=0):
     print('importing optimizations')
     optimizations = sf.get_files_from_folder(f'cluster_experiments/clustering_optimizations','json')
-    relevant = [x for x in optimizations if cluster_type in x and hvv in x]
+    if vers==0:
+        relevant = [x for x in optimizations if cluster_type in x and hvv in x]
+    else:
+        relevant = [x for x in optimizations if cluster_type in x and hvv in x and f"v{vers}" in x]
     if len(relevant) ==0:
         print(f"No files found for {hvv}, {cluster_type}")
         return
@@ -104,6 +107,12 @@ def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->list:
     clustering = DBSCAN(min_samples=min_samples,eps=epsilon).fit(embeddings)
     return list(clustering.labels_)
 
+
+
+
+###################### ACTION #########################################################
+x = import_optimization('villain','agglom',visualize=True, vers=1)
+
 for cluster_type in ['dbscan','kmeans','agglom']:
     for template in ['combo_a','combo_b']:
         n_clusters = import_optimization(template, cluster_type, visualize=True)
@@ -122,7 +131,6 @@ for cluster_type in ['dbscan','kmeans','agglom']:
         #                    labels=cluster_labels,
         #                    title=f'{cluster_type} {template}'
         #                    )
-
 
 for cluster_type in ['dbscan','kmeans','agglom']:
     for hvv in ['hero','villain','victim']:
