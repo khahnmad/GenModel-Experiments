@@ -21,7 +21,7 @@ def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
 # N_CLUSTERS = 3500
 # SINGLE_COMBO = 'combo'
 
-HVV_TEMP = 'villain'
+HVV_TEMP = 'victim'
 N_CLUSTERS = 2500
 SINGLE_COMBO = 'single'
 VERS = 1

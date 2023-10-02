@@ -15,9 +15,18 @@ def import_data(file):
     return content
 
 def do_clustering(hvv, data, n_clusters, vers=0):
-    indices = [x['_id']["$oid"] for x in data if 'embedding_result' in x.keys() for elt in x['embedding_result'][hvv]]
-    embeddings = [elt for x in data if 'embedding_result' in x.keys() for elt in x['embedding_result'][hvv]]
-    text = [elt for x in data if 'embedding_result' in x.keys() for elt in x['denoising_result'][hvv]]
+    indices = []
+    embeddings = []
+    text = []
+
+    for i in range(len(data)):
+        elt = data[i]
+        if 'embedding_result' not in data[i].keys():
+            continue
+        for j in range(len(data[i]['embedding_result'][hvv])):
+            indices.append(elt['_id']["$oid"])
+            embeddings.append(elt['embedding_result'][hvv][j])
+            text.append(elt['denoising_result'][hvv][j])
 
     filename = f'agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl'
     try:
@@ -112,20 +121,20 @@ def calculate_cluster_significance(clusters,vers=0):
     return df
 
 N_CLUSTERS = 2500
-HVV = 'villain'
+HVV = 'hero'
 VERS=1
 # Import data
 # data = import_data('../../input/initial_subsample_results.json')
 data = import_data('../../input/initial_subsample_triplets_results.json')
-try:
-    cluster_df = pd.read_csv(f'cluster_interpretation_{HVV}_{N_CLUSTERS}.csv')
-except FileNotFoundError:
+# try:
+#     cluster_df = pd.read_csv(f'cluster_interpretation_{HVV}_{N_CLUSTERS}.csv')
+# except FileNotFoundError:
     # Do clustering # also export the clustering
-    clustering = do_clustering(HVV,data,n_clusters=N_CLUSTERS, vers=VERS)
+clustering = do_clustering(HVV,data,n_clusters=N_CLUSTERS, vers=VERS)
 
-    # Iterate through clusters and calculate mainstream and extreme log odds
-    cluster_df = calculate_cluster_significance(clustering,vers=1)
-    cluster_df.to_csv(f'cluster_interpretation_{HVV}_{N_CLUSTERS}_v{VERS}.csv')
+# Iterate through clusters and calculate mainstream and extreme log odds
+cluster_df = calculate_cluster_significance(clustering,vers=1)
+cluster_df.to_csv(f'cluster_interpretation_{HVV}_{N_CLUSTERS}_v{VERS}.csv')
 
 # Identify mainstreamed extremist hvvs
 main_extreme = cluster_df.loc[(cluster_df['extreme']>=-0.5) & (cluster_df['mainstream']>=-0.5) & (cluster_df['time']<0)]

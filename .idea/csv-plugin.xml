@@ -234,6 +234,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\clustering\sbert_agglom_optimization.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\clustering\sbert_vectors.py">
           <value>
             <Attribute>

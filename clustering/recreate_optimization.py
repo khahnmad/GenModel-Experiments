@@ -11,12 +11,14 @@ from sklearn.cluster import KMeans, DBSCAN
 import re
 import sklearn
 
-def import_optimization( hvv, cluster_type, visualize=False, vers=0):
+def import_optimization( hvv, cluster_type, visualize=False, vers=0, single_combo='single'):
     print('importing optimizations')
     optimizations = sf.get_files_from_folder(f'cluster_experiments/clustering_optimizations','json')
     if vers==0:
         relevant = [x for x in optimizations if cluster_type in x and hvv in x]
     else:
+        if single_combo=='combo':
+            optimizations = sf.get_files_from_folder(f'cluster_experiments/sbert_clustering_optimization','json')
         relevant = [x for x in optimizations if cluster_type in x and hvv in x and f"v{vers}" in x]
     if len(relevant) ==0:
         print(f"No files found for {hvv}, {cluster_type}")
@@ -111,7 +113,7 @@ def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->list:
 
 
 ###################### ACTION #########################################################
-x = import_optimization('villain','agglom',visualize=True, vers=1)
+x = import_optimization('','agglom',visualize=True, vers=1, single_combo='combo')
 
 for cluster_type in ['dbscan','kmeans','agglom']:
     for template in ['combo_a','combo_b']:

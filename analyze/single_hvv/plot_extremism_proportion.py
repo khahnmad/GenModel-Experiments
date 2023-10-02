@@ -6,11 +6,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def load_cluster_df(hvv_temp, n_clusters, single_combo):
-    if single_combo=='single':
-        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
+    if vers==0:
+        if single_combo=='single':
+            cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        else:
+            cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
 
@@ -51,11 +54,10 @@ def do_clustering(hvv, data, n_clusters, single_combo):
     return clusters
 
 
-def fetch_y(hvv):
-    N_CLUSTERS = 5000
-    SINGLE_COMBO = 'single'
+def fetch_y(hvv, n_clusters, vers=0):
 
-    cluster_df = load_cluster_df(hvv, n_clusters=N_CLUSTERS, single_combo=SINGLE_COMBO)
+
+    cluster_df = load_cluster_df(hvv, n_clusters=n_clusters, single_combo='single',vers=vers)
 
     main_extreme = len(cluster_df.loc[(cluster_df['extreme']>=-0.5) & (cluster_df['mainstream']>=-0.5)])
     only_extreme = len(cluster_df.loc[(cluster_df['extreme']>=np.inf)])
@@ -63,12 +65,13 @@ def fetch_y(hvv):
     other = len(cluster_df) - main_extreme - only_extreme - only_main
     return [main_extreme, only_extreme, only_main, other]
 
-
+N_CLUSTERS = 2500
+VERS = 1
 # create data
 x = ['Hero', 'Villain', 'Victim']
-h = fetch_y('hero')
-vil = fetch_y('villain')
-vic = fetch_y('victim')
+h = fetch_y('hero',N_CLUSTERS,VERS)
+vil = fetch_y('villain',N_CLUSTERS, VERS)
+vic = fetch_y('victim',N_CLUSTERS, VERS)
 
 y4 = np.array([h[0], vil[0],vic[0]])
 y3 = np.array([h[1], vil[1],vic[1]])

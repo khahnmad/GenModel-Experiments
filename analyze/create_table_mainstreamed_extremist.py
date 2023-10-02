@@ -4,26 +4,35 @@ import json
 import pickle
 import numpy as np
 
-def load_cluster_df(hvv_temp, n_clusters, single_combo):
-    if single_combo=='single':
-        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
+    if vers ==0:
+        if single_combo=='single':
+            cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        else:
+            cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
 
-def import_raw_data(hvv_temp):
-    if hvv_temp != 'a' and hvv_temp!='b':
-        with open('../input/initial_subsample_results.json', 'r') as j:
-            content = json.loads(j.read())
+def import_raw_data(hvv_temp, vers=0):
+    if vers == 0:
+        if hvv_temp != 'a' and hvv_temp!='b':
+            with open('../input/initial_subsample_results.json', 'r') as j:
+                content = json.loads(j.read())
+        else:
+            with open(f'../clustering/cluster_experiments/sbert_embdddings/initial_subsample_{hvv_temp}.pkl', "rb") as f:
+                content = pickle.load(f)['content']
+                f.close()
     else:
-        with open(f'../clustering/cluster_experiments/sbert_embdddings/initial_subsample_{hvv_temp}.pkl', "rb") as f:
-            content = pickle.load(f)['content']
-            f.close()
+
+        with open('../input/initial_subsample_triplets_results.json', 'r') as j:
+            content = json.loads(j.read())
+
     return content
 
 
-def do_clustering(hvv, data, n_clusters, single_combo):
+def do_clustering(hvv, data, n_clusters, single_combo,vers):
 
 
     if single_combo=='single':
@@ -37,6 +46,8 @@ def do_clustering(hvv, data, n_clusters, single_combo):
         embeddings = [x['embedding'] for x in data if 'embedding' in x.keys()]
         text = [x['sentence'] for x in data if 'embedding' in x.keys()]
         filename = f'combo_hvv/agglom_clusering_{hvv}_{n_clusters}.pkl'
+    if vers!=0:
+        filename = f'single_hvv/agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl'
 
     clustering = sf.import_pkl_file(filename)
 
@@ -45,20 +56,33 @@ def do_clustering(hvv, data, n_clusters, single_combo):
     for i in range(len(indices)):
         data_point = [x for x in data if x['_id']["$oid"] == indices[i]][0]
         # also add text
-        clusters[labels[i]].append([indices[i], data_point['sample_id'], text[i]])
+        if vers==0:
+            clusters[labels[i]].append([indices[i], data_point['sample_id'], text[i]])
+        else:
+            clusters[labels[i]].append([indices[i], data_point['publish_date'], data_point['partisanship'], text[i]])
     return clusters
 
-N_CLUSTERS = 3500
-HVV_TEMP = 'b'
+# N_CLUSTERS = 3500
+# HVV_TEMP = 'b'
+# SINGLE_COMBO = 'combo'
+
+# N_CLUSTERS = 3500
+# HVV_TEMP = 'b'
+# SINGLE_COMBO = 'combo'
+
+N_CLUSTERS = 2500
+HVV_TEMP = 'hero'
 SINGLE_COMBO = 'combo'
+VERS = 1
 
-data = import_raw_data(HVV_TEMP)
 
-cluster_df = load_cluster_df(HVV_TEMP, n_clusters=N_CLUSTERS, single_combo=SINGLE_COMBO)
+data = import_raw_data(HVV_TEMP, vers=VERS)
+
+cluster_df = load_cluster_df(HVV_TEMP, n_clusters=N_CLUSTERS, single_combo=SINGLE_COMBO, vers=VERS)
 
 main_extreme_df = cluster_df.loc[(cluster_df['extreme']>=-0.5) & (cluster_df['mainstream']>=-0.5) & (cluster_df['time']<0)]
 main_extreme_ids = list(main_extreme_df['cluster_id'].values)
-clusters = do_clustering(HVV_TEMP,data,N_CLUSTERS,single_combo=SINGLE_COMBO)
+clusters = do_clustering(HVV_TEMP,data,N_CLUSTERS,single_combo=SINGLE_COMBO,vers=VERS)
 main_extreme_clusters= {k:clusters[k] for k in main_extreme_ids}
 # print('')
 
