@@ -2,3 +2,9 @@
 output/sample_processing_results.json
 /analyze/cluster_wo_vectorization/alphabet_og/
 /input/initial_subsample_triplets_results.json
+/input/v2_sample_0_50000.pkl
+/input/download_data/
+/analyze/cluster_wo_vectorization/cleaned_exact_matches_4500.json
+/analyze/cluster_wo_vectorization/exact_matches_7500.json
+/input/complete_sample_0_50000.pkl
+/input/initial_subsample_results.json

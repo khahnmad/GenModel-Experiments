@@ -1,25 +1,35 @@
 import pandas as pd
 import shared_functions as sf
 
-def load_cluster_df(hvv_temp, n_clusters):
-    cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+def load_cluster_df(hvv_temp, n_clusters,vers=0):
+    if vers==0:
+        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+    else:
+        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
-def load_raw_data(hvv_temp):
-    return sf.import_pkl_file(f'../../clustering/cluster_experiments/sbert_embdddings/initial_subsample_{hvv_temp}.pkl')['content']
+def load_raw_data(hvv_temp, vers):
+    if vers==0:
+        return sf.import_pkl_file(f'../../clustering/cluster_experiments/sbert_embdddings/initial_subsample_{hvv_temp}.pkl')['content']
+    else:
+        return \
+        sf.import_pkl_file(f'../../clustering/initial_subsample_{hvv_temp}_v{vers}.pkl')[
+            'content']
 
-def fetch_mainstream_extreme_clusters(hvv, n_clusters):
-    cluster_df = load_cluster_df(hvv, n_clusters)
+def fetch_mainstream_extreme_clusters(hvv, n_clusters,vers=0):
+    cluster_df = load_cluster_df(hvv, n_clusters,vers)
     main_extreme_df = cluster_df.loc[
         (cluster_df['extreme'] >= -0.5) & (cluster_df['mainstream'] >= -0.5) & (cluster_df['time'] <= 0)]
     main_extreme_ids = list(main_extreme_df['cluster_id'].values)
     return main_extreme_ids
 
 
-def fetch_cluster_components(raw_data , ids, hvv):
+def fetch_cluster_components(raw_data , ids, hvv,vers=0):
 
-
-    clustering = sf.import_pkl_file( f'agglom_clusering_{hvv}_{n_clusters}.pkl')
+    if vers==0:
+        clustering = sf.import_pkl_file( f'agglom_clusering_{hvv}_{n_clusters}.pkl')
+    else:
+        clustering = sf.import_pkl_file( f'agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl')
     labels = list(clustering.labels_)
 
     hvv_data = []
@@ -29,11 +39,19 @@ def fetch_cluster_components(raw_data , ids, hvv):
         if labels[i] not in ids:
             continue
         # for j in range(len(elt['embedding_result'][hvv])):
-        new_elt = {'_id': elt['_id']["$oid"],
+        if vers==0:
+            new_elt = {'_id': elt['_id']["$oid"],
                    'sample_id':elt['sample_id'],
                    'text':elt['sentence'],
                    'cluster_id': int(labels[i]),
                    }
+        else:
+            new_elt = {'_id': elt['_id']["$oid"],
+                       'publish_date': elt['publish_date'],
+                       'partisanship': elt['partisanship'],
+                       'text': elt['sentence'],
+                       'cluster_id': int(labels[i]),
+                       }
         hvv_data.append(new_elt)
 
 
@@ -44,13 +62,16 @@ def fetch_cluster_components(raw_data , ids, hvv):
     return hvv_data
 
 ## Get mainstream extremes for each of the three hvvs ##
-hvv = 'b'
-n_clusters = 3500
-data = load_raw_data(hvv)
+# hvv = 'b'
+# n_clusters = 3500
+hvv = 'c'
+n_clusters = 2500
+VERS = 1
+data = load_raw_data(hvv,VERS)
 
 
-cluster_ids = fetch_mainstream_extreme_clusters(hvv, n_clusters)
-cluster_components = fetch_cluster_components(data, cluster_ids,hvv)
+cluster_ids = fetch_mainstream_extreme_clusters(hvv, n_clusters, vers=VERS)
+cluster_components = fetch_cluster_components(data, cluster_ids,hvv,vers=VERS)
 
 df = pd.DataFrame(data=cluster_components)
 df['Immigration'] = False

@@ -9,7 +9,10 @@ def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
         else:
             cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
+        if single_combo == 'single':
+            cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
+        else:
+            cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
 #
@@ -21,9 +24,14 @@ def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
 # N_CLUSTERS = 3500
 # SINGLE_COMBO = 'combo'
 
-HVV_TEMP = 'victim'
+# HVV_TEMP = 'victim'
+# N_CLUSTERS = 2500
+# SINGLE_COMBO = 'single'
+# VERS = 1
+
+HVV_TEMP = 'c'
 N_CLUSTERS = 2500
-SINGLE_COMBO = 'single'
+SINGLE_COMBO = 'combo'
 VERS = 1
 
 cluster_df = load_cluster_df(HVV_TEMP, N_CLUSTERS,SINGLE_COMBO,VERS)

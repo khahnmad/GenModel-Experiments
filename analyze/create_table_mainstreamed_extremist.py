@@ -11,7 +11,10 @@ def load_cluster_df(hvv_temp, n_clusters, single_combo, vers=0):
         else:
             cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
+        if single_combo=='single':
+            cluster_df = pd.read_csv(f'single_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
+        else:
+            cluster_df = pd.read_csv(f'combo_hvv/cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv')
     return cluster_df
 
 
@@ -25,9 +28,15 @@ def import_raw_data(hvv_temp, vers=0):
                 content = pickle.load(f)['content']
                 f.close()
     else:
+        if hvv_temp != 'a' and hvv_temp != 'b' and hvv_temp!='c':
+            with open('../input/initial_subsample_triplets_results.json', 'r') as j:
+                content = json.loads(j.read())
+        else:
+            with open(f'../clustering/initial_subsample_{hvv_temp}_v{vers}.pkl',
+                      "rb") as f:
+                content = pickle.load(f)['content']
+                f.close()
 
-        with open('../input/initial_subsample_triplets_results.json', 'r') as j:
-            content = json.loads(j.read())
 
     return content
 
@@ -47,13 +56,22 @@ def do_clustering(hvv, data, n_clusters, single_combo,vers):
         text = [x['sentence'] for x in data if 'embedding' in x.keys()]
         filename = f'combo_hvv/agglom_clusering_{hvv}_{n_clusters}.pkl'
     if vers!=0:
-        filename = f'single_hvv/agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl'
+        if single_combo=='single': # TODO THIS is still messed up
+            indices = [x['_id']["$oid"] for x in data if 'embedding_result' in x.keys()]
+            embeddings = [x['embedding'] for x in data if 'embedding_result' in x.keys()]
+            text = [x['sentence'] for x in data if 'embedding_result' in x.keys()]
+            filename = f'single_hvv/agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl'
+        else:
+            indices = [x['_id']["$oid"] for x in data if 'embedding' in x.keys()]
+            embeddings = [x['embedding'] for x in data if 'embedding' in x.keys()]
+            text = [x['sentence'] for x in data if 'embedding' in x.keys()]
+            filename = f'combo_hvv/agglom_clusering_{hvv}_{n_clusters}_v{vers}.pkl'
 
     clustering = sf.import_pkl_file(filename)
 
     labels = list(clustering.labels_)
     clusters = {c: [] for c in range(n_clusters)}
-    for i in range(len(indices)):
+    for i in range(len(indices)): # TODO : somethings gone wrong here
         data_point = [x for x in data if x['_id']["$oid"] == indices[i]][0]
         # also add text
         if vers==0:
@@ -70,11 +88,15 @@ def do_clustering(hvv, data, n_clusters, single_combo,vers):
 # HVV_TEMP = 'b'
 # SINGLE_COMBO = 'combo'
 
+# N_CLUSTERS = 2500
+# HVV_TEMP = 'villain'
+# SINGLE_COMBO = 'single'
+# VERS = 1
+
 N_CLUSTERS = 2500
-HVV_TEMP = 'hero'
+HVV_TEMP = 'c'
 SINGLE_COMBO = 'combo'
 VERS = 1
-
 
 data = import_raw_data(HVV_TEMP, vers=VERS)
 

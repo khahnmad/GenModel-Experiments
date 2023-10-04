@@ -4,11 +4,14 @@ import json
 import pickle
 import numpy as np
 
-def load_cluster_df(hvv_temp, n_clusters, single_combo):
-    if single_combo=='single':
-        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+def load_cluster_df(hvv_temp, n_clusters, single_combo,vers):
+    if vers==0:
+        if single_combo=='single':
+            cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        else:
+            cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
     else:
-        cluster_df = pd.read_csv(f'cluster_interpretation_{hvv_temp}_{n_clusters}.csv')
+        cluster_df = pd.read_csv(f"cluster_interpretation_{hvv_temp}_{n_clusters}_v{vers}.csv")
     return cluster_df
 
 
@@ -51,13 +54,18 @@ def do_clustering(hvv, data, n_clusters, single_combo):
 
 
 
-N_CLUSTERS = 3500
-hvv = 'b'
+# N_CLUSTERS = 3500
+# hvv = 'b'
+# SINGLE_COMBO = 'combo'
+
+N_CLUSTERS = 2500
+hvv = 'c'
 SINGLE_COMBO = 'combo'
+VERS = 1
 
 data = import_raw_data(hvv)
 
-cluster_df = load_cluster_df(hvv, n_clusters=N_CLUSTERS, single_combo=SINGLE_COMBO)
+cluster_df = load_cluster_df(hvv, n_clusters=N_CLUSTERS, single_combo=SINGLE_COMBO,vers=VERS)
 
 main_extreme_df = cluster_df.loc[(cluster_df['extreme']>=-0.5) & (cluster_df['mainstream']>=-0.5)]
 pos_slope = len(main_extreme_df.loc[main_extreme_df['time']>0])

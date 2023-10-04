@@ -127,7 +127,7 @@ except FileNotFoundError:
 
     # Iterate through clusters and calculate mainstream and extreme log odds
     cluster_df = calculate_cluster_significance(clustering,VERS)
-    cluster_df.to_csv(f'cluster_interpretation_{TEMPLATE}_{N_CLUSTERS}.csv')
+    cluster_df.to_csv(f'cluster_interpretation_{TEMPLATE}_{N_CLUSTERS}_v{VERS}.csv')
 
 # Identify mainstreamed extremist hvvs
 main_extreme = cluster_df.loc[(cluster_df['extreme']>=-0.25) & (cluster_df['mainstream']>=-0.25) & (cluster_df['time']<=0)]
