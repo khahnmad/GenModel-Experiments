@@ -1,3 +1,6 @@
+"""
+Works for both separate and combined approaches
+"""
 import shared_functions as sf
 from typing import List
 import numpy as np

@@ -1,3 +1,6 @@
+"""
+Works for both separate and combined approaches
+"""
 import shared_functions as sf
 from sklearn.cluster import AgglomerativeClustering
 import sklearn
