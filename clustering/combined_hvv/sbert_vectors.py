@@ -50,44 +50,44 @@ def export_as_pkl(export_name:str, content):
         f.close()
 
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-
-data = load_data('../../input/initial_subsample_triplets_results.json')
-temp = 'c'
-sentences = apply_template(data, temp)
-sentence_embeddings = model.encode(sentences)
-count = 0
-output = []
-for sent, emb in zip(sentences,sentence_embeddings):
-    row = {'sentence':sent,
-           'embedding':emb,
-           '_id':data[count]["_id"],
-           # 'sample_id':data[count]['sample_id']
-           'partisanship': data[count]['partisanship'],
-           'publish_date': data[count]['publish_date']
-           }
-    count +=1
-    output.append(row)
-
-export_as_pkl(f'initial_subsample_{temp}_v1.pkl', {"content":output,
-                                                       'metadata': {"template_type":temp,
-                                                                    "model": 'paraphrase-MiniLM-L6-v2',
-                                                                    'version':1}})
+#
+# data = load_data('../../input/initial_subsample_triplets_results.json')
+# temp = 'b'
+# sentences = apply_template(data, temp)
+# sentence_embeddings = model.encode(sentences)
+# count = 0
+# output = []
+# for sent, emb in zip(sentences,sentence_embeddings):
+#     row = {'sentence':sent,
+#            'embedding':emb,
+#            '_id':data[count]["_id"],
+#            # 'sample_id':data[count]['sample_id']
+#            'partisanship': data[count]['partisanship'],
+#            'publish_date': data[count]['publish_date']
+#            }
+#     count +=1
+#     output.append(row)
+#
+# export_as_pkl(f'sbert_embeddings/initial_subsample_{temp}_v1.pkl', {"content":output,
+#                                                        'metadata': {"template_type":temp,
+#                                                                     "model": 'paraphrase-MiniLM-L6-v2',
+#                                                                     'version':1}})
 
 #################################### INITIAL SUBSAMPLE OG VERSION #################################################
-# data = load_data('../input/initial_subsample_results.json')
-# for temp in ['a','b']:
-#     sentences = apply_template(data, temp)
-#     sentence_embeddings = model.encode(sentences)
-#     count = 0
-#     output = []
-#     for sent, emb in zip(sentences,sentence_embeddings):
-#         row = {'sentence':sent,
-#                'embedding':emb,
-#                '_id':data[count]["_id"],
-#                'sample_id':data[count]['sample_id']}
-#         count +=1
-#         output.append(row)
-#
-#     export_as_pkl(f'initial_subsample_{temp}.pkl', {"content":output,
-#                                                        'metadata': {"template_type":temp,
-#                                                                     "model": 'paraphrase-MiniLM-L6-v2'}})
+data = load_data('../../input/initial_subsample_results.json')
+for temp in ['c']:
+    sentences = apply_template(data, temp)
+    sentence_embeddings = model.encode(sentences)
+    count = 0
+    output = []
+    for sent, emb in zip(sentences,sentence_embeddings):
+        row = {'sentence':sent,
+               'embedding':emb,
+               '_id':data[count]["_id"],
+               'sample_id':data[count]['sample_id']}
+        count +=1
+        output.append(row)
+
+    export_as_pkl(f'initial_subsample_{temp}.pkl', {"content":output,
+                                                       'metadata': {"template_type":temp,
+                                                                    "model": 'paraphrase-MiniLM-L6-v2'}})

@@ -10,7 +10,7 @@ def load_cluster_df(hvv_temp, n_clusters,vers=0):
 
 def load_raw_data(hvv_temp, vers):
     if vers==0:
-        return sf.import_pkl_file(f'../../clustering/combined_hvv/sbert_embdddings/initial_subsample_{hvv_temp}.pkl')['content']
+        return sf.import_pkl_file(f'../../clustering/combined_hvv/sbert_embeddings/initial_subsample_{hvv_temp}.pkl')['content']
     else:
         return \
         sf.import_pkl_file(f'../../clustering/initial_subsample_{hvv_temp}_v{vers}.pkl')[

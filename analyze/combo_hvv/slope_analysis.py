@@ -20,7 +20,7 @@ def import_raw_data(hvv_temp):
         with open('../../input/initial_subsample_results.json', 'r') as j:
             content = json.loads(j.read())
     else:
-        with open(f'../../clustering/combined_hvv/sbert_embdddings/initial_subsample_{hvv_temp}.pkl', "rb") as f:
+        with open(f'../../clustering/combined_hvv/sbert_embeddings/initial_subsample_{hvv_temp}.pkl', "rb") as f:
             content = pickle.load(f)['content']
             f.close()
     return content

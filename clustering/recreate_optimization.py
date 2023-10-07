@@ -11,67 +11,70 @@ import matplotlib.pyplot as plt
 
 from sklearn.cluster import KMeans, DBSCAN
 
-import re
-import sklearn
+def fetch_relevant_files(hvv_temp:str, cluster_type:str,  vers=0, single_combo='single'):
+    if vers == 0:
+        opt_loc = f'./clustering_optimizations/version_0'
+        if single_combo == 'single':
+            opt_loc += f'/separate'
+        else:
+            opt_loc += f'/combined'
 
-def import_optimization( hvv, cluster_type, visualize=False, vers=0, single_combo='single'):
-    print('importing optimizations')
-    optimizations = sf.get_files_from_folder(f'cluster_experiments/clustering_optimizations','json')
-    if vers==0:
-        relevant = [x for x in optimizations if cluster_type in x and hvv in x]
+        optimizations = sf.get_files_from_folder(opt_loc, 'json')
+
     else:
-        if single_combo=='combo':
-            optimizations = sf.get_files_from_folder(f'cluster_experiments/sbert_clustering_optimization','json')
-        relevant = [x for x in optimizations if cluster_type in x and hvv in x and f"v{vers}" in x]
-    if len(relevant) ==0:
-        print(f"No files found for {hvv}, {cluster_type}")
+        opt_loc = f'./clustering_optimizations/version_{vers}'
+        if single_combo == 'single':
+            opt_loc += f'/separate'
+        else:
+            opt_loc += f'/combined'
+
+        optimizations = sf.get_files_from_folder(opt_loc, 'json')
+
+    relevant = [x for x in optimizations if cluster_type in x and hvv_temp in x]
+    if len(relevant) == 0:
+        print(f"No files found for {hvv_temp}, {cluster_type}, v{vers}")
+        return None
+    return relevant
+
+def import_optimization(hvv_temp:str, cluster_type:str, visualize=False, vers=0, single_combo='single'):
+    # Fetch the relevant optimization files
+    relevant_files = fetch_relevant_files(hvv_temp, cluster_type, vers, single_combo)
+    if relevant_files is None:
         return
+
+    # Import the data from the relevant files
     data = []
-    print('iterating through relevant files')
-    for file in relevant:
+    for file in relevant_files:
         content = sf.import_json(file)
         data += content['content'][1:]
         columns = content['content'][0]
 
-    # if hvv=='':
-    #     data = sf.import_json(f'cluster_experiments/clustering_optimizations/{cluster_type}_n_optimization_{start}_{end}.json')
-    # else:
-    #     data = sf.import_json(f'cluster_experiments/clustering_optimizations/{cluster_type}_n_optimization_{start}_{end}_{hvv}.json')
+    # Format the data into a df
     df = pd.DataFrame(data=data, columns=columns)
     max_ = df[df['silhouette_score'] == df['silhouette_score'].max()]
-    print(f"{cluster_type}, {hvv}: Max silhouette score is {df['silhouette_score'].max()}")
-    print('doing visualization')
+    print(f"{cluster_type}, {hvv_temp}, v{vers}, {single_combo}: Max silhouette score is {df['silhouette_score'].max()}")
+
+    # Plot the data
     if cluster_type=='dbscan':
-        df = df.sort_values(by='epsilon')
-        if visualize:
-            x = df['epsilon'].values
-            y = df['silhouette_score'].values
-            plt.plot(x, y)
-            plt.xlabel('Epsilon')
-            plt.ylabel('Silhouette Score')
-            if cluster_type=='agglom':
-                plt.title(f"Agglomerative Clustering, {hvv} archetype")
-            else:
-                plt.title(f"{cluster_type}, {hvv}")
-            plt.show()
-
-        return list(max_['epsilon'].values)[0]
+        x_label = 'epsilon'
     else:
-        df = df.sort_values(by='num_clusters')
+        x_label = 'num_clusters'
 
-        if visualize:
-            x = df['num_clusters'].values
-            y = df['silhouette_score'].values
-            plt.plot(x,y)
-            plt.xlabel('Number of Clusters')
-            plt.ylabel('Silhouette Score')
-            if cluster_type == 'agglom':
-                plt.title(f"Agglomerative Clustering, {hvv} archetype")
-            else:
-                plt.title(f"{cluster_type}, {hvv}")
-            plt.show()
+    df = df.sort_values(by=x_label)
 
-        return list(max_['num_clusters'].values)[0]
+    if visualize:
+        x = df[x_label].values
+        y = df['silhouette_score'].values
+        plt.plot(x,y)
+        plt.xlabel(x_label)
+        plt.ylabel('Silhouette Score')
+        if cluster_type == 'agglom':
+            plt.title(f"Agglomerative Clustering, {hvv_temp} archetype")
+        else:
+            plt.title(f"{cluster_type}, {hvv_temp}")
+        plt.show()
+
+    return list(max_[x_label].values)[0]
 
 
 def tsne_visualization(texts: List[str], labels: List[str], embeddings: List, title):
@@ -115,27 +118,28 @@ def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->list:
 
 
 
-###################### ACTION #########################################################
-x = import_optimization('','agglom',visualize=True, vers=1, single_combo='combo')
-
+###################### ACTION ############################
+# COMBINED HVV
 for cluster_type in ['dbscan','kmeans','agglom']:
-    for template in ['combo_a','combo_b']:
-        n_clusters = import_optimization(template, cluster_type, visualize=True)
-        # if n_clusters is None:
-        #     continue
-        # if 'a' in template:
-        #     vectors, text = fetch_data('cluster_experiments/sbert_embdddings/initial_subsample_a.pkl')
-        # else:
-        #     vectors, text = fetch_data('cluster_experiments/sbert_embdddings/initial_subsample_b.pkl')
-        # if cluster_type=='dbscan':
-        #     cluster_labels = do_DBSCAN_clustering(epsilon=n_clusters, embeddings=vectors)
-        # else:
-        #     cluster_labels = do_kmeans_clustering(n_clusters, vectors)
-        # tsne_visualization(texts=text,
-        #                    embeddings=vectors,
-        #                    labels=cluster_labels,
-        #                    title=f'{cluster_type} {template}'
-        #                    )
+    for template in ['combo_a','combo_b','combo_c']:
+        for version in range(3):
+            n_clusters = import_optimization(hvv_temp=template, cluster_type=cluster_type,vers=version,
+                                             visualize=True, single_combo='combo')
+            # if n_clusters is None:
+            #     continue
+            # if 'a' in template:
+            #     vectors, text = fetch_data('cluster_experiments/sbert_embdddings/initial_subsample_a.pkl')
+            # else:
+            #     vectors, text = fetch_data('cluster_experiments/sbert_embdddings/initial_subsample_b.pkl')
+            # if cluster_type=='dbscan':
+            #     cluster_labels = do_DBSCAN_clustering(epsilon=n_clusters, embeddings=vectors)
+            # else:
+            #     cluster_labels = do_kmeans_clustering(n_clusters, vectors)
+            # tsne_visualization(texts=text,
+            #                    embeddings=vectors,
+            #                    labels=cluster_labels,
+            #                    title=f'{cluster_type} {template}'
+            #                    )
 
 for cluster_type in ['dbscan','kmeans','agglom']:
     for hvv in ['hero','villain','victim']:

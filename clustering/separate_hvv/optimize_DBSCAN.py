@@ -44,8 +44,11 @@ def fetch_data(filename,hvv='hero')->list:
 def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->tuple:
     clustering = DBSCAN(min_samples=min_samples,eps=epsilon).fit(embeddings)
     # cluster_centers = list(clustering.cluster_centers_)
-    silhouette_score = sklearn.metrics.silhouette_score(X=embeddings,labels=clustering.labels_)
-    return clustering, float(silhouette_score)
+    try:
+        silhouette_score = float(sklearn.metrics.silhouette_score(X=embeddings,labels=clustering.labels_))
+    except ValueError:
+        silhouette_score = None
+    return clustering, silhouette_score
 
 def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:list, min_samples=5):
     n_optimization = [['epsilon','min_samples','silhouette_score','duration']]
@@ -57,25 +60,26 @@ def optimize_cluster_number(start_n:int, end_n:int, interval:int, embeddings:lis
         print(f"{n}/{end_n}")
     return n_optimization
 
-for hvv in ['villain','victim']:
+for hvv in ['hero']:
     print('starting')
     embeddings = fetch_data('../../input/initial_subsample_results.json', hvv)
     print('loaded embeddings')
     start_n = 1
     # end_n = int(0.5 * len(embeddings))
-    end_n = 20
-    interval = 2
+    end_n = 10
+    interval = 1
     # Experiment w different cluster number
 
     print('beginning optimization')
     optimization = optimize_cluster_number(start_n, end_n,interval, embeddings)
-    export_as_json(f'dbscan_n_optimization_{start_n}_{end_n}_{hvv}.json',{'content':optimization,
-                                                                       'metadata':{'start':start_n,
-                                                                                   'end':end_n,
-                                                                                   'clustering':'agglomerative',
-                                                                                   'initial_subsample':True,
-                                                                                   'num_embeddings':len(embeddings),
-                                                                                   'hvv':hvv,
-                                                                                   'min_samples':5}})
+    export_as_json(f'../clustering_optimizations/version_0/separate/dbscan_n_optimization_{start_n}_{end_n}_{hvv}.json',
+                   {'content':optimization,
+                    'metadata':{'start':start_n,
+                               'end':end_n,
+                               'clustering':'agglomerative',
+                               'initial_subsample':True,
+                               'num_embeddings':len(embeddings),
+                               'hvv':hvv,
+                               'min_samples':5}})
 
     print(f'Exporting {hvv}')
