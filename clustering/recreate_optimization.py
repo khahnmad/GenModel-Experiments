@@ -36,6 +36,20 @@ def fetch_relevant_files(hvv_temp:str, cluster_type:str,  vers=0, single_combo='
         return None
     return relevant
 
+def plot_clustering_optimization(df, x_label, hvv_temp, cluster_type):
+    x = df[x_label].values
+    y = df['silhouette_score'].values
+    plt.plot(x, y)
+    plt.xlabel(x_label)
+    plt.ylabel('Silhouette Score')
+    if cluster_type == 'agglom':
+        plt.title(f"Agglomerative Clustering, {hvv_temp} archetype")
+    else:
+        plt.title(f"{cluster_type}, {hvv_temp}")
+    plt.show()
+
+
+
 def import_optimization(hvv_temp:str, cluster_type:str, visualize=False, vers=0, single_combo='single'):
     # Fetch the relevant optimization files
     relevant_files = fetch_relevant_files(hvv_temp, cluster_type, vers, single_combo)
@@ -63,17 +77,7 @@ def import_optimization(hvv_temp:str, cluster_type:str, visualize=False, vers=0,
     df = df.sort_values(by=x_label)
 
     if visualize:
-        x = df[x_label].values
-        y = df['silhouette_score'].values
-        plt.plot(x,y)
-        plt.xlabel(x_label)
-        plt.ylabel('Silhouette Score')
-        if cluster_type == 'agglom':
-            plt.title(f"Agglomerative Clustering, {hvv_temp} archetype")
-        else:
-            plt.title(f"{cluster_type}, {hvv_temp}")
-        plt.show()
-
+        plot_clustering_optimization(df, x_label, hvv_temp, cluster_type)
     return list(max_[x_label].values)[0]
 
 
@@ -121,7 +125,7 @@ def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->list:
 ###################### ACTION ############################
 # COMBINED HVV
 for cluster_type in ['dbscan','kmeans','agglom']:
-    for template in ['combo_a','combo_b','combo_c']:
+    for template in ['combo_a','combo_b','combo_c','combo_d']:
         for version in range(3):
             n_clusters = import_optimization(hvv_temp=template, cluster_type=cluster_type,vers=version,
                                              visualize=True, single_combo='combo')
