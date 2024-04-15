@@ -30,7 +30,7 @@ def fetch_relevant_files(hvv_temp:str, cluster_type:str,  vers=0, single_combo='
 
         optimizations = sf.get_files_from_folder(opt_loc, 'json')
 
-    relevant = [x for x in optimizations if cluster_type in x and hvv_temp in x]
+    relevant = [x for x in optimizations if f"\\{cluster_type}" in x and hvv_temp in x]
     if len(relevant) == 0:
         print(f"No files found for {hvv_temp}, {cluster_type}, v{vers}")
         return None
@@ -124,7 +124,7 @@ def do_DBSCAN_clustering(epsilon, embeddings, min_samples=5)->list:
 
 ###################### ACTION ############################
 # COMBINED HVV
-for cluster_type in ['dbscan','kmeans','agglom']:
+for cluster_type in ['dbscan','kmeans','agglom','faiskmeans']:
     for template in ['combo_a','combo_b','combo_c','combo_d']:
         for version in range(3):
             n_clusters = import_optimization(hvv_temp=template, cluster_type=cluster_type,vers=version,

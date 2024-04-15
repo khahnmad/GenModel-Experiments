@@ -1,0 +1,34 @@
+,0,1,2,3,4,5
+0,afghans,victim,FarLeft,0.0,1.0,1.0,foreign
+1,delta variant,villain,Left,0.0,1.0,0.25,apolitical
+2,derek chauvin,villain,Left,0.4,1.0,0.6666666666666666,racialized violence
+3,donald trump.george floyd,villain-victim,CenterRight,0.0,1.0,1.0,racialized violence
+4,donald trump.ilhan omar,villain-victim,FarLeft,0.0,1.0,1.0,campaign
+5,donald trump.ukraine,villain-victim,FarLeft,0.0,1.0,1.0,foreign
+6,gary johnson,hero,FarLeft,1.0,0.0,0.25,above
+7,greta thunberg,hero,Center,1.0,0.0,0.0,unknown
+8,hurricane ida,villain,CenterRight,0.0,1.0,0.0,apolitical
+9,jacob blake,victim,Left,0.5,0.0,1.0,racialized violence
+10,jalen brunson,hero,Center,1.0,0.0,0.0,apolitical
+11,james comey,victim,CenterRight,0.5,0.5,1.0,above
+12,joe biden.tara reade,villain-victim,FarLeft,1.0,1.0,1.0,sexual misconduct
+13,joe biden.tara reade,villain-victim,Left,1.0,1.0,1.0,sexual misconduct
+14,joel embiid,hero,Center,1.0,0.0,0.0,apolitical
+15,john conyers,villain,CenterRight,0.0,1.0,1.0,sexual misconduct
+16,jussie smollett.none,villain-victim,Left,1.0,1.0,1.0,racialized violence
+17,kansas,villain,Center,0.0,1.0,0.0,apolitical
+18,matt lauer,villain,CenterLeft,1.0,1.0,0.0,sexual misconduct
+19,michael bloomberg,villain,FarLeft,0.2857142857142857,1.0,0.14285714285714285,above
+20,mike bloomberg,villain,FarLeft,0.5,1.0,0.5,above
+21,none.beto o'rourke,hero-villain,Right,1.0,1.0,0.5,campaign
+22,none.international criminal court,hero-villain,Right,1.0,1.0,1.0,foreign
+23,none.tara reade,hero-victim,CenterRight,1.0,1.0,1.0,sexual misconduct
+24,none.tara reade,hero-victim,FarLeft,1.0,0.6666666666666666,1.0,sexual misconduct
+25,none.tara reade,hero-victim,Left,1.0,1.0,1.0,sexual misconduct
+26,none.tara reade,hero-victim,Right,1.0,0.6666666666666666,1.0,sexual misconduct
+27,tara reade,hero,CenterRight,1.0,0.0,1.0,sexual misconduct
+28,tara reade,victim,CenterRight,0.5,0.6666666666666666,1.0,sexual misconduct
+29,tara reade,victim,FarLeft,0.5,0.6666666666666666,1.0,sexual misconduct
+30,tara reade,victim,Left,1.0,1.0,1.0,sexual misconduct
+31,tara reade,victim,Right,0.5,0.6666666666666666,1.0,sexual misconduct
+32,ted cruz.donald trump,hero-villain,FarLeft,1.0,1.0,0.3333333333333333,sexual misconduct

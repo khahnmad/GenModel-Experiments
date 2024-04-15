@@ -1,1 +1,0 @@
-{"content": [["num_clusters", "silhouette_score", "duration"], [8000, 0.12666846988581767, 442.6637690067291], [8100, 0.12747499816731653, 444.3057692050934], [8200, 0.12833843184609514, 467.732839345932]], "metadata": {"start": 8000, "end": 8200, "clustering": "agglomerative", "initial_subsample": true, "num_embeddings": 42156, "hvv": "combo", "template": "d"}}

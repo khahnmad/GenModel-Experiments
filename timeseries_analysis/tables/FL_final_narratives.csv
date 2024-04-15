@@ -1,0 +1,14 @@
+,input_level,hvv,part_b,narrative
+0,single,hero,Center,chris paul
+1,single,hero,CenterLeft,chris paul
+2,single,hero,CenterRight,chris paul
+3,single,victim,Center,john bolton
+4,single,victim,Center,jacob blake
+5,single,victim,Center,standing rock sioux tribe
+6,single,victim,Center,reince priebus
+7,single,villain,Center,louis dejoy
+8,single,villain,Center,cristiano ronaldo
+9,single,villain,CenterLeft,anthony scaramucci
+10,single,villain,CenterRight,harvey weinstein
+11,tuple,hero-villain,Center,kamala harris.joe biden
+12,tuple,villain-victim,CenterRight,donald trump.james comey

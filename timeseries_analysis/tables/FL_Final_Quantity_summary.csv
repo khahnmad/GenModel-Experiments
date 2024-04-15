@@ -1,0 +1,22 @@
+,input_level,hvv,part_b,count
+0,FarLeft,combo,"hero, villain, victim",0
+1,FarLeft,combo,"hero, villain, victim",0
+2,FarLeft,combo,"hero, villain, victim",0
+3,FarLeft,single,hero,1
+4,FarLeft,single,hero,1
+5,FarLeft,single,hero,1
+6,FarLeft,single,victim,4
+7,FarLeft,single,victim,0
+8,FarLeft,single,victim,0
+9,FarLeft,single,villain,2
+10,FarLeft,single,villain,1
+11,FarLeft,single,villain,1
+12,FarLeft,tuple,hero-victim,0
+13,FarLeft,tuple,hero-victim,0
+14,FarLeft,tuple,hero-victim,0
+15,FarLeft,tuple,hero-villain,1
+16,FarLeft,tuple,hero-villain,0
+17,FarLeft,tuple,hero-villain,0
+18,FarLeft,tuple,villain-victim,0
+19,FarLeft,tuple,villain-victim,0
+20,FarLeft,tuple,villain-victim,1

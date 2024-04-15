@@ -1,0 +1,34 @@
+,input_level,hvv,part_b,narrative
+0,single,hero,Center,greta thunberg
+1,single,hero,Center,jalen brunson
+2,single,hero,Center,joel embiid
+3,single,hero,CenterRight,tara reade
+4,single,hero,FarLeft,gary johnson
+5,single,victim,CenterRight,tara reade
+6,single,victim,CenterRight,james comey
+7,single,victim,FarLeft,tara reade
+8,single,victim,FarLeft,afghans
+9,single,victim,Left,tara reade
+10,single,victim,Left,jacob blake
+11,single,victim,Right,tara reade
+12,single,villain,Center,kansas
+13,single,villain,CenterLeft,matt lauer
+14,single,villain,CenterRight,hurricane ida
+15,single,villain,CenterRight,john conyers
+16,single,villain,FarLeft,michael bloomberg
+17,single,villain,FarLeft,mike bloomberg
+18,single,villain,Left,derek chauvin
+19,single,villain,Left,delta variant
+20,tuple,hero-victim,CenterRight,none.tara reade
+21,tuple,hero-victim,FarLeft,none.tara reade
+22,tuple,hero-victim,Left,none.tara reade
+23,tuple,hero-victim,Right,none.tara reade
+24,tuple,hero-villain,FarLeft,ted cruz.donald trump
+25,tuple,hero-villain,Right,none.international criminal court
+26,tuple,hero-villain,Right,none.beto o'rourke
+27,tuple,villain-victim,CenterRight,donald trump.george floyd
+28,tuple,villain-victim,FarLeft,donald trump.ukraine
+29,tuple,villain-victim,FarLeft,joe biden.tara reade
+30,tuple,villain-victim,FarLeft,donald trump.ilhan omar
+31,tuple,villain-victim,Left,jussie smollett.none
+32,tuple,villain-victim,Left,joe biden.tara reade

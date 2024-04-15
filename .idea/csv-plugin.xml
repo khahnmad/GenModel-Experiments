@@ -129,6 +129,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\analyze\requested_visuals\keywords_over_time.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\analyze\requested_visuals\viz_persons_role.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\analyze\single_hvv\connection_to_categories.py">
           <value>
             <Attribute>
@@ -186,6 +200,20 @@
           </value>
         </entry>
         <entry key="\clustering\cluster_experiments\visualize_cluster_num_decision.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\clustering\combined_hvv\optimize_DBSCAN.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\clustering\export_top_sil_scores.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -262,6 +290,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\input\chekcing.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\input\download_alt_triplets.py">
           <value>
             <Attribute>
@@ -298,6 +333,111 @@
           </value>
         </entry>
         <entry key="\shared_functions.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\avg_signal_for_mainstreamed_narrs.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\compare_influence_on_diff_part.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\compare_inlfuence_of_diff_part_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\final_quantity.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\fr_narratives_text.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\identify_strongest_fr_narratives.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_correlation_strength.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_fr_influence_other_parts.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_narrative_intersection.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_narratives_for_investigation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\read_15_day_segment_data.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\read_text_mainstreamed_narrs.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\sam_first_appears.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\summarize_final_quantity.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
