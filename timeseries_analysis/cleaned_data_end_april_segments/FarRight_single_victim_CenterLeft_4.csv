@@ -1,0 +1,509 @@
+donald trump,"[0.5000000000000001, 1.0]",6,10
+donald trump,"[0.5, nan]",7,11
+donald trump,"[0.9449111825230679, nan]",8,12
+donald trump,"[-1.8441914136100055e-17, 1.0]",18,22
+donald trump,"[0.7559289460184544, nan]",19,23
+donald trump,"[-0.5960395606792698, 1.0]",25,29
+donald trump,"[-0.6933752452815364, 1.0]",26,30
+donald trump,"[0.944911182523068, -1.0]",31,35
+donald trump,"[-1.0, 1.0]",33,37
+donald trump,"[-0.5, 1.0]",34,38
+donald trump,"[0.5000000000000001, nan]",35,39
+donald trump,"[0.5, -1.0]",39,43
+donald trump,"[1.0, nan]",41,45
+donald trump,"[-0.654653670707977, 1.0]",43,47
+donald trump,"[-0.5, 1.0]",44,48
+donald trump,"[-0.970725343394151, 1.0]",46,50
+donald trump,"[-1.0, 1.0]",47,51
+donald trump,"[-0.5, 1.0]",56,60
+donald trump,"[-1.0, 1.0]",63,67
+donald trump,"[-0.5960395606792698, 1.0]",64,68
+donald trump,"[0.5, 1.0]",73,77
+donald trump,"[0.5, nan]",74,78
+donald trump,"[0.8660254037844386, -1.0]",75,79
+donald trump,"[0.5, -1.0]",76,80
+donald trump,"[-1.0, 1.0]",78,82
+donald trump,"[1.0, nan]",102,106
+donald trump,"[1.0, nan]",103,107
+donald trump,"[1.0, nan]",104,108
+donald trump,"[0.5000000000000001, nan]",108,112
+donald trump,"[-0.5, 1.0]",117,121
+donald trump,"[-0.5, 1.0]",118,122
+americans,"[-0.5, 1.0]",21,25
+americans,"[-8.255428088526173e-18, 1.0]",22,26
+americans,"[0.5, nan]",23,27
+americans,"[0.5, -1.0]",36,40
+americans,"[0.8660254037844387, nan]",40,44
+americans,"[-0.8660254037844387, 1.0]",70,74
+americans,"[-0.3273268353539885, 1.0]",71,75
+americans,"[-0.7559289460184545, 1.0]",72,76
+americans,"[0.5, nan]",76,80
+americans,"[-1.0, 1.0]",78,82
+americans,"[-0.5, 1.0]",79,83
+americans,"[0.3592106040535498, 1.0]",101,105
+americans,"[1.0, -1.0]",102,106
+americans,"[0.9933992677987827, -1.0]",103,107
+americans,"[0.9449111825230679, -1.0]",104,108
+americans,"[0.7559289460184546, -1.0]",105,109
+americans,"[0.720576692122892, 1.0]",107,111
+americans,"[0.7559289460184545, -1.0]",108,112
+americans,"[0.6933752452815364, nan]",109,113
+americans,"[0.8660254037844387, -1.0]",113,117
+americans,"[1.0, -1.0]",114,118
+americans,"[0.5, nan]",116,120
+americans,"[1.0, -1.0]",118,122
+americans,"[0.7559289460184544, -1.0]",119,123
+americans,"[0.9176629354822471, -1.0]",123,127
+americans,"[1.0, -1.0]",124,128
+americans,"[-0.5000000000000001, 1.0]",136,140
+united states,"[-0.8660254037844386, 1.0]",0,4
+united states,"[0.5000000000000001, 1.0]",2,6
+united states,"[0.5, 1.0]",5,9
+united states,"[0.5000000000000001, -1.0]",9,13
+united states,"[0.4999999999999999, 1.0]",10,14
+united states,"[2.4262251439800735e-17, 1.0]",11,15
+united states,"[0.5000000000000001, nan]",12,16
+united states,"[1.0, nan]",17,21
+united states,"[1.0, -1.0]",18,22
+united states,"[1.0, nan]",19,23
+united states,"[0.5, -1.0]",24,28
+united states,"[0.5000000000000001, nan]",25,29
+united states,"[1.0, nan]",31,35
+united states,"[1.0, -1.0]",32,36
+united states,"[0.8660254037844387, nan]",33,37
+united states,"[-0.7559289460184545, 1.0]",35,39
+united states,"[-0.7559289460184546, 1.0]",36,40
+united states,"[-0.8660254037844387, 1.0]",37,41
+united states,"[-1.0, 1.0]",38,42
+united states,"[0.5, 1.0]",43,47
+united states,"[-0.970725343394151, 1.0]",45,49
+united states,"[-0.5000000000000001, 1.0]",46,50
+united states,"[-0.8660254037844387, 1.0]",51,55
+united states,"[-0.5000000000000001, 1.0]",52,56
+united states,"[-0.5000000000000001, 1.0]",58,62
+united states,"[-1.0, 1.0]",61,65
+united states,"[-0.5, 1.0]",62,66
+united states,"[0.8660254037844387, -1.0]",72,76
+united states,"[0.8660254037844387, -1.0]",73,77
+united states,"[0.9449111825230683, nan]",74,78
+united states,"[-0.8660254037844387, 1.0]",78,82
+united states,"[-0.6546536707079771, 1.0]",101,105
+united states,"[1.0, -1.0]",102,106
+united states,"[0.8660254037844387, nan]",103,107
+united states,"[-1.0, 1.0]",106,110
+united states,"[1.0, nan]",110,114
+united states,"[0.8660254037844387, -1.0]",111,115
+united states,"[0.8660254037844387, nan]",112,116
+united states,"[1.0, nan]",115,119
+united states,"[0.8660254037844387, -1.0]",116,120
+united states,"[0.5, nan]",117,121
+united states,"[1.0, nan]",129,133
+united states,"[0.8660254037844387, -1.0]",130,134
+united states,"[1.0, -1.0]",131,135
+united states,"[1.0, -1.0]",132,136
+hillary clinton,"[0.970725343394151, -1.0]",0,4
+hillary clinton,"[1.0, nan]",1,5
+hillary clinton,"[-0.8660254037844387, 1.0]",4,8
+hillary clinton,"[-0.6933752452815364, 1.0]",5,9
+hillary clinton,"[0.8660254037844387, -1.0]",9,13
+hillary clinton,"[0.9285714285714285, 1.0]",10,14
+hillary clinton,"[0.9878291611472622, nan]",12,16
+hillary clinton,"[-0.6286185570937123, 1.0]",14,18
+hillary clinton,"[-0.5000000000000001, 1.0]",15,19
+hillary clinton,"[0.5, nan]",16,20
+hillary clinton,"[0.9994237971287661, -1.0]",17,21
+hillary clinton,"[0.9662823901213163, -1.0]",18,22
+hillary clinton,"[0.9878291611472623, nan]",19,23
+hillary clinton,"[0.5, 1.0]",29,33
+hillary clinton,"[0.5000000000000001, nan]",30,34
+hillary clinton,"[0.5, -1.0]",31,35
+democratic party,"[1.0, nan]",0,4
+democratic party,"[-0.5000000000000001, 1.0]",23,27
+democratic party,"[-0.5000000000000001, 1.0]",24,28
+democratic party,"[0.5000000000000001, nan]",25,29
+democratic party,"[0.5, -1.0]",26,30
+democratic party,"[0.5000000000000001, nan]",27,31
+democratic party,"[-0.5000000000000001, 1.0]",48,52
+democratic party,"[-0.5000000000000001, 1.0]",67,71
+democratic party,"[-0.5000000000000001, 1.0]",68,72
+democratic party,"[-0.8660254037844387, 1.0]",72,76
+democratic party,"[-0.7559289460184544, 1.0]",76,80
+democratic party,"[-0.9449111825230682, 1.0]",77,81
+democratic party,"[-0.5, 1.0]",78,82
+democratic party,"[0.5000000000000001, nan]",79,83
+democratic party,"[0.5000000000000001, nan]",103,107
+democratic party,"[0.5, -1.0]",104,108
+democratic party,"[0.5000000000000001, nan]",106,110
+democratic party,"[1.0, nan]",107,111
+democratic party,"[-0.5000000000000001, 1.0]",127,131
+democratic party,"[-0.5000000000000001, 1.0]",128,132
+democratic party,"[-0.5000000000000001, 1.0]",135,139
+democratic party,"[-0.5000000000000001, 1.0]",136,140
+joe biden,"[-0.8660254037844387, 1.0]",103,107
+joe biden,"[-0.5000000000000001, 1.0]",104,108
+joe biden,"[0.944911182523068, nan]",105,109
+joe biden,"[1.0, -1.0]",106,110
+joe biden,"[0.5, -1.0]",107,111
+joe biden,"[1.0, -1.0]",108,112
+joe biden,"[1.0, nan]",109,113
+joe biden,"[1.0, nan]",110,114
+joe biden,"[1.0, -1.0]",111,115
+joe biden,"[0.8029550685469662, nan]",112,116
+joe biden,"[0.5000000000000001, 1.0]",113,117
+joe biden,"[-0.5, 1.0]",119,123
+republican party,"[1.0, nan]",0,4
+republican party,"[1.0, nan]",1,5
+republican party,"[1.0, nan]",2,6
+republican party,"[0.5000000000000001, nan]",3,7
+republican party,"[0.5, 1.0]",10,14
+republican party,"[0.5000000000000001, nan]",11,15
+republican party,"[0.5, nan]",12,16
+republican party,"[-0.5000000000000001, 1.0]",38,42
+republican party,"[1.0, nan]",45,49
+republican party,"[1.0, -1.0]",46,50
+republican party,"[0.5, nan]",47,51
+republican party,"[1.0, nan]",65,69
+republican party,"[0.5, 1.0]",110,114
+republican party,"[0.5000000000000001, nan]",111,115
+republican party,"[1.0, nan]",112,116
+republican party,"[-1.0, 1.0]",120,124
+republican party,"[-0.8660254037844387, 1.0]",121,125
+republican party,"[-0.5000000000000001, 1.0]",122,126
+republican party,"[-0.5000000000000001, 1.0]",135,139
+republican party,"[-0.5000000000000001, 1.0]",136,140
+ukraine,"[1.0, nan]",7,11
+ukraine,"[1.0, -1.0]",8,12
+ukraine,"[1.0, nan]",140,144
+ukraine,"[1.0, -1.0]",141,145
+ukraine,"[1.0, nan]",142,146
+ukraine,"[0.5, nan]",150,154
+migrants,"[1.0, nan]",65,69
+migrants,"[1.0, -1.0]",66,70
+migrants,"[0.5, nan]",67,71
+george floyd,"[1.0, nan]",103,107
+george floyd,"[-0.3592106040535498, 1.0]",105,109
+george floyd,"[-0.45090963848058163, 1.0]",106,110
+george floyd,"[0.8660254037844387, nan]",107,111
+george floyd,"[-0.5000000000000001, 1.0]",125,129
+george floyd,"[-1.0, 1.0]",126,130
+george floyd,"[-1.0, 1.0]",135,139
+george floyd,"[-0.5000000000000001, 1.0]",136,140
+public,"[1.0, nan]",0,4
+public,"[-0.5000000000000001, 1.0]",13,17
+public,"[-1.0, 1.0]",14,18
+public,"[1.0, nan]",19,23
+public,"[1.0, -1.0]",20,24
+public,"[1.0, nan]",21,25
+public,"[1.0, nan]",41,45
+public,"[1.0, -1.0]",42,46
+public,"[1.0, nan]",43,47
+public,"[-0.5000000000000001, 1.0]",71,75
+public,"[-0.5000000000000001, 1.0]",72,76
+taxpayers,"[-0.8660254037844387, 1.0]",0,4
+taxpayers,"[1.0, nan]",29,33
+taxpayers,"[1.0, -1.0]",30,34
+taxpayers,"[0.5, nan]",31,35
+taxpayers,"[1.0, nan]",69,73
+taxpayers,"[1.0, -1.0]",70,74
+taxpayers,"[0.8660254037844387, nan]",71,75
+taxpayers,"[-0.5000000000000001, 1.0]",78,82
+taxpayers,"[1.0, nan]",103,107
+taxpayers,"[1.0, -1.0]",104,108
+taxpayers,"[1.0, nan]",105,109
+consumers,"[1.0, nan]",27,31
+consumers,"[1.0, -1.0]",28,32
+consumers,"[1.0, nan]",29,33
+consumers,"[1.0, nan]",125,129
+consumers,"[1.0, -1.0]",126,130
+consumers,"[1.0, -1.0]",127,131
+consumers,"[1.0, -1.0]",128,132
+consumers,"[1.0, nan]",129,133
+consumers,"[0.5, 1.0]",131,135
+consumers,"[-0.5000000000000001, 1.0]",134,138
+israel,"[-0.5000000000000001, 1.0]",121,125
+israel,"[-0.5000000000000001, 1.0]",122,126
+israel,"[-0.5000000000000001, 1.0]",134,138
+children,"[1.0, nan]",101,105
+children,"[0.5, -1.0]",102,106
+children,"[0.5000000000000001, nan]",103,107
+children,"[0.5, 1.0]",125,129
+children,"[0.5000000000000001, nan]",127,131
+iran,"[-0.5000000000000001, 1.0]",79,83
+iran,"[-0.5000000000000001, 1.0]",80,84
+barack obama,"[-0.7559289460184545, 1.0]",15,19
+barack obama,"[-0.5, 1.0]",16,20
+barack obama,"[-0.5000000000000001, 1.0]",29,33
+barack obama,"[-1.0, 1.0]",30,34
+barack obama,"[1.0, nan]",69,73
+barack obama,"[1.0, -1.0]",70,74
+barack obama,"[1.0, nan]",71,75
+woman,"[1.0, nan]",0,4
+woman,"[0.5000000000000001, -1.0]",25,29
+woman,"[1.0, -1.0]",26,30
+woman,"[0.5, -1.0]",27,31
+woman,"[1.0, -1.0]",42,46
+woman,"[0.5, nan]",43,47
+woman,"[-0.5000000000000001, 1.0]",49,53
+woman,"[-0.5000000000000001, 1.0]",50,54
+woman,"[0.5000000000000001, nan]",73,77
+woman,"[1.0, -1.0]",74,78
+woman,"[0.5, -1.0]",75,79
+woman,"[1.0, -1.0]",130,134
+woman,"[1.0, nan]",131,135
+russia,"[-0.5000000000000001, 1.0]",10,14
+russia,"[-0.5000000000000001, 1.0]",11,15
+russia,"[-0.5, 1.0]",57,61
+russia,"[-8.255428088526173e-18, 1.0]",58,62
+russia,"[1.0, nan]",59,63
+america,"[-0.5000000000000001, 1.0]",105,109
+america,"[-1.0, 1.0]",106,110
+china,"[-0.5000000000000001, 1.0]",101,105
+china,"[-0.5000000000000001, 1.0]",102,106
+china,"[0.5000000000000001, nan]",103,107
+china,"[1.0, -1.0]",104,108
+china,"[1.0, nan]",105,109
+mexico,"[1.0, nan]",23,27
+mexico,"[1.0, -1.0]",24,28
+mexico,"[1.0, nan]",25,29
+mexico,"[0.5000000000000001, -1.0]",67,71
+mexico,"[1.0, -1.0]",68,72
+mexico,"[1.0, nan]",69,73
+mexico,"[-0.5000000000000001, 1.0]",74,78
+uk,"[1.0, -1.0]",0,4
+uk,"[0.5, nan]",1,5
+uk,"[0.5, 1.0]",9,13
+uk,"[0.5000000000000001, nan]",10,14
+uk,"[1.0, nan]",11,15
+uk,"[1.0, nan]",67,71
+uk,"[1.0, -1.0]",68,72
+uk,"[1.0, nan]",69,73
+uk,"[1.0, nan]",73,77
+uk,"[-0.8660254037844386, 1.0]",75,79
+uk,"[-0.5000000000000001, 1.0]",76,80
+students,"[1.0, -1.0]",0,4
+students,"[1.0, nan]",1,5
+students,"[1.0, nan]",29,33
+students,"[1.0, -1.0]",30,34
+students,"[1.0, nan]",31,35
+students,"[-0.5000000000000001, 1.0]",61,65
+students,"[-0.5000000000000001, 1.0]",62,66
+environment,"[1.0, nan]",119,123
+environment,"[1.0, -1.0]",120,124
+environment,"[1.0, nan]",121,125
+environment,"[-0.5000000000000001, 1.0]",133,137
+environment,"[-0.5000000000000001, 1.0]",134,138
+afghanistan,"[-0.5000000000000001, 1.0]",25,29
+afghanistan,"[-0.5000000000000001, 1.0]",26,30
+afghanistan,"[0.3592106040535498, 1.0]",133,137
+afghanistan,"[0.6546536707079773, -1.0]",134,138
+afghanistan,"[0.6286185570937123, nan]",135,139
+congress,"[-0.5000000000000001, 1.0]",19,23
+congress,"[-0.5000000000000001, 1.0]",20,24
+congress,"[1.0, nan]",41,45
+congress,"[1.0, -1.0]",42,46
+congress,"[1.0, nan]",43,47
+congress,"[-1.0, 1.0]",75,79
+congress,"[-0.5, 1.0]",76,80
+venezuelan people,"[-0.5, 1.0]",73,77
+venezuelan people,"[0.5000000000000001, nan]",74,78
+venezuelan people,"[0.7559289460184544, -1.0]",75,79
+venezuelan people,"[1.0, -1.0]",76,80
+venezuelan people,"[0.5000000000000001, -1.0]",77,81
+venezuelan people,"[-0.7559289460184546, 1.0]",79,83
+venezuelan people,"[-0.7559289460184546, 1.0]",80,84
+north korea,"[-0.7559289460184546, 1.0]",37,41
+north korea,"[-0.5000000000000001, 1.0]",38,42
+north korea,"[-0.944911182523068, 1.0]",41,45
+north korea,"[-0.5, 1.0]",42,46
+ted cruz,"[0.5000000000000001, -1.0]",2,6
+ted cruz,"[1.0, nan]",3,7
+covid-19,"[-0.5, 1.0]",101,105
+covid-19,"[1.0, nan]",123,127
+covid-19,"[1.0, -1.0]",124,128
+covid-19,"[0.5, -1.0]",125,129
+covid-19,"[-0.8660254037844387, 1.0]",127,131
+covid-19,"[-0.5000000000000001, 1.0]",128,132
+lgbt community,"[-0.5000000000000001, 1.0]",103,107
+lgbt community,"[-0.5000000000000001, 1.0]",104,108
+india,"[1.0, nan]",17,21
+india,"[1.0, -1.0]",18,22
+india,"[0.8660254037844387, -1.0]",19,23
+india,"[-0.5000000000000001, 1.0]",125,129
+india,"[-0.5000000000000001, 1.0]",126,130
+illegal immigrants,"[1.0, nan]",69,73
+illegal immigrants,"[1.0, -1.0]",70,74
+illegal immigrants,"[1.0, nan]",71,75
+cnn,"[1.0, nan]",17,21
+cnn,"[1.0, -1.0]",18,22
+cnn,"[1.0, nan]",19,23
+cnn,"[1.0, nan]",25,29
+cnn,"[0.5, -1.0]",26,30
+cnn,"[0.5000000000000001, nan]",27,31
+immigrants,"[-0.5000000000000001, 1.0]",29,33
+immigrants,"[-0.5000000000000001, 1.0]",30,34
+immigrants,"[1.0, nan]",101,105
+immigrants,"[0.5, -1.0]",102,106
+immigrants,"[0.5000000000000001, nan]",103,107
+man,"[1.0, nan]",0,4
+man,"[-0.5000000000000001, 1.0]",57,61
+man,"[-0.5000000000000001, 1.0]",58,62
+california,"[1.0, nan]",47,51
+california,"[1.0, -1.0]",48,52
+california,"[1.0, nan]",49,53
+california,"[-0.5000000000000001, 1.0]",57,61
+california,"[-0.5000000000000001, 1.0]",58,62
+california,"[1.0, nan]",67,71
+california,"[1.0, -1.0]",68,72
+california,"[1.0, nan]",69,73
+syrian people,"[1.0, nan]",23,27
+syrian people,"[1.0, -1.0]",24,28
+syrian people,"[1.0, nan]",25,29
+syrian people,"[-0.5000000000000001, 1.0]",39,43
+syrian people,"[-0.5000000000000001, 1.0]",40,44
+syrian people,"[1.0, nan]",51,55
+syrian people,"[1.0, -1.0]",52,56
+syrian people,"[1.0, nan]",53,57
+julian assange,"[-0.5000000000000001, 1.0]",75,79
+julian assange,"[-0.7559289460184544, 1.0]",76,80
+julian assange,"[0.9819805060619659, 1.0]",79,83
+julian assange,"[0.9819805060619659, -1.0]",80,84
+julian assange,"[1.0, nan]",81,85
+nancy pelosi,"[-0.5000000000000001, 1.0]",73,77
+nancy pelosi,"[-0.5000000000000001, 1.0]",74,78
+nancy pelosi,"[-0.5000000000000001, 1.0]",125,129
+nancy pelosi,"[-0.5000000000000001, 1.0]",126,130
+jamal khashoggi,"[0.5, 1.0]",65,69
+jamal khashoggi,"[-0.5000000000000001, 1.0]",68,72
+jamal khashoggi,"[0.5000000000000001, nan]",69,73
+jamal khashoggi,"[1.0, -1.0]",70,74
+jamal khashoggi,"[1.0, nan]",71,75
+apple,"[-0.5000000000000001, 1.0]",3,7
+apple,"[-0.5000000000000001, 1.0]",4,8
+apple,"[1.0, nan]",150,154
+apple,"[0.5, -1.0]",151,155
+apple,"[0.5000000000000001, nan]",152,156
+germany,"[-0.5000000000000001, 1.0]",11,15
+germany,"[-0.5000000000000001, 1.0]",12,16
+obamacare,"[1.0, nan]",33,37
+obamacare,"[0.5, -1.0]",34,38
+australia,"[1.0, nan]",35,39
+australia,"[1.0, -1.0]",36,40
+australia,"[1.0, nan]",37,41
+australia,"[1.0, nan]",115,119
+australia,"[1.0, -1.0]",116,120
+australia,"[1.0, nan]",117,121
+women,"[-0.5000000000000001, 1.0]",57,61
+women,"[-0.5000000000000001, 1.0]",58,62
+women,"[-0.5000000000000001, 1.0]",67,71
+women,"[-0.5000000000000001, 1.0]",68,72
+bernie sanders,"[-0.5000000000000001, 1.0]",5,9
+twitter,"[1.0, nan]",150,154
+twitter,"[0.5, -1.0]",151,155
+twitter,"[0.5000000000000001, nan]",152,156
+refugees,"[-0.5000000000000001, 1.0]",61,65
+refugees,"[-0.5000000000000001, 1.0]",62,66
+police,"[1.0, nan]",110,114
+police,"[1.0, -1.0]",111,115
+police,"[1.0, nan]",112,116
+police,"[-0.5000000000000001, 1.0]",119,123
+police,"[-0.5000000000000001, 1.0]",120,124
+customers,"[1.0, nan]",43,47
+customers,"[1.0, -1.0]",44,48
+customers,"[1.0, nan]",45,49
+american taxpayers,"[-0.5000000000000001, 1.0]",77,81
+american taxpayers,"[-1.0, 1.0]",78,82
+michael flynn,"[-0.5000000000000001, 1.0]",27,31
+michael flynn,"[-1.0, 1.0]",28,32
+climate change,"[1.0, nan]",0,4
+climate change,"[1.0, nan]",79,83
+climate change,"[1.0, -1.0]",80,84
+climate change,"[1.0, nan]",81,85
+planned parenthood,"[-0.5000000000000001, 1.0]",1,5
+melania trump,"[1.0, nan]",38,42
+melania trump,"[1.0, -1.0]",39,43
+melania trump,"[1.0, nan]",40,44
+venezuela,"[0.5, nan]",71,75
+venezuela,"[0.5000000000000001, nan]",73,77
+venezuela,"[-1.0, 1.0]",77,81
+venezuela,"[-0.5000000000000001, 1.0]",78,82
+millennials,"[1.0, nan]",56,60
+millennials,"[1.0, -1.0]",57,61
+millennials,"[1.0, nan]",58,62
+new york times,"[-0.5000000000000001, 1.0]",38,42
+new york times,"[-0.5000000000000001, 1.0]",39,43
+new york times,"[-0.5000000000000001, 1.0]",63,67
+new york times,"[-0.5000000000000001, 1.0]",64,68
+facebook users,"[0.5000000000000001, -1.0]",71,75
+facebook users,"[1.0, -1.0]",72,76
+facebook users,"[1.0, nan]",73,77
+european union,"[1.0, nan]",9,13
+european union,"[1.0, -1.0]",10,14
+european union,"[1.0, nan]",11,15
+investors,"[1.0, nan]",117,121
+investors,"[1.0, -1.0]",118,122
+investors,"[1.0, nan]",119,123
+voters,"[-0.5000000000000001, 1.0]",15,19
+voters,"[-0.5000000000000001, 1.0]",16,20
+theresa may,"[-0.5000000000000001, 1.0]",79,83
+theresa may,"[-0.5000000000000001, 1.0]",80,84
+breonna taylor,"[0.5, 1.0]",110,114
+breonna taylor,"[0.5000000000000001, nan]",111,115
+breonna taylor,"[1.0, nan]",112,116
+hunter biden,"[0.5, 1.0]",113,117
+hunter biden,"[0.5000000000000001, nan]",115,119
+community,"[-0.5000000000000001, 1.0]",57,61
+community,"[-0.5000000000000001, 1.0]",58,62
+british people,"[0.944911182523068, 1.0]",9,13
+british people,"[0.9449111825230679, -1.0]",10,14
+british people,"[1.0, nan]",11,15
+brazil,"[-0.5000000000000001, 1.0]",13,17
+brazil,"[-0.5000000000000001, 1.0]",14,18
+undocumented immigrants,"[-0.5000000000000001, 1.0]",25,29
+undocumented immigrants,"[-0.5000000000000001, 1.0]",26,30
+parents,"[1.0, nan]",127,131
+parents,"[1.0, -1.0]",128,132
+parents,"[1.0, nan]",129,133
+libya,"[-0.5000000000000001, 1.0]",0,4
+catholic church,"[1.0, nan]",6,10
+catholic church,"[1.0, -1.0]",7,11
+catholic church,"[1.0, nan]",8,12
+hong kong,"[1.0, nan]",103,107
+hong kong,"[1.0, -1.0]",104,108
+daca recipients,"[1.0, nan]",38,42
+daca recipients,"[0.9449111825230683, -1.0]",39,43
+daca recipients,"[0.9449111825230679, nan]",40,44
+economy,"[-0.5000000000000001, 1.0]",131,135
+economy,"[-0.5000000000000001, 1.0]",132,136
+boris johnson,"[1.0, nan]",9,13
+boris johnson,"[0.5, -1.0]",10,14
+boris johnson,"[0.5000000000000001, nan]",11,15
+twitter users,"[1.0, nan]",122,126
+twitter users,"[1.0, -1.0]",123,127
+twitter users,"[1.0, nan]",124,128
+unvaccinated people,"[-0.8660254037844387, 1.0]",135,139
+unvaccinated people,"[-0.5000000000000001, 1.0]",136,140
+ivanka trump,"[1.0, nan]",55,59
+ivanka trump,"[0.5, nan]",56,60
+ivanka trump,"[0.5000000000000001, 1.0]",57,61
+tucker carlson,"[-0.5000000000000001, 1.0]",123,127
+tucker carlson,"[-0.5000000000000001, 1.0]",124,128
+russian citizens,"[1.0, nan]",105,109
+russian citizens,"[1.0, -1.0]",106,110
+russian citizens,"[1.0, nan]",107,111
+17-year-old girl,"[-0.5000000000000001, 1.0]",47,51
+17-year-old girl,"[-0.5000000000000001, 1.0]",48,52
+federal workers,"[1.0, nan]",69,73
+federal workers,"[1.0, -1.0]",70,74
+federal workers,"[1.0, nan]",71,75
+american families,"[1.0, nan]",69,73
+american families,"[1.0, -1.0]",70,74
+american families,"[1.0, nan]",71,75
+john kasich,"[0.5, 1.0]",3,7
+john kasich,"[0.5000000000000001, nan]",5,9
+immigrant families,"[1.0, nan]",57,61
+immigrant families,"[0.5, -1.0]",58,62
+immigrant families,"[0.5000000000000001, nan]",59,63
+residents,"[-0.5000000000000001, 1.0]",123,127
+residents,"[-0.5000000000000001, 1.0]",124,128
+alexei navalny,"[-0.5000000000000001, 1.0]",110,114
+alexei navalny,"[-0.5000000000000001, 1.0]",111,115

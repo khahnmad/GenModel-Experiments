@@ -1,0 +1,43 @@
+,partial or complete narrative,"hero, villain, and/or victim",lagging partisanship,# of narratives with >= 0.5 cross-corr,total # of narratives shared by FR and lagging partisanship
+0,combo,"hero, villain, victim",Center,3,108
+1,combo,"hero, villain, victim",CenterLeft,1,92
+2,combo,"hero, villain, victim",CenterRight,1,108
+3,combo,"hero, villain, victim",FarLeft,8,146
+4,combo,"hero, villain, victim",Left,4,97
+5,combo,"hero, villain, victim",Right,3,105
+6,single,hero,Center,2,232
+7,single,hero,CenterLeft,4,235
+8,single,hero,CenterRight,6,243
+9,single,hero,FarLeft,10,324
+10,single,hero,Left,8,220
+11,single,hero,Right,10,232
+12,single,victim,Center,7,206
+13,single,victim,CenterLeft,6,208
+14,single,victim,CenterRight,6,221
+15,single,victim,FarLeft,8,342
+16,single,victim,Left,13,221
+17,single,victim,Right,12,233
+18,single,villain,Center,8,250
+19,single,villain,CenterLeft,13,260
+20,single,villain,CenterRight,13,267
+21,single,villain,FarLeft,16,383
+22,single,villain,Left,11,265
+23,single,villain,Right,19,300
+24,tuple,hero-victim,Center,4,177
+25,tuple,hero-victim,CenterLeft,3,168
+26,tuple,hero-victim,CenterRight,6,180
+27,tuple,hero-victim,FarLeft,9,254
+28,tuple,hero-victim,Left,6,161
+29,tuple,hero-victim,Right,4,169
+30,tuple,hero-villain,Center,1,164
+31,tuple,hero-villain,CenterLeft,4,154
+32,tuple,hero-villain,CenterRight,3,167
+33,tuple,hero-villain,FarLeft,10,247
+34,tuple,hero-villain,Left,4,156
+35,tuple,hero-villain,Right,9,174
+36,tuple,villain-victim,Center,4,108
+37,tuple,villain-victim,CenterLeft,3,107
+38,tuple,villain-victim,CenterRight,3,107
+39,tuple,villain-victim,FarLeft,8,211
+40,tuple,villain-victim,Left,8,107
+41,tuple,villain-victim,Right,6,118

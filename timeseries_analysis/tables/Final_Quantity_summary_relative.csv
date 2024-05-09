@@ -1,22 +1,13 @@
 ,input_level,hvv,part_b,count,total_narr,relative
-0,combo,"hero, villain, victim",Center,0,108,0.0
-1,combo,"hero, villain, victim",CenterLeft,0,92,0.0
-2,combo,"hero, villain, victim",CenterRight,0,108,0.0
-3,single,hero,Center,3,232,0.01293103448275862
-4,single,hero,CenterLeft,0,235,0.0
-5,single,hero,CenterRight,1,243,0.00411522633744856
-6,single,victim,Center,0,206,0.0
-7,single,victim,CenterLeft,0,208,0.0
-8,single,victim,CenterRight,2,221,0.00904977375565611
-9,single,villain,Center,1,250,0.004
-10,single,villain,CenterLeft,1,260,0.0038461538461538464
-11,single,villain,CenterRight,2,267,0.00749063670411985
-12,tuple,hero-victim,Center,0,177,0.0
-13,tuple,hero-victim,CenterLeft,0,168,0.0
-14,tuple,hero-victim,CenterRight,1,180,0.005555555555555556
-15,tuple,hero-villain,Center,0,164,0.0
-16,tuple,hero-villain,CenterLeft,0,154,0.0
-17,tuple,hero-villain,CenterRight,0,167,0.0
-18,tuple,villain-victim,Center,0,108,0.0
-19,tuple,villain-victim,CenterLeft,0,107,0.0
-20,tuple,villain-victim,CenterRight,1,107,0.009345794392523364
+0,combo,"hero, villain, victim",Center,17,108,0.1574074074074074
+1,combo,"hero, villain, victim",CenterLeft,20,92,0.21739130434782608
+2,combo,"hero, villain, victim",CenterRight,20,108,0.18518518518518517
+3,single,hero,Center,25,232,0.10775862068965517
+4,single,hero,CenterLeft,29,235,0.12340425531914893
+5,single,hero,CenterRight,41,243,0.16872427983539096
+6,single,victim,Center,31,206,0.15048543689320387
+7,single,victim,CenterLeft,31,208,0.14903846153846154
+8,single,victim,CenterRight,41,221,0.18552036199095023
+9,single,villain,Center,36,250,0.144
+10,single,villain,CenterLeft,40,260,0.15384615384615385
+11,single,villain,CenterRight,52,267,0.1947565543071161

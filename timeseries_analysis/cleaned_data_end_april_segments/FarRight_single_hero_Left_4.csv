@@ -1,0 +1,360 @@
+donald trump,"[-0.8219949365267865, 1.0]",12,16
+donald trump,"[-0.6099942813304187, 1.0]",13,17
+donald trump,"[0.9449111825230683, 1.0]",23,27
+donald trump,"[1.0, -1.0]",24,28
+donald trump,"[0.9449111825230682, -1.0]",25,29
+donald trump,"[-1.0, 1.0]",27,31
+donald trump,"[-1.0, 1.0]",28,32
+donald trump,"[-0.8660254037844387, 1.0]",31,35
+donald trump,"[-0.7559289460184546, 1.0]",33,37
+donald trump,"[-0.2773500981126146, 1.0]",34,38
+donald trump,"[1.0, nan]",35,39
+donald trump,"[-0.5000000000000001, 1.0]",37,41
+donald trump,"[-0.8660254037844387, 1.0]",38,42
+donald trump,"[0.18898223650461357, 1.0]",39,43
+donald trump,"[0.9449111825230679, -1.0]",40,44
+donald trump,"[0.9449111825230683, nan]",41,45
+donald trump,"[-0.5000000000000001, 1.0]",63,67
+donald trump,"[-0.5, 1.0]",64,68
+donald trump,"[0.944911182523068, 1.0]",68,72
+donald trump,"[0.8660254037844386, nan]",69,73
+donald trump,"[-0.5, 1.0]",70,74
+donald trump,"[0.5000000000000001, nan]",77,81
+donald trump,"[-0.7559289460184544, 1.0]",114,118
+joe biden,"[0.5, 1.0]",101,105
+joe biden,"[0.5000000000000001, nan]",102,106
+joe biden,"[1.0, nan]",103,107
+joe biden,"[-0.5000000000000001, 1.0]",107,111
+joe biden,"[-0.5000000000000001, 1.0]",108,112
+joe biden,"[0.5000000000000001, nan]",109,113
+joe biden,"[0.9449111825230683, -1.0]",110,114
+joe biden,"[0.9449111825230679, nan]",111,115
+joe biden,"[0.9176629354822471, nan]",113,117
+joe biden,"[-8.255428088526173e-18, 1.0]",116,120
+joe biden,"[0.8660254037844387, -1.0]",117,121
+joe biden,"[0.944911182523068, nan]",119,123
+joe biden,"[1.0, -1.0]",120,124
+joe biden,"[0.9819805060619657, -1.0]",121,125
+joe biden,"[0.5, -1.0]",122,126
+joe biden,"[0.9819805060619655, 1.0]",124,128
+joe biden,"[1.0, nan]",125,129
+joe biden,"[1.0, nan]",126,130
+joe biden,"[0.9449111825230682, -1.0]",127,131
+joe biden,"[0.5000000000000001, -1.0]",131,135
+joe biden,"[1.0, -1.0]",132,136
+joe biden,"[0.9332565252573827, -1.0]",133,137
+joe biden,"[0.8660254037844387, -1.0]",134,138
+joe biden,"[0.8660254037844387, nan]",135,139
+joe biden,"[-0.5000000000000001, 1.0]",138,142
+joe biden,"[-0.5000000000000001, 1.0]",139,143
+joe biden,"[-0.8660254037844387, 1.0]",154,158
+joe biden,"[-0.970725343394151, 1.0]",155,159
+joe biden,"[-0.9449111825230682, 1.0]",156,160
+joe biden,"[1.0, nan]",158,162
+joe biden,"[1.0, -1.0]",159,163
+joe biden,"[0.9819805060619655, 1.0]",160,164
+joe biden,"[0.5, 1.0]",164,168
+police,"[0.5000000000000001, nan]",4,8
+police,"[1.0, -1.0]",5,9
+police,"[0.5, -1.0]",9,13
+police,"[0.5000000000000001, nan]",10,14
+police,"[0.5000000000000001, -1.0]",11,15
+police,"[1.0, -1.0]",12,16
+police,"[1.0, nan]",13,17
+police,"[-0.18898223650461365, 1.0]",29,33
+police,"[-0.1889822365046136, 1.0]",30,34
+police,"[0.5, nan]",31,35
+police,"[0.5000000000000001, -1.0]",33,37
+police,"[0.5, -1.0]",34,38
+police,"[0.5000000000000001, nan]",35,39
+police,"[-0.5000000000000001, 1.0]",40,44
+police,"[1.0, nan]",71,75
+police,"[1.0, -1.0]",72,76
+police,"[0.5, -1.0]",73,77
+police,"[-0.8660254037844387, 1.0]",79,83
+police,"[-0.5000000000000001, 1.0]",80,84
+police,"[0.944911182523068, nan]",101,105
+police,"[0.8660254037844387, -1.0]",102,106
+police,"[0.8660254037844387, nan]",103,107
+police,"[-0.5000000000000001, 1.0]",107,111
+police,"[-0.8660254037844387, 1.0]",108,112
+police,"[0.5, 1.0]",117,121
+police,"[0.5000000000000001, nan]",118,122
+police,"[1.0, nan]",119,123
+nancy pelosi,"[1.0, nan]",36,40
+nancy pelosi,"[1.0, -1.0]",37,41
+nancy pelosi,"[1.0, nan]",38,42
+nancy pelosi,"[-0.5000000000000001, 1.0]",47,51
+nancy pelosi,"[-0.5000000000000001, 1.0]",48,52
+nancy pelosi,"[-0.5, 1.0]",67,71
+nancy pelosi,"[0.5000000000000001, nan]",70,74
+nancy pelosi,"[1.0, nan]",71,75
+nancy pelosi,"[0.5, -1.0]",116,120
+nancy pelosi,"[-0.8660254037844387, 1.0]",120,124
+barack obama,"[0.8660254037844387, nan]",5,9
+barack obama,"[0.8660254037844387, 1.0]",15,19
+barack obama,"[0.8660254037844387, -1.0]",16,20
+barack obama,"[-0.9999999999999998, 1.0]",19,23
+barack obama,"[-1.0, 1.0]",26,30
+barack obama,"[1.0, nan]",30,34
+barack obama,"[-0.1889822365046136, 1.0]",31,35
+barack obama,"[-1.0, 1.0]",32,36
+barack obama,"[0.5000000000000001, nan]",34,38
+barack obama,"[0.5000000000000001, nan]",39,43
+barack obama,"[1.0, -1.0]",40,44
+barack obama,"[1.0, nan]",41,45
+barack obama,"[0.5000000000000001, -1.0]",67,71
+barack obama,"[0.5, -1.0]",68,72
+barack obama,"[1.0, nan]",75,79
+barack obama,"[1.0, -1.0]",76,80
+barack obama,"[0.5, -1.0]",77,81
+barack obama,"[0.5000000000000001, nan]",79,83
+barack obama,"[1.0, -1.0]",80,84
+barack obama,"[1.0, nan]",81,85
+barack obama,"[1.0, nan]",103,107
+barack obama,"[1.0, -1.0]",104,108
+barack obama,"[1.0, nan]",105,109
+ted cruz,"[0.8660254037844387, -1.0]",1,5
+ted cruz,"[1.0, nan]",2,6
+ted cruz,"[0.4999999999999999, 1.0]",4,8
+ted cruz,"[1.0, nan]",5,9
+ted cruz,"[-0.5000000000000001, 1.0]",19,23
+ted cruz,"[-1.0, 1.0]",20,24
+hillary clinton,"[-0.5000000000000001, 1.0]",0,4
+hillary clinton,"[-0.5000000000000001, 1.0]",1,5
+hillary clinton,"[0.8660254037844387, nan]",10,14
+hillary clinton,"[-0.8660254037844387, 1.0]",12,16
+hillary clinton,"[-0.8660254037844387, 1.0]",13,17
+hillary clinton,"[0.5, -1.0]",16,20
+hillary clinton,"[0.5, nan]",17,21
+hillary clinton,"[0.7559289460184544, -1.0]",18,22
+hillary clinton,"[0.5000000000000001, -1.0]",19,23
+hillary clinton,"[-0.5000000000000001, 1.0]",63,67
+hillary clinton,"[-1.0, 1.0]",64,68
+bernie sanders,"[-0.5000000000000001, 1.0]",4,8
+ron desantis,"[-0.5000000000000001, 1.0]",123,127
+ron desantis,"[-0.7559289460184544, 1.0]",124,128
+pope francis,"[-0.5, 1.0]",5,9
+pope francis,"[-8.255428088526173e-18, 1.0]",6,10
+pope francis,"[1.0, nan]",7,11
+pope francis,"[-0.5000000000000001, 1.0]",57,61
+pope francis,"[-1.0, 1.0]",58,62
+boris johnson,"[-0.5000000000000001, 1.0]",107,111
+boris johnson,"[-0.5000000000000001, 1.0]",108,112
+boris johnson,"[-0.5000000000000001, 1.0]",117,121
+boris johnson,"[-0.5000000000000001, 1.0]",118,122
+boris johnson,"[1.0, nan]",123,127
+boris johnson,"[1.0, -1.0]",124,128
+boris johnson,"[0.5, -1.0]",125,129
+gavin newsom,"[0.5, 1.0]",120,124
+gavin newsom,"[0.5000000000000001, nan]",121,125
+gavin newsom,"[1.0, nan]",122,126
+gavin newsom,"[1.0, nan]",157,161
+gavin newsom,"[0.5, nan]",158,162
+gavin newsom,"[-0.5, 1.0]",159,163
+gavin newsom,"[-1.0, 1.0]",160,164
+gavin newsom,"[-0.5000000000000001, 1.0]",161,165
+elon musk,"[-0.5000000000000001, 1.0]",31,35
+elon musk,"[-0.5000000000000001, 1.0]",32,36
+lebron james,"[-1.0, 1.0]",59,63
+lebron james,"[-0.5000000000000001, 1.0]",60,64
+alexandria ocasio-cortez,"[0.5, 1.0]",68,72
+alexandria ocasio-cortez,"[-0.8660254037844387, 1.0]",73,77
+alexandria ocasio-cortez,"[-0.8660254037844387, 1.0]",74,78
+alexandria ocasio-cortez,"[-0.5000000000000001, 1.0]",120,124
+alexandria ocasio-cortez,"[-1.0, 1.0]",121,125
+"none
+villain: none
+victim: none","[1.0, nan]",150,154
+"none
+villain: none
+victim: none","[0.5, -1.0]",151,155
+"none
+villain: none
+victim: none","[0.5000000000000001, nan]",152,156
+jesus christ,"[1.0, nan]",51,55
+jesus christ,"[1.0, -1.0]",52,56
+jesus christ,"[1.0, nan]",53,57
+xi jinping,"[1.0, nan]",51,55
+xi jinping,"[1.0, -1.0]",52,56
+xi jinping,"[1.0, nan]",53,57
+xi jinping,"[-0.5000000000000001, 1.0]",139,143
+xi jinping,"[-0.5000000000000001, 1.0]",140,144
+anthony fauci,"[0.8660254037844387, nan]",115,119
+anthony fauci,"[1.0, -1.0]",116,120
+anthony fauci,"[1.0, nan]",117,121
+author,"[-0.5000000000000001, 1.0]",18,22
+author,"[1.0, nan]",102,106
+author,"[1.0, -1.0]",103,107
+mike pence,"[-0.5000000000000001, 1.0]",75,79
+mike pence,"[-0.5000000000000001, 1.0]",76,80
+chuck schumer,"[1.0, nan]",19,23
+chuck schumer,"[1.0, -1.0]",20,24
+chuck schumer,"[1.0, nan]",21,25
+chuck schumer,"[1.0, nan]",119,123
+chuck schumer,"[1.0, -1.0]",120,124
+chuck schumer,"[0.5, nan]",121,125
+chuck schumer,"[0.5, 1.0]",154,158
+chuck schumer,"[0.5000000000000001, nan]",155,159
+chuck schumer,"[1.0, nan]",156,160
+marco rubio,"[0.5, 1.0]",1,5
+marco rubio,"[0.5000000000000001, nan]",3,7
+apple,"[-0.5000000000000001, 1.0]",61,65
+apple,"[-0.5000000000000001, 1.0]",62,66
+apple,"[1.0, nan]",131,135
+apple,"[1.0, -1.0]",132,136
+apple,"[1.0, nan]",133,137
+robert mueller,"[-0.5000000000000001, 1.0]",53,57
+robert mueller,"[-0.5000000000000001, 1.0]",54,58
+robert mueller,"[-0.8660254037844387, 1.0]",79,83
+robert mueller,"[-0.5000000000000001, 1.0]",80,84
+benjamin netanyahu,"[1.0, nan]",0,4
+kamala harris,"[1.0, nan]",109,113
+kamala harris,"[0.5, -1.0]",110,114
+andrew cuomo,"[-0.5000000000000001, 1.0]",112,116
+mark zuckerberg,"[-0.5000000000000001, 1.0]",111,115
+mark zuckerberg,"[-0.5000000000000001, 1.0]",112,116
+mark zuckerberg,"[-0.5000000000000001, 1.0]",119,123
+mark zuckerberg,"[-1.0, 1.0]",120,124
+tim cook,"[-0.5000000000000001, 1.0]",2,6
+tim cook,"[-0.5000000000000001, 1.0]",3,7
+theresa may,"[-0.5000000000000001, 1.0]",15,19
+theresa may,"[-0.5000000000000001, 1.0]",16,20
+fbi,"[1.0, nan]",150,154
+fbi,"[1.0, -1.0]",151,155
+fbi,"[1.0, nan]",152,156
+nikki haley,"[1.0, nan]",37,41
+nikki haley,"[0.9449111825230679, -1.0]",38,42
+nikki haley,"[1.0, nan]",39,43
+ivanka trump,"[-0.5000000000000001, 1.0]",33,37
+ivanka trump,"[-1.0, 1.0]",34,38
+prince harry,"[-0.5000000000000001, 1.0]",129,133
+prince harry,"[-0.5000000000000001, 1.0]",130,134
+chris christie,"[0.5000000000000001, nan]",2,6
+chris christie,"[1.0, nan]",3,7
+angela merkel,"[1.0, nan]",57,61
+angela merkel,"[1.0, -1.0]",58,62
+angela merkel,"[1.0, nan]",59,63
+google,"[8.255428088526173e-18, 1.0]",151,155
+google,"[-8.255428088526173e-18, 1.0]",152,156
+google,"[1.0, nan]",153,157
+john kelly,"[1.0, nan]",35,39
+emmanuel macron,"[-0.5000000000000001, 1.0]",31,35
+emmanuel macron,"[-0.5000000000000001, 1.0]",32,36
+emmanuel macron,"[-0.5000000000000001, 1.0]",69,73
+emmanuel macron,"[-0.5000000000000001, 1.0]",70,74
+serena williams,"[-1.0, 1.0]",63,67
+serena williams,"[-0.5000000000000001, 1.0]",64,68
+james comey,"[1.0, nan]",17,21
+james comey,"[1.0, -1.0]",18,22
+james comey,"[1.0, nan]",19,23
+tom cruise,"[-1.0, 1.0]",152,156
+parents,"[1.0, nan]",150,154
+parents,"[1.0, -1.0]",151,155
+parents,"[1.0, nan]",152,156
+john kerry,"[1.0, nan]",1,5
+john kerry,"[1.0, -1.0]",2,6
+john kerry,"[1.0, nan]",3,7
+john kerry,"[1.0, nan]",15,19
+john kerry,"[1.0, -1.0]",16,20
+john kerry,"[1.0, nan]",17,21
+cdc,"[1.0, nan]",123,127
+cdc,"[1.0, -1.0]",124,128
+cdc,"[1.0, nan]",125,129
+susan collins,"[1.0, nan]",35,39
+susan collins,"[1.0, -1.0]",36,40
+susan collins,"[1.0, nan]",37,41
+susan collins,"[1.0, nan]",119,123
+susan collins,"[1.0, -1.0]",120,124
+susan collins,"[1.0, nan]",121,125
+healthcare workers,"[-0.5000000000000001, 1.0]",113,117
+healthcare workers,"[-0.5000000000000001, 1.0]",114,118
+jacinda ardern,"[-0.5000000000000001, 1.0]",115,119
+jacinda ardern,"[-0.5000000000000001, 1.0]",116,120
+jerry brown,"[1.0, nan]",69,73
+jerry brown,"[1.0, -1.0]",70,74
+jerry brown,"[1.0, nan]",71,75
+joe scarborough,"[1.0, nan]",0,4
+joe scarborough,"[1.0, -1.0]",1,5
+joe scarborough,"[1.0, nan]",2,6
+cory booker,"[1.0, nan]",71,75
+cory booker,"[1.0, -1.0]",72,76
+cory booker,"[1.0, nan]",73,77
+kellyanne conway,"[-0.5000000000000001, 1.0]",21,25
+kellyanne conway,"[-0.5000000000000001, 1.0]",22,26
+kellyanne conway,"[-0.5000000000000001, 1.0]",25,29
+kellyanne conway,"[-0.5000000000000001, 1.0]",26,30
+ariana grande,"[1.0, nan]",71,75
+ariana grande,"[1.0, -1.0]",72,76
+ariana grande,"[1.0, nan]",73,77
+prince william,"[1.0, nan]",120,124
+prince william,"[1.0, -1.0]",121,125
+prince william,"[1.0, nan]",122,126
+prince william,"[1.0, nan]",152,156
+prince william,"[1.0, -1.0]",153,157
+prince william,"[1.0, nan]",154,158
+kanye west,"[-0.8660254037844387, 1.0]",57,61
+kanye west,"[-0.5000000000000001, 1.0]",58,62
+stacey abrams,"[1.0, nan]",71,75
+stacey abrams,"[1.0, -1.0]",72,76
+stacey abrams,"[0.8660254037844387, nan]",73,77
+jair bolsonaro,"[0.5, 1.0]",75,79
+jair bolsonaro,"[0.5000000000000001, nan]",76,80
+jair bolsonaro,"[1.0, nan]",77,81
+john kasich,"[-0.5000000000000001, 1.0]",1,5
+john kasich,"[-0.5000000000000001, 1.0]",2,6
+john kasich,"[0.5, 1.0]",5,9
+john kasich,"[0.5000000000000001, nan]",7,11
+muhammad ali,"[-0.5000000000000001, 1.0]",24,28
+muhammad ali,"[-0.5000000000000001, 1.0]",25,29
+jordan peele,"[-0.5000000000000001, 1.0]",24,28
+jordan peele,"[-0.5000000000000001, 1.0]",25,29
+larry hogan,"[1.0, nan]",71,75
+larry hogan,"[1.0, -1.0]",72,76
+larry hogan,"[1.0, nan]",73,77
+liz truss,"[-0.5000000000000001, 1.0]",153,157
+liz truss,"[-1.0, 1.0]",154,158
+maxine waters,"[-0.5000000000000001, 1.0]",25,29
+maxine waters,"[-0.5000000000000001, 1.0]",26,30
+rex tillerson,"[1.0, nan]",39,43
+rex tillerson,"[1.0, -1.0]",40,44
+rex tillerson,"[1.0, nan]",41,45
+bradley beal,"[1.0, nan]",45,49
+bradley beal,"[1.0, -1.0]",46,50
+bradley beal,"[1.0, nan]",47,51
+liz cheney,"[-1.0, 1.0]",155,159
+nato,"[1.0, nan]",7,11
+nato,"[1.0, -1.0]",8,12
+nato,"[1.0, nan]",9,13
+michael flynn,"[1.0, nan]",43,47
+michael flynn,"[1.0, -1.0]",44,48
+michael flynn,"[1.0, nan]",45,49
+gina raimondo,"[-0.5000000000000001, 1.0]",127,131
+gina raimondo,"[-0.5000000000000001, 1.0]",128,132
+lady gaga,"[-0.5000000000000001, 1.0]",25,29
+lady gaga,"[-0.5000000000000001, 1.0]",26,30
+novak djokovic,"[1.0, nan]",109,113
+novak djokovic,"[1.0, -1.0]",110,114
+novak djokovic,"[1.0, nan]",111,115
+david hogg,"[-0.5000000000000001, 1.0]",51,55
+david hogg,"[-0.5000000000000001, 1.0]",52,56
+george floyd,"[1.0, nan]",103,107
+george floyd,"[0.5, -1.0]",104,108
+george floyd,"[0.5000000000000001, nan]",105,109
+john fetterman,"[-0.5000000000000001, 1.0]",151,155
+john fetterman,"[-0.5000000000000001, 1.0]",152,156
+john fetterman,"[1.0, nan]",158,162
+john fetterman,"[0.5, nan]",159,163
+john fetterman,"[0.5000000000000001, 1.0]",160,164
+j.k. rowling,"[-0.5000000000000001, 1.0]",37,41
+j.k. rowling,"[-0.5000000000000001, 1.0]",38,42
+giannis antetokounmpo,"[-0.5000000000000001, 1.0]",77,81
+giannis antetokounmpo,"[-0.5000000000000001, 1.0]",78,82
+giannis antetokounmpo,"[1.0, nan]",107,111
+giannis antetokounmpo,"[1.0, -1.0]",108,112
+giannis antetokounmpo,"[1.0, nan]",109,113
+noam chomsky,"[-0.5000000000000001, 1.0]",107,111
+noam chomsky,"[-0.5000000000000001, 1.0]",108,112
+deb haaland,"[1.0, nan]",124,128
+deb haaland,"[1.0, -1.0]",125,129
+deb haaland,"[1.0, nan]",126,130

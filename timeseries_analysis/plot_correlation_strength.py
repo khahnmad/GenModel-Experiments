@@ -23,32 +23,33 @@ def breakdown_correlation_strength(data):
                 b+=1
             elif y[0] >= 0 or y[1] >= 0:
                 a+=1
-    return [b,c,d]
+    return [a,b,c,d]
 
 
 def fr_corr_strngth():
 
-    other_data = sf.import_json('C:\\Users\\khahn\\Documents\\Thesis\\timeseries data\\signals\\FarRight_signals_by_part_input_hvv.json')
-    data = sf.import_json('C:\\Users\\khahn\\Documents\\Thesis\\timeseries data\\signals\\signals_by_part_input_hvv.json')
+    other_data = sf.import_json('C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\signals\\FarRight_signals_by_part_input_hvv.json')
+    # data = sf.import_json('C:\\Users\\khahn\\Documents\\Thesis\\timeseries data\\signals\\signals_by_part_input_hvv.json')
     print('')
 
-    source = data['FarRight']
+    source = other_data['FarRight']
 
-    plottable = [['InputType','Partisanship','0.25>=x>0.5','0.5>=x>0.75','0.75>=']]
+    plottable = [['InputType','Partisanship','x<0.25','0.25>=x>0.5','0.5>=x>0.75','0.75>=']]
     for p in source.keys():
-        if "Center" in p: # Ignoring the different types of Centrist
-            for input_type in source[p].keys():
-                corr_strength = breakdown_correlation_strength(source[p][input_type])
-                plottable.append([input_type,p]+corr_strength)
+        # if "Center" in p: # Ignoring the different types of Centrist
+        for input_type in source[p].keys():
+            corr_strength = breakdown_correlation_strength(source[p][input_type])
+            plottable.append([input_type,p]+corr_strength)
 
     df = pd.DataFrame(data=plottable[1:],columns=plottable[0])
-    merged = df.groupby(by='Partisanship').sum(['0.25>=x>0.5','0.5>=x>0.75','0.75>=']).reset_index()
+    merged = df.groupby(by='Partisanship').sum(['x<0.25','0.25>=x>0.5','0.5>=x>0.75','0.75>=']).reset_index()
     ax = merged.plot.bar(x='Partisanship')
     for container in ax.containers:
         ax.bar_label(container)
+    plt.ylabel('Number of Narratives')
     plt.legend()
     plt.tight_layout()
-    plt.title('Number of Centrist Narratives with a >0.25 Cross-Correlation with a Far Right Narrative by Correlation Strength')
+    plt.title('Number of Narratives cross-correlated with a Far Right Narrative by Correlation Strength')
     plt.savefig('graphs/num_positive_centristi_narr.png')
     plt.show()
 
@@ -79,4 +80,6 @@ def fl_corr_strngth():
     plt.savefig('graphs/FL_num_positive_centristi_narr.png')
     plt.show()
 
-fl_corr_strngth()
+# fl_corr_strngth()
+
+fr_corr_strngth()

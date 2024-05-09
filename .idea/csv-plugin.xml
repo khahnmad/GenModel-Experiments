@@ -339,6 +339,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\apply_binsize.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\avg_signal_for_mainstreamed_narrs.py">
           <value>
             <Attribute>
@@ -360,10 +367,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\export_mainstreamed_text.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\final_quantity.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\final_quantity_smaller_segments.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
@@ -378,6 +399,13 @@
           <value>
             <Attribute>
               <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\investigate_bin_threshold.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
@@ -409,7 +437,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plot_number_matches_by_seg_length.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_time_bins.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
