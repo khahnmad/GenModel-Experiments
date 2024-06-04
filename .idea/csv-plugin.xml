@@ -395,6 +395,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\heatmap_visualization.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\identify_strongest_fr_narratives.py">
           <value>
             <Attribute>
@@ -403,6 +410,13 @@
           </value>
         </entry>
         <entry key="\timeseries_analysis\investigate_bin_threshold.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\manual_review_of_narrative_matches.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

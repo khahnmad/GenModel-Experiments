@@ -208,19 +208,20 @@ inputs = {
     'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
 }
 
-part_a = 'FarRight'
-for input_level in inputs.keys():
-    for hvv in inputs[input_level]:
-        for part_b in ['CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right']:
-            for segment_size in range(4,72): # between one month and 3 years
-                print(f"For {input_level}, {hvv}, {part_b}:")
-                characters = fetch_all_characters(part_a, part_b, h_v_v=hvv, input_level=input_level)
-                signals = fetch_all_signals(characters, hvv, [part_a, part_b], input_level)
-                high_correlation = find_fr_influence_narratives(signals, segment_size)
-                print(f"   {len(high_correlation)} narratives")
-                if input_level == 'tuple':
-                    sf.export_nested_list(f"cleaned_data_end_april_segments\\{part_a}_{input_level}_{'-'.join(hvv)}_{part_b}_{segment_size}.csv", high_correlation)
-                else:
-                    sf.export_nested_list(f"cleaned_data_end_april_segments\\{part_a}_{input_level}_{hvv}_{part_b}_{segment_size}.csv", high_correlation)
+# part_a = 'FarRight'
+for part_a in ['CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right','FarRight']:
+    for input_level in inputs.keys():
+        for hvv in inputs[input_level]:
+            for part_b in ['CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right','FarRight']:
+                for segment_size in [20]: # between one month and 3 years
+                    print(f"For {input_level}, {hvv}, {part_b}:")
+                    characters = fetch_all_characters(part_a, part_b, h_v_v=hvv, input_level=input_level)
+                    signals = fetch_all_signals(characters, hvv, [part_a, part_b], input_level)
+                    high_correlation = find_fr_influence_narratives(signals, segment_size)
+                    print(f"   {len(high_correlation)} narratives")
+                    if input_level == 'tuple':
+                        sf.export_nested_list(f"cleaned_data_end_april_segments\\{part_a}_{input_level}_{'-'.join(hvv)}_{part_b}_{segment_size}.csv", high_correlation)
+                    else:
+                        sf.export_nested_list(f"cleaned_data_end_april_segments\\{part_a}_{input_level}_{hvv}_{part_b}_{segment_size}.csv", high_correlation)
 # TODO: add other part_a options, so that we can see the effect other parts have on
 # the Center

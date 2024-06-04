@@ -64,7 +64,7 @@ def export_nested_list(csv_name:str, nested_list):
             writer.writerow(row)
 
 def getConnection(
-    connection_string: str = "", database_name: str = "", use_dotenv: bool = False
+    connection_string: str = "", database_name: str = "", use_dotenv: bool = True
 ):
     "Returns MongoDB and GridFS connection"
 
