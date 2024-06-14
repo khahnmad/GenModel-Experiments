@@ -26,7 +26,7 @@ def extract_values(dictionary):
 #         counter[part][year][month]+=1
 #         # print('')
 # # sf.export_as_json('sample_bin_size_no_dups.json',counter)
-counter = sf.import_json('sample_bin_size_no_dups.json')
+counter = sf.import_json('../sample_bin_size_no_dups.json')
 # # just the values
 # values = []
 # for p in counter.keys():

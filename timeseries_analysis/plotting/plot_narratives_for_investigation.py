@@ -2,7 +2,7 @@ import shared_functions as sf
 import pandas as pd
 import  matplotlib.pyplot as plt
 
-signal_data = sf.import_json('signals\\FarRight_signals_by_part_input_hvv.json')
+signal_data = sf.import_json('../signals/FarRight_signals_by_part_input_hvv.json')
 #### FULL SIGNAL ###
 # high_correlation_files = [x for x in sf.get_files_from_folder('cleaned_data_end_april', 'csv') if 'FarRight' in x]
 #

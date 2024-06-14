@@ -19,9 +19,9 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 def find_empty_times(times):
     # Given all the time data, look through to find any dates that are missing, and export them in a lis t
     new_values = []
-    for yr, m, half in product(range(2016, 2023), range(1, 13), [1, 15]):
-        if datetime.date(year=yr, month=m, day=half) not in times:
-            new_values.append(datetime.date(year=yr, month=m, day=half))
+    for yr, m in product(range(2016, 2023), range(1, 13)):
+        if datetime.date(year=yr, month=m, day=1) not in times:
+            new_values.append(datetime.date(year=yr, month=m, day=1))
     return new_values
 
 
@@ -196,7 +196,7 @@ inputs = {
     'combo': ['hero, villain, victim'],
     'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
 }
-for part_a in ['CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right','FarRight']:
+for part_a in ['FarRight','CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right']:
 
     for input_level in inputs.keys():
         for hvv in inputs[input_level]:

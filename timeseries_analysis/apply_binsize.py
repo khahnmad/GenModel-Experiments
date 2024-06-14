@@ -1,3 +1,7 @@
+"""
+Apply max number of bins to each month long period
+"""
+
 import shared_functions as sf
 import pandas as pd
 import random

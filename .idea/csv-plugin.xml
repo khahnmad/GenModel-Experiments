@@ -500,6 +500,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\plot_correlation_strength.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_fr_influence_other_parts.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\read_15_day_segment_data.py">
           <value>
             <Attribute>

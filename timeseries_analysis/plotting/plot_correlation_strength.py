@@ -26,13 +26,14 @@ def breakdown_correlation_strength(data):
     return [a,b,c,d]
 
 
-def fr_corr_strngth():
+def fr_corr_strngth(binsize):
 
-    other_data = sf.import_json('C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\signals\\FarRight_signals_by_part_input_hvv.json')
-    # data = sf.import_json('C:\\Users\\khahn\\Documents\\Thesis\\timeseries data\\signals\\signals_by_part_input_hvv.json')
-    print('')
+    if binsize=='month':
+        data = sf.import_json("..\\month_signals\\FarRight_signals_by_part_input_hvv.json")
+    else:
+        data = sf.import_json("..\\signals\\FarRight_signals_by_part_input_hvv.json")
 
-    source = other_data['FarRight']
+    source = data['FarRight']
 
     plottable = [['InputType','Partisanship','x<0.25','0.25>=x>0.5','0.5>=x>0.75','0.75>=']]
     for p in source.keys():
@@ -54,10 +55,14 @@ def fr_corr_strngth():
     plt.show()
 
 
-def fl_corr_strngth():
-    data = sf.import_json(
-        'C:\\Users\\khahn\\Documents\\Thesis\\timeseries data\\signals\\FarLeft_signals_by_part_input_hvv.json')
-    print('')
+def fl_corr_strngth(binsize):
+    if binsize=='month':
+        data = sf.import_json(
+            '..\\month_signals\\FarLeft_signals_by_part_input_hvv.json')
+    else:
+        data = sf.import_json(
+            '..\\signals\\FarLeft_signals_by_part_input_hvv.json')
+        print('')
 
     source = data['FarLeft']
 
@@ -80,6 +85,5 @@ def fl_corr_strngth():
     plt.savefig('graphs/FL_num_positive_centristi_narr.png')
     plt.show()
 
-# fl_corr_strngth()
-
-fr_corr_strngth()
+fl_corr_strngth(binsize='month')
+fr_corr_strngth(binsize='month')

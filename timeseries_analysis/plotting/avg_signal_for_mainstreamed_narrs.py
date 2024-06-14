@@ -8,15 +8,13 @@ import scipy.stats
 import numpy as np
 
 def is_mainstreamed(character, partisanship):
-    mainstreamed_narrs = sf.import_csv('tables/Final_quantity_narratives.csv')
+    mainstreamed_narrs = sf.import_csv('../tables/Final_quantity_narratives.csv')
     for row in mainstreamed_narrs:
         if character==row[-1] and partisanship==row[3]:
             return True
     return False
-
-data = sf.import_json('signals/FarRight_signals_by_part_input_hvv.json')
-
-print('')
+# MONTH LONG BINS
+data = sf.import_json('../month_signals/FarRight_signals_by_part_input_hvv.json')
 
 source = data['FarRight']
 

@@ -1,3 +1,4 @@
+"""OUtdated for now """
 import  pandas as pd
 import shared_functions as sf
 import numpy as np
@@ -5,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def plot_apolitical_sex_misconduct_cases():
-    data = sf.import_csv('tables/mainstream_cats.csv')
+    data = sf.import_csv('../tables/mainstream_cats.csv')
     cleaned = []
     for row in data[1:]:
         if row[2]=='hero':
@@ -36,7 +37,7 @@ def plot_apolitical_sex_misconduct_cases():
     plt.show()
 
 def plot_centrist_cases():
-    data = sf.import_csv('tables/mainstream_cats.csv')
+    data = sf.import_csv('../tables/mainstream_cats.csv')
     cleaned = []
     for row in data[1:]:
         if 'Center' not in row[3]:

@@ -2,9 +2,13 @@ import matplotlib.pyplot as plt
 import shared_functions as sf
 import scipy.stats
 import numpy as np
-def fetch_avg_correlationn(level,h_v_v, origin):
+
+def fetch_avg_correlationn(level,h_v_v, origin, bin_size):
     # Fetch origin file
-    output = sf.import_json(f'signals/{origin}_signals_by_part_input_hvv.json')[origin]
+    if bin_size=='month':
+        output = sf.import_json(f'../month_signals/{origin}_signals_by_part_input_hvv.json')[origin]
+    else:
+        output = sf.import_json(f'../signals/{origin}_signals_by_part_input_hvv.json')[origin]
 
     avg_correlation = {}
     for p_b in ['FarRight', 'Right', 'CenterRight', 'Center', 'CenterLeft', 'Left', 'FarLeft']:
@@ -28,18 +32,18 @@ def fetch_avg_correlationn(level,h_v_v, origin):
         avg_correlation[p_b] = list(corr.values())
     return avg_correlation
 
-def plot_avg_correlation(level,h_v_v, origin):
-    avg_correlation = fetch_avg_correlationn(level,h_v_v,origin)
-    # x = list(range(10))
-    # for k in avg_correlation.keys():
-    #     plt.plot(x,avg_correlation[k],label=k)
-    # plt.xlabel('Time Shift')
-    # plt.ylabel('Average Correlation')
-    # plt.title(f'Correlation from Source: {origin}, for {h_v_v}')
-    # plt.legend()
-    #
-    # plt.savefig(f"avg_corr_jamboard_viz\\{origin}_{h_v_v}_as_{level}.jpg")
-    # plt.show()
+def plot_avg_correlation(level,h_v_v, origin,binsize):
+    avg_correlation = fetch_avg_correlationn(level,h_v_v,origin,binsize)
+    x = list(range(10))
+    for k in avg_correlation.keys():
+        plt.plot(x,avg_correlation[k],label=k)
+    plt.xlabel('Time Shift')
+    plt.ylabel('Average Correlation')
+    plt.title(f'Correlation from Source: {origin}, for {h_v_v}')
+    plt.legend()
+
+    plt.savefig(f"..\\avg_corr_jamboard_viz\\{origin}_{h_v_v}_as_{level}_{binsize}.jpg")
+    plt.show()
 
 
 inputs = {
@@ -50,4 +54,4 @@ inputs = {
 for input_level in inputs.keys():
     for hvv in inputs[input_level]:
         for source in ['FarRight','Right','CenterRight','Center','CenterLeft','Left','FarLeft']:
-            plot_avg_correlation(input_level, hvv, source)
+            plot_avg_correlation(input_level, hvv, source,binsize='month')
