@@ -381,6 +381,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\final_quantity_month_bins.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\final_quantity_smaller_segments.py">
           <value>
             <Attribute>
@@ -409,6 +416,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\investigate_avg_corr_artefact.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\investigate_bin_threshold.py">
           <value>
             <Attribute>
@@ -420,6 +434,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_avg_correlation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
@@ -459,6 +480,13 @@
           </value>
         </entry>
         <entry key="\timeseries_analysis\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plot_signals.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
