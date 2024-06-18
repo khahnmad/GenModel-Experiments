@@ -500,6 +500,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\avg_signal_for_mainstreamed_narrs.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\corr_over_time_high_correlation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\heatmap_visualization.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\part_w_most_influence.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_avg_correlation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\plot_correlation_strength.py">
           <value>
             <Attribute>
@@ -515,6 +550,13 @@
           </value>
         </entry>
         <entry key="\timeseries_analysis\plotting\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_signals.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -4,6 +4,8 @@ import scipy.stats
 import numpy as np
 
 def fetch_avg_correlationn(level,h_v_v, origin, bin_size):
+    if level == 'tuple':
+        h_v_v = "-".join(h_v_v)
     # Fetch origin file
     if bin_size=='month':
         output = sf.import_json(f'../month_signals/{origin}_signals_by_part_input_hvv.json')[origin]
@@ -14,10 +16,11 @@ def fetch_avg_correlationn(level,h_v_v, origin, bin_size):
     for p_b in ['FarRight', 'Right', 'CenterRight', 'Center', 'CenterLeft', 'Left', 'FarLeft']:
         if p_b==origin:
             continue
+
         rel_signals = output[p_b][level][h_v_v]
-        corr = {k: [] for k in range(10)}
+        corr = {k: [] for k in range(20)}
         for signal in rel_signals:
-            for l in range(10):
+            for l in range(20):
                 if l == 0:
                     r, p = scipy.stats.pearsonr(signal[1], signal[2])  # coefficient, p-value
                 else:
@@ -34,7 +37,7 @@ def fetch_avg_correlationn(level,h_v_v, origin, bin_size):
 
 def plot_avg_correlation(level,h_v_v, origin,binsize):
     avg_correlation = fetch_avg_correlationn(level,h_v_v,origin,binsize)
-    x = list(range(10))
+    x = list(range(20))
     for k in avg_correlation.keys():
         plt.plot(x,avg_correlation[k],label=k)
     plt.xlabel('Time Shift')
@@ -47,8 +50,8 @@ def plot_avg_correlation(level,h_v_v, origin,binsize):
 
 
 inputs = {
-    'single':['hero','villain','victim'],
-    'combo': ['hero, villain, victim'],
+    # 'single':['hero','villain','victim'],
+    # 'combo': ['hero, villain, victim'],
     'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
 }
 for input_level in inputs.keys():

@@ -51,7 +51,7 @@ def fr_corr_strngth(binsize):
     plt.legend()
     plt.tight_layout()
     plt.title('Number of Narratives cross-correlated with a Far Right Narrative by Correlation Strength')
-    plt.savefig('graphs/num_positive_centristi_narr.png')
+    plt.savefig('../graphs/num_positive_centristi_narr.png')
     plt.show()
 
 
@@ -66,23 +66,23 @@ def fl_corr_strngth(binsize):
 
     source = data['FarLeft']
 
-    plottable = [['InputType', 'Partisanship', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']]
+    plottable = [['InputType', 'Partisanship','x<0.25', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']]
     for p in source.keys():
-        if "Center" in p:  # Ignoring the different types of Centrist
-            for input_type in source[p].keys():
-                corr_strength = breakdown_correlation_strength(source[p][input_type])
-                plottable.append([input_type, p] + corr_strength)
+        # if "Center" in p:  # Ignoring the different types of Centrist
+        for input_type in source[p].keys():
+            corr_strength = breakdown_correlation_strength(source[p][input_type])
+            plottable.append([input_type, p] + corr_strength)
 
     df = pd.DataFrame(data=plottable[1:], columns=plottable[0])
-    merged = df.groupby(by='Partisanship').sum(['0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']).reset_index()
+    merged = df.groupby(by='Partisanship').sum(['x<0.25','0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']).reset_index()
     ax = merged.plot.bar(x='Partisanship')
     for container in ax.containers:
         ax.bar_label(container)
     plt.legend()
     plt.tight_layout()
     plt.title(
-        'Number of Centrist Narratives with a >0.25 Cross-Correlation with a Far Left Narrative by Correlation Strength')
-    plt.savefig('graphs/FL_num_positive_centristi_narr.png')
+        'Number of Narratives with a >0.25 Cross-Correlation with a Far Left Narrative by Correlation Strength')
+    plt.savefig('../graphs/FL_num_positive_centristi_narr.png')
     plt.show()
 
 fl_corr_strngth(binsize='month')

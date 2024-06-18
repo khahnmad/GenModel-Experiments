@@ -9,7 +9,7 @@ def generate_grid(i_level, hvv, length, bin_size):
         for p_b in partisanships:
             if i_level == 'tuple':
                 if bin_size=='month':
-                    print('NOT SURE HOW TO HANLDE')
+                    file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april_monthbins\\{p_a}_{i_level}_{ '-'.join(hvv)}_{p_b}.csv"
                 else:
                     if isinstance(length,int):
                         file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april_segments\\{p_a}_{i_level}_{'-'.join(hvv)}_{p_b}_{length}.csv"
@@ -17,7 +17,7 @@ def generate_grid(i_level, hvv, length, bin_size):
                         file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april\\{p_a}_{i_level}_{ '-'.join(hvv)}_{p_b}.csv"
             else:
                 if bin_size=='month':
-                    file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april_monthbins\\{p_a}_{i_level}_{hvv}_{p_b}_{length}.csv"
+                    file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april_monthbins\\{p_a}_{i_level}_{hvv}_{p_b}.csv"
                 else:
                     if isinstance(length,int):
                         file = f"C:\\Users\\khahn\\Documents\\Github\\GenModel-Experiments\\timeseries_analysis\\cleaned_data_end_april_segments\\{p_a}_{i_level}_{hvv}_{p_b}_{length}.csv"

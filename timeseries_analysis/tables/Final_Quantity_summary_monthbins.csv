@@ -1,0 +1,607 @@
+,input_level,hvv,part_b,character
+0,combo,"hero, villain, victim",Center,none.donald trump.hillary clinton
+1,combo,"hero, villain, victim",Center,none.donald trump.joe biden
+2,combo,"hero, villain, victim",Center,donald trump.hillary clinton.none
+3,combo,"hero, villain, victim",Center,hillary clinton.donald trump.none
+4,combo,"hero, villain, victim",Center,none.china.none
+5,combo,"hero, villain, victim",Center,hillary clinton.none.none
+6,combo,"hero, villain, victim",Center,mike pompeo.none.none
+7,combo,"hero, villain, victim",CenterLeft,joe biden.donald trump.none
+8,combo,"hero, villain, victim",CenterLeft,prince harry.none.none
+9,combo,"hero, villain, victim",CenterLeft,bernie sanders.hillary clinton.none
+10,combo,"hero, villain, victim",CenterLeft,juan guaidó.nicolás maduro.venezuelan people
+11,combo,"hero, villain, victim",CenterLeft,boris johnson.none.none
+12,combo,"hero, villain, victim",CenterRight,none.hillary clinton.none
+13,combo,"hero, villain, victim",CenterRight,joe biden.donald trump.none
+14,combo,"hero, villain, victim",CenterRight,none.none.hillary clinton
+15,combo,"hero, villain, victim",CenterRight,hillary clinton.donald trump.none
+16,combo,"hero, villain, victim",CenterRight,none.russia.ukraine
+17,combo,"hero, villain, victim",CenterRight,none.donald trump.ted cruz
+18,combo,"hero, villain, victim",CenterRight,none.none.india
+19,combo,"hero, villain, victim",FarLeft,none.donald trump.hillary clinton
+20,combo,"hero, villain, victim",FarLeft,joe biden.donald trump.none
+21,combo,"hero, villain, victim",FarLeft,bernie sanders.hillary clinton.none
+22,combo,"hero, villain, victim",FarLeft,none.donald trump.ted cruz
+23,combo,"hero, villain, victim",FarLeft,michael cohen.donald trump.none
+24,combo,"hero, villain, victim",FarLeft,ted cruz.donald trump.none
+25,combo,"hero, villain, victim",FarLeft,none.donald trump.michael cohen
+26,combo,"hero, villain, victim",FarLeft,ted cruz.none.none
+27,combo,"hero, villain, victim",FarLeft,none.richard spencer.none
+28,combo,"hero, villain, victim",FarLeft,none.donald trump.canada
+29,combo,"hero, villain, victim",FarLeft,none.joe biden.tara reade
+30,combo,"hero, villain, victim",FarLeft,tara reade.joe biden.none
+31,combo,"hero, villain, victim",FarRight,alex jones.global elite.80% of the world's population
+32,combo,"hero, villain, victim",FarRight,alex jones.global elite.world population
+33,combo,"hero, villain, victim",FarRight,none.hillary clinton.none
+34,combo,"hero, villain, victim",FarRight,none.vladimir putin.target
+35,combo,"hero, villain, victim",FarRight,none.donald trump.hillary clinton
+36,combo,"hero, villain, victim",FarRight,donald trump.hillary clinton.none
+37,combo,"hero, villain, victim",FarRight,vladimir putin.international criminal court.russia
+38,combo,"hero, villain, victim",FarRight,none.hillary clinton.donald trump
+39,combo,"hero, villain, victim",FarRight,none.international criminal court.vladimir putin
+40,combo,"hero, villain, victim",FarRight,none.joe biden.donald trump
+41,combo,"hero, villain, victim",FarRight,michael harrington.target.walmart
+42,combo,"hero, villain, victim",Left,none.russia.none
+43,combo,"hero, villain, victim",Left,hillary clinton.donald trump.none
+44,combo,"hero, villain, victim",Left,none.jussie smollett.none
+45,combo,"hero, villain, victim",Left,bernie sanders.hillary clinton.none
+46,combo,"hero, villain, victim",Left,none.joe biden.tara reade
+47,combo,"hero, villain, victim",Left,none.donald trump.canada
+48,combo,"hero, villain, victim",Right,none.vladimir putin.target
+49,combo,"hero, villain, victim",Right,none.donald trump.joe biden
+50,combo,"hero, villain, victim",Right,none.none.hillary clinton
+51,combo,"hero, villain, victim",Right,kate middleton.none.none
+52,combo,"hero, villain, victim",Right,none.russia.ukraine
+53,combo,"hero, villain, victim",Right,none.donald trump.republican party
+54,combo,"hero, villain, victim",Right,none.international criminal court.donald trump
+55,combo,"hero, villain, victim",Right,none.barack obama.americans
+56,combo,"hero, villain, victim",Right,nancy pelosi.none.none
+57,single,hero,Center,hillary clinton
+58,single,hero,Center,mitch mcconnell
+59,single,hero,Center,andy murray
+60,single,hero,Center,joel embiid
+61,single,hero,Center,volodymyr zelensky
+62,single,hero,Center,giannis antetokounmpo
+63,single,hero,Center,juan guaidó
+64,single,hero,Center,ash carter
+65,single,hero,Center,meghan markle
+66,single,hero,CenterLeft,joe manchin
+67,single,hero,CenterLeft,juan guaidó
+68,single,hero,CenterLeft,tiger woods
+69,single,hero,CenterLeft,lady gaga
+70,single,hero,CenterLeft,george soros
+71,single,hero,CenterLeft,gal gadot
+72,single,hero,CenterLeft,michael avenatti
+73,single,hero,CenterRight,joe biden
+74,single,hero,CenterRight,ted cruz
+75,single,hero,CenterRight,hillary clinton
+76,single,hero,CenterRight,nigel farage
+77,single,hero,CenterRight,anthony fauci
+78,single,hero,CenterRight,tara reade
+79,single,hero,CenterRight,volodymyr zelensky
+80,single,hero,CenterRight,staffan de mistura
+81,single,hero,CenterRight,cardi b
+82,single,hero,CenterRight,david cameron
+83,single,hero,CenterRight,juan guaidó
+84,single,hero,CenterRight,ben wallace
+85,single,hero,FarLeft,hillary clinton
+86,single,hero,FarLeft,ted cruz
+87,single,hero,FarLeft,alexandria ocasio-cortez
+88,single,hero,FarLeft,anthony fauci
+89,single,hero,FarLeft,pete buttigieg
+90,single,hero,FarLeft,michael cohen
+91,single,hero,FarLeft,tara reade
+92,single,hero,FarLeft,brad raffensperger
+93,single,hero,FarLeft,kayleigh mcenany
+94,single,hero,FarLeft,jerry brown
+95,single,hero,FarLeft,michael avenatti
+96,single,hero,FarLeft,gary johnson
+97,single,hero,FarLeft,sean spicer
+98,single,hero,FarLeft,mick mulvaney
+99,single,hero,FarLeft,mark milley
+100,single,hero,FarLeft,marine le pen
+101,single,hero,FarLeft,jim acosta
+102,single,hero,FarLeft,cassidy hutchinson
+103,single,hero,FarLeft,john fetterman
+104,single,hero,FarLeft,al franken
+105,single,hero,FarRight,alex jones
+106,single,hero,FarRight,ted cruz
+107,single,hero,FarRight,ron desantis
+108,single,hero,FarRight,dave hodges
+109,single,hero,FarRight,chris christie
+110,single,hero,FarRight,herschel walker
+111,single,hero,Left,ted cruz
+112,single,hero,Left,chris christie
+113,single,hero,Left,kellyanne conway
+114,single,hero,Left,john kasich
+115,single,hero,Left,rex tillerson
+116,single,hero,Left,lady gaga
+117,single,hero,Left,david hogg
+118,single,hero,Left,john fetterman
+119,single,hero,Left,juan guaidó
+120,single,hero,Left,giannis antetokounmpo
+121,single,hero,Right,theodore shoebat
+122,single,hero,Right,james mattis
+123,single,hero,Right,ben carson
+124,single,hero,Right,kate middleton
+125,single,hero,Right,josh hawley
+126,single,hero,Right,stacey abrams
+127,single,hero,Right,volodymyr zelensky
+128,single,hero,Right,volodymyr zelenskyy
+129,single,hero,Right,liz cheney
+130,single,hero,Right,rosa parks
+131,single,hero,Right,moon jae-in
+132,single,hero,Right,joel embiid
+133,single,victim,Center,hillary clinton
+134,single,victim,Center,venezuela
+135,single,victim,Center,ted cruz
+136,single,victim,Center,afghanistan
+137,single,victim,Center,police
+138,single,victim,Center,isis
+139,single,victim,Center,central american migrants
+140,single,victim,Center,hong kong
+141,single,victim,Center,jacob blake
+142,single,victim,Center,indian people
+143,single,victim,Center,unvaccinated people
+144,single,victim,CenterLeft,hillary clinton
+145,single,victim,CenterLeft,ted cruz
+146,single,victim,CenterLeft,protesters
+147,single,victim,CenterLeft,british people
+148,single,victim,CenterLeft,boris johnson
+149,single,victim,CenterLeft,unvaccinated people
+150,single,victim,CenterLeft,russian citizens
+151,single,victim,CenterLeft,federal workers
+152,single,victim,CenterLeft,john kasich
+153,single,victim,CenterRight,hillary clinton
+154,single,victim,CenterRight,ukraine
+155,single,victim,CenterRight,ted cruz
+156,single,victim,CenterRight,julian assange
+157,single,victim,CenterRight,tara reade
+158,single,victim,CenterRight,james comey
+159,single,victim,CenterRight,central american migrants
+160,single,victim,CenterRight,nato
+161,single,victim,CenterRight,john kasich
+162,single,victim,CenterRight,jacob blake
+163,single,victim,CenterRight,herschel walker
+164,single,victim,FarLeft,hillary clinton
+165,single,victim,FarLeft,joe biden
+166,single,victim,FarLeft,ukraine
+167,single,victim,FarLeft,north korea
+168,single,victim,FarLeft,ted cruz
+169,single,victim,FarLeft,venezuela
+170,single,victim,FarLeft,michael cohen
+171,single,victim,FarLeft,tara reade
+172,single,victim,FarLeft,stormy daniels
+173,single,victim,FarLeft,muslim community
+174,single,victim,FarLeft,john kasich
+175,single,victim,FarLeft,unaccompanied minors
+176,single,victim,FarLeft,white americans
+177,single,victim,FarLeft,herschel walker
+178,single,victim,FarLeft,paul pelosi
+179,single,victim,FarLeft,ronald reagan
+180,single,victim,FarLeft,tiktok
+181,single,victim,FarRight,donald trump
+182,single,victim,FarRight,80% of the world's population
+183,single,victim,FarRight,hillary clinton
+184,single,victim,FarRight,world population
+185,single,victim,FarRight,joe biden
+186,single,victim,FarRight,bill clinton
+187,single,victim,FarRight,breonna taylor
+188,single,victim,FarRight,nfl
+189,single,victim,FarRight,walmart
+190,single,victim,Left,north korea
+191,single,victim,Left,tara reade
+192,single,victim,Left,james comey
+193,single,victim,Left,investors
+194,single,victim,Left,heather heyer
+195,single,victim,Left,nbc
+196,single,victim,Left,david hogg
+197,single,victim,Left,jacob blake
+198,single,victim,Left,brittney griner
+199,single,victim,Left,iraq
+200,single,victim,Left,disney
+201,single,victim,Left,mika brzezinski
+202,single,victim,Left,17 people
+203,single,victim,Left,afghans
+204,single,victim,Right,80% of the world's population
+205,single,victim,Right,ukraine
+206,single,victim,Right,afghanistan
+207,single,victim,Right,north korea
+208,single,victim,Right,venezuela
+209,single,victim,Right,nigeria
+210,single,victim,Right,alexandria ocasio-cortez
+211,single,victim,Right,tara reade
+212,single,victim,Right,south korea
+213,single,victim,Right,nbc
+214,single,victim,Right,muslims
+215,single,victim,Right,central american migrants
+216,single,victim,Right,small business owners
+217,single,victim,Right,homebuyers
+218,single,victim,Right,huma abedin
+219,single,victim,Right,hard-pressed households
+220,single,victim,Right,jussie smollett
+221,single,victim,Right,donna brazile
+222,single,victim,Right,homeless people
+223,single,victim,Right,ma'khia bryant
+224,single,victim,Right,ron desantis
+225,single,villain,Center,covid-19
+226,single,villain,Center,kansas
+227,single,villain,Center,ron desantis
+228,single,villain,Center,united airlines
+229,single,villain,Center,jared kushner
+230,single,villain,Center,lebron james
+231,single,villain,Center,matt lauer
+232,single,villain,Center,rishi sunak
+233,single,villain,Center,sam bankman-fried
+234,single,villain,Center,jill stein
+235,single,villain,Center,josh hawley
+236,single,villain,Center,russian forces
+237,single,villain,CenterLeft,covid-19
+238,single,villain,CenterLeft,isis
+239,single,villain,CenterLeft,north korea
+240,single,villain,CenterLeft,andrew cuomo
+241,single,villain,CenterLeft,virus
+242,single,villain,CenterLeft,chinese communist party
+243,single,villain,CenterLeft,david cameron
+244,single,villain,CenterLeft,larry nassar
+245,single,villain,CenterLeft,mother nature
+246,single,villain,CenterLeft,matt lauer
+247,single,villain,CenterLeft,donna brazile
+248,single,villain,CenterLeft,anthony weiner
+249,single,villain,CenterLeft,eric schneiderman
+250,single,villain,CenterLeft,mohamed noor
+251,single,villain,CenterLeft,ahmad khan rahami
+252,single,villain,CenterLeft,roseanne barr
+253,single,villain,CenterLeft,mick mulvaney
+254,single,villain,CenterLeft,marjorie taylor greene
+255,single,villain,CenterRight,covid-19
+256,single,villain,CenterRight,hillary clinton
+257,single,villain,CenterRight,russia
+258,single,villain,CenterRight,isis
+259,single,villain,CenterRight,north korea
+260,single,villain,CenterRight,andrew cuomo
+261,single,villain,CenterRight,virus
+262,single,villain,CenterRight,harvey weinstein
+263,single,villain,CenterRight,john conyers
+264,single,villain,CenterRight,larry nassar
+265,single,villain,CenterRight,kansas
+266,single,villain,CenterRight,lebron james
+267,single,villain,CenterRight,scammers
+268,single,villain,CenterRight,opec+
+269,single,villain,CenterRight,hurricane ida
+270,single,villain,CenterRight,monkeypox
+271,single,villain,CenterRight,obesity
+272,single,villain,CenterRight,ralph northam
+273,single,villain,CenterRight,sam bankman-fried
+274,single,villain,FarLeft,donald trump
+275,single,villain,FarLeft,barack obama
+276,single,villain,FarLeft,covid-19
+277,single,villain,FarLeft,north korea
+278,single,villain,FarLeft,elon musk
+279,single,villain,FarLeft,alexandria ocasio-cortez
+280,single,villain,FarLeft,scott pruitt
+281,single,villain,FarLeft,william barr
+282,single,villain,FarLeft,john mccain
+283,single,villain,FarLeft,derek chauvin
+284,single,villain,FarLeft,john kasich
+285,single,villain,FarLeft,josh hawley
+286,single,villain,FarLeft,larry nassar
+287,single,villain,FarLeft,doj
+288,single,villain,FarLeft,nato
+289,single,villain,FarLeft,sidney powell
+290,single,villain,FarLeft,tim kaine
+291,single,villain,FarLeft,nigel farage
+292,single,villain,FarLeft,islamic extremists
+293,single,villain,FarLeft,north korean regime
+294,single,villain,FarLeft,gas leak
+295,single,villain,FarLeft,liz truss
+296,single,villain,FarLeft,sam bankman-fried
+297,single,villain,FarLeft,canadian government
+298,single,villain,FarLeft,john cornyn
+299,single,villain,FarLeft,ralph northam
+300,single,villain,FarLeft,cory booker
+301,single,villain,FarRight,donald trump
+302,single,villain,FarRight,global elite
+303,single,villain,FarRight,joe biden
+304,single,villain,FarRight,hillary clinton
+305,single,villain,FarRight,barack obama
+306,single,villain,FarRight,covid-19
+307,single,villain,FarRight,biden administration
+308,single,villain,FarRight,north korea
+309,single,villain,FarRight,international criminal court
+310,single,villain,FarRight,new world order
+311,single,villain,FarRight,alexandria ocasio-cortez
+312,single,villain,FarRight,target
+313,single,villain,FarRight,k. walker
+314,single,villain,FarRight,huma abedin
+315,single,villain,FarRight,brian kemp
+316,single,villain,FarRight,chinese authorities
+317,single,villain,Left,covid-19
+318,single,villain,Left,north korea
+319,single,villain,Left,taliban
+320,single,villain,Left,elon musk
+321,single,villain,Left,jussie smollett
+322,single,villain,Left,mike pence
+323,single,villain,Left,hamas
+324,single,villain,Left,larry nassar
+325,single,villain,Left,espn
+326,single,villain,Left,bashar al-assad
+327,single,villain,Left,john kasich
+328,single,villain,Left,matt lauer
+329,single,villain,Left,roy moore
+330,single,villain,Left,delta variant
+331,single,villain,Left,eric schneiderman
+332,single,villain,Left,department of education
+333,single,villain,Left,liz truss
+334,single,villain,Right,donald trump
+335,single,villain,Right,joe biden
+336,single,villain,Right,covid-19
+337,single,villain,Right,hillary clinton
+338,single,villain,Right,barack obama
+339,single,villain,Right,biden administration
+340,single,villain,Right,taliban
+341,single,villain,Right,alexandria ocasio-cortez
+342,single,villain,Right,kamala harris
+343,single,villain,Right,harvey weinstein
+344,single,villain,Right,marco rubio
+345,single,villain,Right,ilhan omar
+346,single,villain,Right,chris christie
+347,single,villain,Right,matt lauer
+348,single,villain,Right,united airlines
+349,single,villain,Right,jose mourinho
+350,single,villain,Right,john podesta
+351,single,villain,Right,rodrigo duterte
+352,single,villain,Right,susan rice
+353,single,villain,Right,ghislaine maxwell
+354,single,villain,Right,cancel culture
+355,single,villain,Right,john conyers
+356,single,villain,Right,anthony weiner
+357,single,villain,Right,roseanne barr
+358,single,villain,Right,larry nassar
+359,tuple,hero-victim,Center,none.none
+360,tuple,hero-victim,Center,none.hillary clinton
+361,tuple,hero-victim,Center,hillary clinton.none
+362,tuple,hero-victim,Center,none.afghanistan
+363,tuple,hero-victim,Center,none.planned parenthood
+364,tuple,hero-victim,Center,andy murray.none
+365,tuple,hero-victim,Center,jeff bezos.none
+366,tuple,hero-victim,Center,none.police
+367,tuple,hero-victim,Center,none.venezuelans
+368,tuple,hero-victim,Center,andrew cuomo.none
+369,tuple,hero-victim,Center,mike pompeo.none
+370,tuple,hero-victim,CenterLeft,alexandria ocasio-cortez.none
+371,tuple,hero-victim,CenterLeft,boris johnson.none
+372,tuple,hero-victim,CenterLeft,tiger woods.none
+373,tuple,hero-victim,CenterLeft,none.canada
+374,tuple,hero-victim,CenterLeft,juan guaidó.venezuelan people
+375,tuple,hero-victim,CenterLeft,none.hunter biden
+376,tuple,hero-victim,CenterLeft,michael flynn.none
+377,tuple,hero-victim,CenterLeft,none.stormy daniels
+378,tuple,hero-victim,CenterRight,none.hillary clinton
+379,tuple,hero-victim,CenterRight,none.ukraine
+380,tuple,hero-victim,CenterRight,hillary clinton.none
+381,tuple,hero-victim,CenterRight,ted cruz.none
+382,tuple,hero-victim,CenterRight,none.ted cruz
+383,tuple,hero-victim,CenterRight,anthony fauci.none
+384,tuple,hero-victim,CenterRight,none.tara reade
+385,tuple,hero-victim,CenterRight,emmanuel macron.none
+386,tuple,hero-victim,CenterRight,cardi b.none
+387,tuple,hero-victim,CenterRight,none.central american migrants
+388,tuple,hero-victim,CenterRight,joe biden.ukraine
+389,tuple,hero-victim,CenterRight,julian assange.none
+390,tuple,hero-victim,CenterRight,joe biden.americans
+391,tuple,hero-victim,CenterRight,twitter.none
+392,tuple,hero-victim,FarLeft,none.none
+393,tuple,hero-victim,FarLeft,none.hillary clinton
+394,tuple,hero-victim,FarLeft,bernie sanders.none
+395,tuple,hero-victim,FarLeft,hillary clinton.none
+396,tuple,hero-victim,FarLeft,none.north korea
+397,tuple,hero-victim,FarLeft,none.ted cruz
+398,tuple,hero-victim,FarLeft,ted cruz.none
+399,tuple,hero-victim,FarLeft,michael cohen.none
+400,tuple,hero-victim,FarLeft,nigel farage.none
+401,tuple,hero-victim,FarLeft,none.george floyd
+402,tuple,hero-victim,FarLeft,none.michael cohen
+403,tuple,hero-victim,FarLeft,none.american democracy
+404,tuple,hero-victim,FarLeft,none.tara reade
+405,tuple,hero-victim,FarLeft,none.isis
+406,tuple,hero-victim,FarLeft,none.canada
+407,tuple,hero-victim,FarLeft,none.lebanon
+408,tuple,hero-victim,FarLeft,beto o'rourke.none
+409,tuple,hero-victim,FarLeft,tara reade.none
+410,tuple,hero-victim,FarLeft,jen psaki.none
+411,tuple,hero-victim,FarLeft,nancy pelosi.democratic party
+412,tuple,hero-victim,FarLeft,jerry brown.california
+413,tuple,hero-victim,FarRight,none.none
+414,tuple,hero-victim,FarRight,alex jones.80% of the world's population
+415,tuple,hero-victim,FarRight,none.hillary clinton
+416,tuple,hero-victim,FarRight,alex jones.world population
+417,tuple,hero-victim,FarRight,none.target
+418,tuple,hero-victim,FarRight,ted cruz.none
+419,tuple,hero-victim,FarRight,dave hodges.none
+420,tuple,hero-victim,FarRight,none.barack obama
+421,tuple,hero-victim,FarRight,vladimir putin.russia
+422,tuple,hero-victim,FarRight,none.vladimir putin
+423,tuple,hero-victim,FarRight,none.north korea
+424,tuple,hero-victim,FarRight,ben carson.none
+425,tuple,hero-victim,FarRight,michael harrington.walmart
+426,tuple,hero-victim,Left,none.north korea
+427,tuple,hero-victim,Left,none.tara reade
+428,tuple,hero-victim,Left,none.canada
+429,tuple,hero-victim,Left,none.investors
+430,tuple,hero-victim,Left,ariana grande.none
+431,tuple,hero-victim,Left,none.james comey
+432,tuple,hero-victim,Left,twitter.none
+433,tuple,hero-victim,Left,none.nancy pelosi
+434,tuple,hero-victim,Left,none.david hogg
+435,tuple,hero-victim,Left,cory booker.none
+436,tuple,hero-victim,Right,none.hillary clinton
+437,tuple,hero-victim,Right,alex jones.world population
+438,tuple,hero-victim,Right,hillary clinton.none
+439,tuple,hero-victim,Right,none.north korea
+440,tuple,hero-victim,Right,boris johnson.none
+441,tuple,hero-victim,Right,jesus christ.none
+442,tuple,hero-victim,Right,none.children
+443,tuple,hero-victim,Right,none.hunter biden
+444,tuple,hero-victim,Right,none.alexandria ocasio-cortez
+445,tuple,hero-victim,Right,kate middleton.none
+446,tuple,hero-victim,Right,none.saudi arabia
+447,tuple,hero-victim,Right,none.south korea
+448,tuple,hero-victim,Right,none.central american migrants
+449,tuple,hero-victim,Right,none.homebuyers
+450,tuple,hero-victim,Right,ben carson.none
+451,tuple,hero-victim,Right,cory booker.none
+452,tuple,hero-villain,Center,none.none
+453,tuple,hero-villain,Center,joe biden.donald trump
+454,tuple,hero-villain,Center,none.inflation
+455,tuple,hero-villain,Center,mike pompeo.none
+456,tuple,hero-villain,CenterLeft,none.hillary clinton
+457,tuple,hero-villain,CenterLeft,ted cruz.donald trump
+458,tuple,hero-villain,CenterLeft,none.protesters
+459,tuple,hero-villain,CenterLeft,juan guaidó.nicolás maduro
+460,tuple,hero-villain,CenterLeft,prince harry.none
+461,tuple,hero-villain,CenterLeft,bernie sanders.hillary clinton
+462,tuple,hero-villain,CenterLeft,lady gaga.none
+463,tuple,hero-villain,CenterLeft,boris johnson.none
+464,tuple,hero-villain,CenterRight,joe biden.donald trump
+465,tuple,hero-villain,CenterRight,hillary clinton.donald trump
+466,tuple,hero-villain,CenterRight,none.andrew cuomo
+467,tuple,hero-villain,CenterRight,ted cruz.donald trump
+468,tuple,hero-villain,CenterRight,julian assange.hillary clinton
+469,tuple,hero-villain,FarLeft,none.donald trump
+470,tuple,hero-villain,FarLeft,none.joe biden
+471,tuple,hero-villain,FarLeft,none.barack obama
+472,tuple,hero-villain,FarLeft,joe biden.donald trump
+473,tuple,hero-villain,FarLeft,none.north korea
+474,tuple,hero-villain,FarLeft,bernie sanders.hillary clinton
+475,tuple,hero-villain,FarLeft,ted cruz.donald trump
+476,tuple,hero-villain,FarLeft,anthony fauci.donald trump
+477,tuple,hero-villain,FarLeft,none.elon musk
+478,tuple,hero-villain,FarLeft,none.alexandria ocasio-cortez
+479,tuple,hero-villain,FarLeft,brad raffensperger.donald trump
+480,tuple,hero-villain,FarLeft,none.john mccain
+481,tuple,hero-villain,FarLeft,kamala harris.donald trump
+482,tuple,hero-villain,FarLeft,hillary clinton.bernie sanders
+483,tuple,hero-villain,FarLeft,tara reade.joe biden
+484,tuple,hero-villain,FarLeft,none.richard spencer
+485,tuple,hero-villain,FarLeft,ted cruz.none
+486,tuple,hero-villain,FarLeft,none.nbc
+487,tuple,hero-villain,FarLeft,democratic party.donald trump
+488,tuple,hero-villain,FarLeft,none.mitt romney
+489,tuple,hero-villain,FarLeft,none.josh hawley
+490,tuple,hero-villain,FarRight,none.none
+491,tuple,hero-villain,FarRight,none.donald trump
+492,tuple,hero-villain,FarRight,alex jones.global elite
+493,tuple,hero-villain,FarRight,none.joe biden
+494,tuple,hero-villain,FarRight,none.hillary clinton
+495,tuple,hero-villain,FarRight,none.barack obama
+496,tuple,hero-villain,FarRight,none.global elite
+497,tuple,hero-villain,FarRight,donald trump.hillary clinton
+498,tuple,hero-villain,FarRight,vladimir putin.international criminal court
+499,tuple,hero-villain,FarRight,none.international criminal court
+500,tuple,hero-villain,FarRight,none.inflation
+501,tuple,hero-villain,FarRight,none.k. walker
+502,tuple,hero-villain,FarRight,michael harrington.target
+503,tuple,hero-villain,Left,none.none
+504,tuple,hero-villain,Left,joe biden.donald trump
+505,tuple,hero-villain,Left,none.taliban
+506,tuple,hero-villain,Left,none.elon musk
+507,tuple,hero-villain,Left,ted cruz.donald trump
+508,tuple,hero-villain,Left,none.bill de blasio
+509,tuple,hero-villain,Left,bernie sanders.hillary clinton
+510,tuple,hero-villain,Left,john kasich.donald trump
+511,tuple,hero-villain,Left,lady gaga.none
+512,tuple,hero-villain,Left,juan guaidó.nicolás maduro
+513,tuple,hero-villain,Right,none.none
+514,tuple,hero-villain,Right,none.joe biden
+515,tuple,hero-villain,Right,donald trump.hillary clinton
+516,tuple,hero-villain,Right,none.international criminal court
+517,tuple,hero-villain,Right,none.harvey weinstein
+518,tuple,hero-villain,Right,none.kamala harris
+519,tuple,hero-villain,Right,none.marco rubio
+520,tuple,hero-villain,Right,kate middleton.none
+521,tuple,hero-villain,Right,none.ilhan omar
+522,tuple,hero-villain,Right,none.hamas
+523,tuple,hero-villain,Right,none.ghislaine maxwell
+524,tuple,hero-villain,Right,bernie sanders.hillary clinton
+525,tuple,hero-villain,Right,none.susan rice
+526,tuple,hero-villain,Right,nancy pelosi.none
+527,tuple,villain-victim,Center,none.none
+528,tuple,villain-victim,Center,covid-19.none
+529,tuple,villain-victim,Center,donald trump.hillary clinton
+530,tuple,villain-victim,Center,donald trump.joe biden
+531,tuple,villain-victim,Center,derek chauvin.george floyd
+532,tuple,villain-victim,Center,harvey weinstein.none
+533,tuple,villain-victim,Center,kim jong-un.north korea
+534,tuple,villain-victim,Center,donald trump.george floyd
+535,tuple,villain-victim,Center,jill stein.none
+536,tuple,villain-victim,CenterLeft,covid-19.none
+537,tuple,villain-victim,CenterLeft,donald trump.hillary clinton
+538,tuple,villain-victim,CenterLeft,james comey.hillary clinton
+539,tuple,villain-victim,CenterLeft,taliban.afghanistan
+540,tuple,villain-victim,CenterLeft,donald trump.canada
+541,tuple,villain-victim,CenterLeft,jair bolsonaro.brazil
+542,tuple,villain-victim,CenterRight,none.none
+543,tuple,villain-victim,CenterRight,hillary clinton.none
+544,tuple,villain-victim,CenterRight,covid-19.none
+545,tuple,villain-victim,CenterRight,donald trump.hillary clinton
+546,tuple,villain-victim,CenterRight,russia.ukraine
+547,tuple,villain-victim,CenterRight,james comey.hillary clinton
+548,tuple,villain-victim,CenterRight,vladimir putin.ukraine
+549,tuple,villain-victim,CenterRight,donald trump.george floyd
+550,tuple,villain-victim,FarLeft,none.none
+551,tuple,villain-victim,FarLeft,donald trump.none
+552,tuple,villain-victim,FarLeft,donald trump.hillary clinton
+553,tuple,villain-victim,FarLeft,donald trump.joe biden
+554,tuple,villain-victim,FarLeft,donald trump.ted cruz
+555,tuple,villain-victim,FarLeft,derek chauvin.george floyd
+556,tuple,villain-victim,FarLeft,tucker carlson.none
+557,tuple,villain-victim,FarLeft,alexandria ocasio-cortez.none
+558,tuple,villain-victim,FarLeft,donald trump.nancy pelosi
+559,tuple,villain-victim,FarLeft,richard spencer.none
+560,tuple,villain-victim,FarLeft,robert mueller.none
+561,tuple,villain-victim,FarLeft,joe biden.tara reade
+562,tuple,villain-victim,FarLeft,donald trump.george floyd
+563,tuple,villain-victim,FarLeft,donald trump.john kasich
+564,tuple,villain-victim,FarLeft,donald trump.california
+565,tuple,villain-victim,FarLeft,josh hawley.none
+566,tuple,villain-victim,FarLeft,john kasich.none
+567,tuple,villain-victim,FarLeft,north korea.otto warmbier
+568,tuple,villain-victim,FarRight,none.none
+569,tuple,villain-victim,FarRight,global elite.80% of the world's population
+570,tuple,villain-victim,FarRight,donald trump.none
+571,tuple,villain-victim,FarRight,hillary clinton.none
+572,tuple,villain-victim,FarRight,global elite.world population
+573,tuple,villain-victim,FarRight,donald trump.hillary clinton
+574,tuple,villain-victim,FarRight,vladimir putin.target
+575,tuple,villain-victim,FarRight,new world order.80% of the world's population
+576,tuple,villain-victim,FarRight,donald trump.joe biden
+577,tuple,villain-victim,FarRight,hillary clinton.donald trump
+578,tuple,villain-victim,FarRight,none.hillary clinton
+579,tuple,villain-victim,FarRight,international criminal court.vladimir putin
+580,tuple,villain-victim,FarRight,alexandria ocasio-cortez.none
+581,tuple,villain-victim,FarRight,joe biden.donald trump
+582,tuple,villain-victim,FarRight,james comey.none
+583,tuple,villain-victim,FarRight,target.walmart
+584,tuple,villain-victim,Left,none.none
+585,tuple,villain-victim,Left,covid-19.none
+586,tuple,villain-victim,Left,james comey.hillary clinton
+587,tuple,villain-victim,Left,jussie smollett.none
+588,tuple,villain-victim,Left,joe biden.tara reade
+589,tuple,villain-victim,Left,kim jong-un.north korea
+590,tuple,villain-victim,Left,donald trump.george floyd
+591,tuple,villain-victim,Left,donald trump.immigrant families
+592,tuple,villain-victim,Left,donald trump.nancy pelosi
+593,tuple,villain-victim,Right,none.none
+594,tuple,villain-victim,Right,covid-19.none
+595,tuple,villain-victim,Right,donald trump.joe biden
+596,tuple,villain-victim,Right,russia.ukraine
+597,tuple,villain-victim,Right,james comey.hillary clinton
+598,tuple,villain-victim,Right,donald trump.republican party
+599,tuple,villain-victim,Right,anthony fauci.none
+600,tuple,villain-victim,Right,harvey weinstein.none
+601,tuple,villain-victim,Right,alexandria ocasio-cortez.none
+602,tuple,villain-victim,Right,kamala harris.none
+603,tuple,villain-victim,Right,north korea.south korea
+604,tuple,villain-victim,Right,joe biden.afghanistan
+605,tuple,villain-victim,Right,donald trump.george floyd

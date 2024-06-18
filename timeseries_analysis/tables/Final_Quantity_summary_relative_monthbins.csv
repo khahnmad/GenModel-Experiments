@@ -1,0 +1,197 @@
+,input_level,hvv,part_b,count,total_narr,time_frame (months),relative
+0,combo,"hero, villain, victim",Center,2,170,84,0.011764705882352941
+1,combo,"hero, villain, victim",CenterLeft,3,138,84,0.021739130434782608
+2,combo,"hero, villain, victim",CenterRight,3,153,84,0.0196078431372549
+3,combo,"hero, villain, victim",FarLeft,8,230,84,0.034782608695652174
+4,combo,"hero, villain, victim",FarRight,3,73,84,0.0410958904109589
+5,combo,"hero, villain, victim",Left,1,147,84,0.006802721088435374
+6,combo,"hero, villain, victim",Right,4,134,84,0.029850746268656716
+7,single,hero,Center,6,398,84,0.01507537688442211
+8,single,hero,CenterLeft,4,373,84,0.010723860589812333
+9,single,hero,CenterRight,4,398,84,0.010050251256281407
+10,single,hero,FarLeft,9,463,84,0.019438444924406047
+11,single,hero,FarRight,8,200,84,0.04
+12,single,hero,Left,8,369,84,0.02168021680216802
+13,single,hero,Right,10,370,84,0.02702702702702703
+14,single,victim,Center,8,317,84,0.025236593059936908
+15,single,victim,CenterLeft,3,326,84,0.009202453987730062
+16,single,victim,CenterRight,10,328,84,0.03048780487804878
+17,single,victim,FarLeft,18,524,84,0.03435114503816794
+18,single,victim,FarRight,4,193,84,0.02072538860103627
+19,single,victim,Left,9,320,84,0.028125
+20,single,victim,Right,11,348,84,0.031609195402298854
+21,single,villain,Center,10,389,84,0.02570694087403599
+22,single,villain,CenterLeft,5,421,84,0.011876484560570071
+23,single,villain,CenterRight,11,419,84,0.026252983293556086
+24,single,villain,FarLeft,11,552,84,0.019927536231884056
+25,single,villain,FarRight,14,252,84,0.05555555555555555
+26,single,villain,Left,9,403,84,0.022332506203473945
+27,single,villain,Right,13,423,84,0.030732860520094562
+28,tuple,hero-victim,Center,3,267,84,0.011235955056179775
+29,tuple,hero-victim,CenterLeft,3,225,84,0.013333333333333334
+30,tuple,hero-victim,CenterRight,2,251,84,0.00796812749003984
+31,tuple,hero-victim,FarLeft,10,378,84,0.026455026455026454
+32,tuple,hero-victim,FarRight,3,127,84,0.023622047244094488
+33,tuple,hero-victim,Left,7,246,84,0.028455284552845527
+34,tuple,hero-victim,Right,6,231,84,0.025974025974025976
+35,tuple,hero-villain,Center,1,261,84,0.0038314176245210726
+36,tuple,hero-villain,CenterLeft,5,235,84,0.02127659574468085
+37,tuple,hero-villain,CenterRight,4,235,84,0.01702127659574468
+38,tuple,hero-villain,FarLeft,7,367,84,0.01907356948228883
+39,tuple,hero-villain,FarRight,6,138,84,0.043478260869565216
+40,tuple,hero-villain,Left,3,248,84,0.012096774193548387
+41,tuple,hero-villain,Right,3,248,84,0.012096774193548387
+42,tuple,villain-victim,Center,4,163,84,0.024539877300613498
+43,tuple,villain-victim,CenterLeft,1,158,84,0.006329113924050633
+44,tuple,villain-victim,CenterRight,4,142,84,0.028169014084507043
+45,tuple,villain-victim,FarLeft,9,326,84,0.027607361963190184
+46,tuple,villain-victim,FarRight,5,103,84,0.04854368932038835
+47,tuple,villain-victim,Left,2,166,84,0.012048192771084338
+48,tuple,villain-victim,Right,7,161,84,0.043478260869565216
+49,combo,"hero, villain, victim",Center,2,170,84,0.011764705882352941
+50,combo,"hero, villain, victim",CenterLeft,7,138,84,0.050724637681159424
+51,combo,"hero, villain, victim",CenterRight,3,153,84,0.0196078431372549
+52,combo,"hero, villain, victim",FarLeft,6,230,84,0.02608695652173913
+53,combo,"hero, villain, victim",FarRight,4,73,84,0.0547945205479452
+54,combo,"hero, villain, victim",Left,7,147,84,0.047619047619047616
+55,combo,"hero, villain, victim",Right,2,134,84,0.014925373134328358
+56,single,hero,Center,10,398,84,0.02512562814070352
+57,single,hero,CenterLeft,13,373,84,0.03485254691689008
+58,single,hero,CenterRight,4,398,84,0.010050251256281407
+59,single,hero,FarLeft,8,463,84,0.017278617710583154
+60,single,hero,FarRight,7,200,84,0.035
+61,single,hero,Left,10,369,84,0.02710027100271003
+62,single,hero,Right,11,370,84,0.02972972972972973
+63,single,victim,Center,10,317,84,0.031545741324921134
+64,single,victim,CenterLeft,8,326,84,0.024539877300613498
+65,single,victim,CenterRight,1,328,84,0.003048780487804878
+66,single,victim,FarLeft,8,524,84,0.015267175572519083
+67,single,victim,FarRight,4,193,84,0.02072538860103627
+68,single,victim,Left,5,320,84,0.015625
+69,single,victim,Right,6,348,84,0.017241379310344827
+70,single,villain,Center,6,389,84,0.015424164524421594
+71,single,villain,CenterLeft,9,421,84,0.021377672209026127
+72,single,villain,CenterRight,6,419,84,0.014319809069212411
+73,single,villain,FarLeft,10,552,84,0.018115942028985508
+74,single,villain,FarRight,11,252,84,0.04365079365079365
+75,single,villain,Left,10,403,84,0.02481389578163772
+76,single,villain,Right,11,423,84,0.026004728132387706
+77,tuple,hero-victim,Center,1,267,84,0.003745318352059925
+78,tuple,hero-victim,CenterLeft,9,225,84,0.04
+79,tuple,hero-victim,CenterRight,5,251,84,0.0199203187250996
+80,tuple,hero-victim,FarLeft,7,378,84,0.018518518518518517
+81,tuple,hero-victim,FarRight,4,127,84,0.031496062992125984
+82,tuple,hero-victim,Left,6,246,84,0.024390243902439025
+83,tuple,hero-victim,Right,6,231,84,0.025974025974025976
+84,tuple,hero-villain,Center,4,261,84,0.01532567049808429
+85,tuple,hero-villain,CenterLeft,10,235,84,0.0425531914893617
+86,tuple,hero-villain,CenterRight,5,235,84,0.02127659574468085
+87,tuple,hero-villain,FarLeft,4,367,84,0.010899182561307902
+88,tuple,hero-villain,FarRight,4,138,84,0.028985507246376812
+89,tuple,hero-villain,Left,8,248,84,0.03225806451612903
+90,tuple,hero-villain,Right,5,248,84,0.020161290322580645
+91,tuple,villain-victim,Center,5,163,84,0.03067484662576687
+92,tuple,villain-victim,CenterLeft,3,158,84,0.0189873417721519
+93,tuple,villain-victim,CenterRight,2,142,84,0.014084507042253521
+94,tuple,villain-victim,FarLeft,7,326,84,0.02147239263803681
+95,tuple,villain-victim,FarRight,4,103,84,0.038834951456310676
+96,tuple,villain-victim,Left,3,166,84,0.018072289156626505
+97,tuple,villain-victim,Right,3,161,84,0.018633540372670808
+98,combo,"hero, villain, victim",Center,1,170,84,0.0058823529411764705
+99,combo,"hero, villain, victim",CenterLeft,7,138,84,0.050724637681159424
+100,combo,"hero, villain, victim",CenterRight,4,153,84,0.026143790849673203
+101,combo,"hero, villain, victim",FarLeft,6,230,84,0.02608695652173913
+102,combo,"hero, villain, victim",FarRight,4,73,84,0.0547945205479452
+103,combo,"hero, villain, victim",Left,1,147,84,0.006802721088435374
+104,combo,"hero, villain, victim",Right,4,134,84,0.029850746268656716
+105,single,hero,Center,2,398,84,0.005025125628140704
+106,single,hero,CenterLeft,17,373,84,0.045576407506702415
+107,single,hero,CenterRight,14,398,84,0.035175879396984924
+108,single,hero,FarLeft,10,463,84,0.02159827213822894
+109,single,hero,FarRight,5,200,84,0.025
+110,single,hero,Left,8,369,84,0.02168021680216802
+111,single,hero,Right,9,370,84,0.024324324324324326
+112,single,victim,Center,0,317,84,0.0
+113,single,victim,CenterLeft,5,326,84,0.015337423312883436
+114,single,victim,CenterRight,7,328,84,0.021341463414634148
+115,single,victim,FarLeft,7,524,84,0.013358778625954198
+116,single,victim,FarRight,6,193,84,0.031088082901554404
+117,single,victim,Left,5,320,84,0.015625
+118,single,victim,Right,4,348,84,0.011494252873563218
+119,single,villain,Center,2,389,84,0.005141388174807198
+120,single,villain,CenterLeft,8,421,84,0.019002375296912115
+121,single,villain,CenterRight,12,419,84,0.028639618138424822
+122,single,villain,FarLeft,9,552,84,0.016304347826086956
+123,single,villain,FarRight,11,252,84,0.04365079365079365
+124,single,villain,Left,5,403,84,0.01240694789081886
+125,single,villain,Right,4,423,84,0.009456264775413711
+126,tuple,hero-victim,Center,2,267,84,0.00749063670411985
+127,tuple,hero-victim,CenterLeft,11,225,84,0.04888888888888889
+128,tuple,hero-victim,CenterRight,6,251,84,0.02390438247011952
+129,tuple,hero-victim,FarLeft,7,378,84,0.018518518518518517
+130,tuple,hero-victim,FarRight,4,127,84,0.031496062992125984
+131,tuple,hero-victim,Left,5,246,84,0.02032520325203252
+132,tuple,hero-victim,Right,6,231,84,0.025974025974025976
+133,tuple,hero-villain,Center,2,261,84,0.007662835249042145
+134,tuple,hero-villain,CenterLeft,12,235,84,0.05106382978723404
+135,tuple,hero-villain,CenterRight,6,235,84,0.02553191489361702
+136,tuple,hero-villain,FarLeft,7,367,84,0.01907356948228883
+137,tuple,hero-villain,FarRight,3,138,84,0.021739130434782608
+138,tuple,hero-villain,Left,6,248,84,0.024193548387096774
+139,tuple,hero-villain,Right,4,248,84,0.016129032258064516
+140,tuple,villain-victim,Center,2,163,84,0.012269938650306749
+141,tuple,villain-victim,CenterLeft,6,158,84,0.0379746835443038
+142,tuple,villain-victim,CenterRight,4,142,84,0.028169014084507043
+143,tuple,villain-victim,FarLeft,5,326,84,0.015337423312883436
+144,tuple,villain-victim,FarRight,3,103,84,0.02912621359223301
+145,tuple,villain-victim,Left,4,166,84,0.024096385542168676
+146,tuple,villain-victim,Right,4,161,84,0.024844720496894408
+147,combo,"hero, villain, victim",Center,7,170,84,0.041176470588235294
+148,combo,"hero, villain, victim",CenterLeft,5,138,84,0.036231884057971016
+149,combo,"hero, villain, victim",CenterRight,7,153,84,0.0457516339869281
+150,combo,"hero, villain, victim",FarLeft,12,230,84,0.05217391304347826
+151,combo,"hero, villain, victim",FarRight,11,73,84,0.1506849315068493
+152,combo,"hero, villain, victim",Left,6,147,84,0.04081632653061224
+153,combo,"hero, villain, victim",Right,9,134,84,0.06716417910447761
+154,single,hero,Center,9,398,84,0.022613065326633167
+155,single,hero,CenterLeft,7,373,84,0.01876675603217158
+156,single,hero,CenterRight,12,398,84,0.03015075376884422
+157,single,hero,FarLeft,20,463,84,0.04319654427645788
+158,single,hero,FarRight,6,200,84,0.03
+159,single,hero,Left,10,369,84,0.02710027100271003
+160,single,hero,Right,12,370,84,0.032432432432432434
+161,single,victim,Center,11,317,84,0.03470031545741325
+162,single,victim,CenterLeft,9,326,84,0.027607361963190184
+163,single,victim,CenterRight,11,328,84,0.03353658536585366
+164,single,victim,FarLeft,17,524,84,0.03244274809160305
+165,single,victim,FarRight,9,193,84,0.046632124352331605
+166,single,victim,Left,14,320,84,0.04375
+167,single,victim,Right,21,348,84,0.0603448275862069
+168,single,villain,Center,12,389,84,0.030848329048843187
+169,single,villain,CenterLeft,18,421,84,0.04275534441805225
+170,single,villain,CenterRight,19,419,84,0.045346062052505964
+171,single,villain,FarLeft,27,552,84,0.04891304347826087
+172,single,villain,FarRight,16,252,84,0.06349206349206349
+173,single,villain,Left,17,403,84,0.04218362282878412
+174,single,villain,Right,25,423,84,0.0591016548463357
+175,tuple,hero-victim,Center,11,267,84,0.04119850187265917
+176,tuple,hero-victim,CenterLeft,8,225,84,0.035555555555555556
+177,tuple,hero-victim,CenterRight,14,251,84,0.055776892430278883
+178,tuple,hero-victim,FarLeft,21,378,84,0.05555555555555555
+179,tuple,hero-victim,FarRight,13,127,84,0.10236220472440945
+180,tuple,hero-victim,Left,10,246,84,0.04065040650406504
+181,tuple,hero-victim,Right,16,231,84,0.06926406926406926
+182,tuple,hero-villain,Center,4,261,84,0.01532567049808429
+183,tuple,hero-villain,CenterLeft,8,235,84,0.03404255319148936
+184,tuple,hero-villain,CenterRight,5,235,84,0.02127659574468085
+185,tuple,hero-villain,FarLeft,21,367,84,0.05722070844686648
+186,tuple,hero-villain,FarRight,13,138,84,0.09420289855072464
+187,tuple,hero-villain,Left,10,248,84,0.04032258064516129
+188,tuple,hero-villain,Right,14,248,84,0.056451612903225805
+189,tuple,villain-victim,Center,9,163,84,0.05521472392638037
+190,tuple,villain-victim,CenterLeft,6,158,84,0.0379746835443038
+191,tuple,villain-victim,CenterRight,8,142,84,0.056338028169014086
+192,tuple,villain-victim,FarLeft,18,326,84,0.05521472392638037
+193,tuple,villain-victim,FarRight,16,103,84,0.1553398058252427
+194,tuple,villain-victim,Left,9,166,84,0.05421686746987952
+195,tuple,villain-victim,Right,13,161,84,0.08074534161490683
