@@ -8,6 +8,7 @@ import pymongo as pm
 from bson import json_util
 import pickle
 
+PARTISANSHIPS =  ['FarLeft','Left','CenterLeft', 'Center', 'CenterRight','Right','FarRight']
 
 def import_pkl_file(file):
     with open(file, "rb") as f:

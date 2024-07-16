@@ -563,6 +563,34 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\upsetplot_charachter_overlap.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\upsetplot_narrative_overlap.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\upsetplot_overlap_coefficient.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\query_fulltext_from_id.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\read_15_day_segment_data.py">
           <value>
             <Attribute>

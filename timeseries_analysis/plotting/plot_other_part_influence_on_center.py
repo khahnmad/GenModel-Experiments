@@ -33,8 +33,8 @@ def plot_nonfr_influence_on_center(binsize):
     else:
         files = sf.get_files_from_folder('..\\signals', 'json')
     for file in files:
-        if 'signals\\FarRight' in file:
-            continue
+        # if 'signals\\FarRight' in file:
+        #     continue
         data = sf.import_json(file)
         part_a = list(data.keys())[0]
         source = data[part_a]

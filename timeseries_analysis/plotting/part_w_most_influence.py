@@ -82,12 +82,12 @@ def plot_by_input_level(input_type, hvv_type):
     # plt.savefig('fr_influence_other_parts')
     plt.show()
 
-plot_total_count()
+# plot_total_count()
 
 inputs = {
-    'single':['hero','villain','victim'],
+    # 'single':['hero','villain','victim'],
     'combo': ['hero, villain, victim'],
-    'tuple':[ 'hero-villain','hero-victim','villain-victim']
+    # 'tuple':[ 'hero-villain','hero-victim','villain-victim']
 }
 for input_type in inputs.keys():
     for hvv_type in inputs[input_type]:
