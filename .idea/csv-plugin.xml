@@ -437,6 +437,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\model_part_influence_as_network.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plot_avg_correlation.py">
           <value>
             <Attribute>
