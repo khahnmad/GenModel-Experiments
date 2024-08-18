@@ -1,3 +1,6 @@
+"""
+NOTE: I don't think this really tells us anything interesting 8/11
+"""
 import shared_functions as sf
 import pandas as pd
 import datetime

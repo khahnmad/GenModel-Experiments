@@ -528,6 +528,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\influence_exterted_received.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\investigate_bin_threshold.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\part_w_most_influence.py">
           <value>
             <Attribute>
@@ -549,6 +563,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\plot_extremes_correlation_strength.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_extremes_pverlap.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\plot_fr_influence_other_parts.py">
           <value>
             <Attribute>
@@ -556,7 +584,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\plot_heatmap_narr_overlap.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_narr_overlap_by_source.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\plot_other_part_influence_on_center.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_partisanship_rel_model_over_time.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

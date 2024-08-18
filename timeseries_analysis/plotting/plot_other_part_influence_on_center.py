@@ -58,4 +58,105 @@ def plot_nonfr_influence_on_center(binsize):
     plt.savefig(f'other_influence_cr_parts_{binsize}')
     plt.show()
 
-plot_nonfr_influence_on_center(binsize='month')
+def plot_all_influence_on_center(binsize):
+    plottable = [['Partisanship','0>=x>0.25','0.25>=x>0.5','0.5>=x>0.75','0.75>=']]
+
+    if binsize=='month':
+        files = sf.get_files_from_folder('..\\month_signals', 'json')
+    else:
+        files = sf.get_files_from_folder('..\\signals', 'json')
+    for file in files:
+        # if 'signals\\FarRight' in file:
+        #     continue
+        data = sf.import_json(file)
+        part_a = list(data.keys())[0]
+        source = data[part_a]
+        for p in source.keys():
+            if 'Center' not in p:
+                continue
+            for input_type in source[p].keys():
+                corr_strength = breakdown_correlation_strength(source[p][input_type])
+                plottable.append([part_a]+corr_strength)
+
+    df = pd.DataFrame(data=plottable[1:],columns=plottable[0])
+    merged = df.groupby(by='Partisanship').sum(['0>=x>0.25','0.25>=x>0.5','0.5>=x>0.75','0.75>=']).reset_index()
+    # merged.plot.bar(x='Partisanship', stacked=True)
+    ax=merged.set_index('Partisanship').plot.bar()
+    for container in ax.containers:
+        ax.bar_label(container)
+    plt.legend()
+    plt.ylabel('# of Narratives')
+    plt.tight_layout()
+    plt.title('Narrative Influence on Centrist Partisanships by Correlation Strength')
+    plt.savefig(f'other_influence_cr_parts_{binsize}')
+    plt.show()
+
+def plot_center_influence_on_center(binsize):
+    plottable = [['Partisanship', '0>=x>0.25', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']]
+
+    if binsize == 'month':
+        files = sf.get_files_from_folder('..\\month_signals', 'json')
+    else:
+        files = sf.get_files_from_folder('..\\signals', 'json')
+    for file in files:
+        # if 'signals\\FarRight' in file:
+        #     continue
+        data = sf.import_json(file)
+        part_a = list(data.keys())[0]
+        source = data[part_a]
+        for p in source.keys():
+            if 'Center' not in p:
+                continue
+            for input_type in source[p].keys():
+                corr_strength = breakdown_correlation_strength(source[p][input_type])
+                plottable.append([part_a] + corr_strength)
+
+    df = pd.DataFrame(data=plottable[1:], columns=plottable[0])
+    merged = df.groupby(by='Partisanship').sum(['0>=x>0.25', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']).reset_index()
+    # merged.plot.bar(x='Partisanship', stacked=True)
+    ax = merged.set_index('Partisanship').loc[['CenterLeft','Center','CenterRight']].plot.bar()
+    for container in ax.containers:
+        ax.bar_label(container)
+    plt.legend()
+    plt.ylabel('# of Narratives')
+    plt.tight_layout()
+    plt.title('Narrative Influence of Centrist Partisanships on Centrist Partisanships by Correlation Strength')
+    # plt.savefig(f'other_influence_cr_parts_{binsize}')
+    plt.show()
+
+def plot_center_influence_on_all(binsize):
+    plottable = [['Partisanship', '0>=x>0.25', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']]
+
+    if binsize == 'month':
+        files = sf.get_files_from_folder('..\\month_signals', 'json')
+    else:
+        files = sf.get_files_from_folder('..\\signals', 'json')
+    for file in files:
+        if 'Center' not in file:
+            continue
+        data = sf.import_json(file)
+        part_a = list(data.keys())[0]
+        source = data[part_a]
+        for p in source.keys():
+
+            for input_type in source[p].keys():
+                corr_strength = breakdown_correlation_strength(source[p][input_type])
+                plottable.append([p] + corr_strength) # data is influenced partisanship, strength of influence
+
+    df = pd.DataFrame(data=plottable[1:], columns=plottable[0])
+    merged = df.groupby(by='Partisanship').sum(['0>=x>0.25', '0.25>=x>0.5', '0.5>=x>0.75', '0.75>=']).reset_index()
+    # merged.plot.bar(x='Partisanship', stacked=True)
+    ax = merged.set_index('Partisanship').plot.bar()
+    for container in ax.containers:
+        ax.bar_label(container)
+    plt.legend()
+    plt.ylabel('# of Narratives')
+    plt.tight_layout()
+    plt.title('Narrative Influence of Centrist Partisanships on all Partisanships by Correlation Strength')
+    # plt.savefig(f'other_influence_cr_parts_{binsize}')
+    plt.show()
+if __name__ == '__main__':
+    plot_center_influence_on_all('month')
+    plot_center_influence_on_center('month')
+    plot_all_influence_on_center(binsize='month')
+    plot_nonfr_influence_on_center(binsize='month')

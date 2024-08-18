@@ -171,45 +171,55 @@ def fetch_all_signals(data, h_v_v, partisanships, input_level):
     return signals
 
 
-def find_fr_influence_narratives(signals):
+def find_fr_influence_narratives(signals, year):
     # Set the threshold for correlation strength
     threshold = 0.5
+    year_translation = {2016: (0,12),
+                        2017: (12,24),
+                        2018: (24,36),
+                        2019: (36,48),
+                        2020: (48,60),
+                        2021: (60,72),
+                        2022: (72,84)
+                        }
 
     high_correlation = []
+    a,b = year_translation[year]
     for signal_pair in signals:
-        if len(signal_pair[1])<2 or len(signal_pair[2])<2:
+        if len(signal_pair[1][a:b])<2 or len(signal_pair[2][a:b])<2:
             continue
         # Generate correlation 
         x, y = [], []
         for l in [1, 2]:
-            r, p = scipy.stats.pearsonr(signal_pair[1][:-l], signal_pair[2][l:])  # coefficient, p-value
+            r, p = scipy.stats.pearsonr(signal_pair[1][a:b][:-l], signal_pair[2][a:b][l:])  # coefficient, p-value
             x.append(l)
             y.append(r)
         if y[0] >= threshold or y[1] >= threshold:
-            high_correlation.append([signal_pair[0], y])
+            high_correlation.append([signal_pair[0]]+y)
     return high_correlation
 
 
 # TODO: add other tuple combos 
 inputs = {
-    'single':['hero','villain','victim'],
+    # 'single':['hero','villain','victim'],
     'combo': ['hero, villain, victim'],
-    'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
+    # 'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
 }
 for part_a in ['FarRight','CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right']:
 
     for input_level in inputs.keys():
         for hvv in inputs[input_level]:
             for part_b in ['CenterLeft', 'Center', 'CenterRight','Left','FarLeft','Right','FarRight']:
-                print(f"For {input_level}, {hvv}, {part_b}:")
-                characters = fetch_all_characters(part_a, part_b, h_v_v=hvv, input_level=input_level)
-                signals = fetch_all_signals(characters, hvv, [part_a, part_b], input_level)
-                high_correlation = find_fr_influence_narratives(signals)
-                print(f"   {len(high_correlation)} narratives")
-                if input_level == 'tuple':
-                    sf.export_nested_list(f"cleaned_data_end_april_monthbins\\{part_a}_{input_level}_{'-'.join(hvv)}_{part_b}.csv", high_correlation)
-                else:
-                    sf.export_nested_list(f"cleaned_data_end_april_monthbins\\{part_a}_{input_level}_{hvv}_{part_b}.csv", high_correlation)
+                for yr in range(2016,2023):
+                    print(f"For {input_level}, {hvv}, {part_b}:")
+                    characters = fetch_all_characters(part_a, part_b, h_v_v=hvv, input_level=input_level)
+                    signals = fetch_all_signals(characters, hvv, [part_a, part_b], input_level)
+                    high_correlation = find_fr_influence_narratives(signals, yr)
+                    print(f"   {len(high_correlation)} narratives")
+                    if input_level == 'tuple':
+                        sf.export_nested_list(f"cleaned_data_end_april_monthbins\\{yr}\\{part_a}_{input_level}_{'-'.join(hvv)}_{part_b}.csv", high_correlation)
+                    else:
+                        sf.export_nested_list(f"cleaned_data_end_april_monthbins\\{yr}\\{part_a}_{input_level}_{hvv}_{part_b}.csv", high_correlation)
 
 # TODO: add other part_a options, so that we can see the effect other parts have on
 # the Center

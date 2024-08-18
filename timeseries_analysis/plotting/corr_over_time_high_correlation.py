@@ -1,3 +1,6 @@
+"""
+NOTE: I don't think this really tells us anything interesting 8/11
+"""
 import matplotlib.pyplot as plt
 import shared_functions as sf
 import scipy.stats

@@ -51,8 +51,8 @@ def plot_avg_correlation(level,h_v_v, origin,binsize):
 
 inputs = {
     # 'single':['hero','villain','victim'],
-    # 'combo': ['hero, villain, victim'],
-    'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
+    'combo': ['hero, villain, victim'],
+    # 'tuple':[['hero','villain'],['hero','victim'],['villain','victim']]
 }
 for input_level in inputs.keys():
     for hvv in inputs[input_level]:
