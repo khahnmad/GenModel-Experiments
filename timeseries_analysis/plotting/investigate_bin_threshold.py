@@ -3,7 +3,6 @@ import pandas as pd
 #
 def extract_values(dictionary):
     oid = dictionary['$oid']
-
     return oid
 
 
@@ -36,6 +35,7 @@ counter = sf.import_json('../sample_bin_size_no_dups.json')
 X axis is bin size, y axis is the number of bins that meet that threshold 
 """
 import matplotlib.pyplot as plt
+
 def count_bins(data,threshold):
     count = 0
     for p in data.keys():

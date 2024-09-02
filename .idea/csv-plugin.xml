@@ -584,6 +584,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\plot_data_qunatity_over_time.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\plot_extremes_correlation_strength.py">
           <value>
             <Attribute>
