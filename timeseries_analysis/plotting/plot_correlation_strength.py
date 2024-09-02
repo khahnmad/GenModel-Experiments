@@ -62,7 +62,6 @@ def fl_corr_strngth(binsize):
     else:
         data = sf.import_json(
             '..\\signals\\FarLeft_signals_by_part_input_hvv.json')
-        print('')
 
     source = data['FarLeft']
 
@@ -84,6 +83,7 @@ def fl_corr_strngth(binsize):
         'Number of Narratives with a >0.25 Cross-Correlation with a Far Left Narrative by Correlation Strength')
     plt.savefig('../graphs/FL_num_positive_centristi_narr.png')
     plt.show()
+
 
 fl_corr_strngth(binsize='month')
 fr_corr_strngth(binsize='month')

@@ -13,8 +13,8 @@ def calculate_correlation(year, signals):
                         2019: (36, 48),
                         2020: (48, 60),
                         2021: (60, 72),
-                        2022: (72, 84)
-                        }
+                        2022: (72, 84),
+                        None: (0,84)}
 
     correlation = []
     a, b = year_translation[year]
@@ -57,6 +57,23 @@ def load_data():
     df = pd.DataFrame(records)
     return df
 
+def load_extremes_data():
+    records = []
+    for p_a in ['FarRight','FarLeft']:
+        for p_b in sf.PARTISANSHIPS:
+            if p_a==p_b:
+                continue
+            signals = import_data(p_a, p_b)
+
+            corr = calculate_correlation(year=None,signals=signals)
+            for c in corr:
+                records.append({'direction':f"{p_a}->",
+                                'partisanship':p_b,
+                                'correlation':c})
+    df = pd.DataFrame(records)
+    return df
+
+
 def plot_histograms():
 
 
@@ -87,23 +104,22 @@ def plot_histograms():
     plt.tight_layout()
     plt.show()
 
-def plot_boxplot(data):
-    # Data
-    # data = pd.DataFrame({
-    #     'Scores': apples_2016 + pears_2016 + apples_2017 + pears_2017,
-    #     'Category': ['Apples'] * len(apples_2016) + ['Pears'] * len(pears_2016) + ['Apples'] * len(apples_2017) + [
-    #         'Pears'] * len(pears_2017),
-    #     'Year': ['2016'] * len(apples_2016) + ['2016'] * len(pears_2016) + ['2017'] * len(apples_2017) + ['2017'] * len(
-    #         pears_2017)
-    # })
-
-    sns.boxplot(x='direction', y='correlation', hue='year', data=data)
-    plt.title('Box Plot of Narrative Correlation by influencing Partisanship and Year')
-    plt.show()
+def plot_boxplot(data, alt_title=None):
+    if 'year' in data.columns:
+        sns.boxplot(x='direction', y='correlation', hue='year', data=data)
+        plt.title('Box Plot of Narrative Correlation by influencing Partisanship and Year')
+        plt.show()
+    else:
+        sns.boxplot(x='direction', y='correlation', hue='partisanship', data=data)
+        plt.title('Box Plot of Narrative Correlation by influencing Partisanship')
+        plt.show()
 
 
 if __name__ == '__main__':
-    df = load_data()
+    # df = load_data()
+    # plot_boxplot(df)
 
-    plot_boxplot(df)
+    extremes_data = load_extremes_data()
+    plot_boxplot(extremes_data)
 
+# TODO UPDATE FINDINGS DOC WITH THIS^ PLOT

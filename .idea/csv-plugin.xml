@@ -542,7 +542,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\timeseries_analysis\plotting\most_common_char_narrs.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\timeseries_analysis\plotting\part_w_most_influence.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\perc_narrative_match_overlap.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -553,6 +567,13 @@
           <value>
             <Attribute>
               <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\timeseries_analysis\plotting\plot_centrist_influencers.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
