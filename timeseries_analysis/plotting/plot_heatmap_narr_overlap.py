@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import shared_functions as sf
 import pandas as pd
+import seaborn as sns
 
 def generate_grid(metric):
     # prepare data for full narrative in common
@@ -51,6 +52,19 @@ def plot_heatmap(metric):
     # plt.show()
     # plt.savefig(f"..\\heatmap_jamboard_viz\\{he_vi_vic}_as_{level}_{segment_length}_{binsize}.jpg")
     plt.show()
+
+    plt.figure(figsize=(8, 6))
+    heatmap_data = data.set_index('part_x')
+    sns.heatmap(heatmap_data, annot=True,  cmap="YlGnBu")
+
+    # Add titles and labels
+    plt.title(f'Overlap by Partisanship for {metric}')
+    plt.xlabel("Partisanship")
+    plt.ylabel("Partisanship")
+
+    # Show the plot
+    plt.show()
+
 inputs = {
     'single':['hero','villain','victim'],
     'combo': ['hero, villain, victim'],

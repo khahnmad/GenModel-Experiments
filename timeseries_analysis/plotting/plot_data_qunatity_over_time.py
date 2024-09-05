@@ -17,34 +17,35 @@ def fetch_data():
     return grouped
 
 def plot_all(df):
-    partisanship = df['Partisanship'].values.tolist()
-    count = df['Count'].values.tolist()
-    year = df['Year'].values.tolist()
+    partisanship = df['Partisanship'].to_numpy()
+    count = df['Count'].to_numpy()
+    year = df['Year'].to_numpy()
     # Line plot
-    sns.lineplot(x=year, y=count, hue=partisanship, marker='o')
+    sns.lineplot(x=year,y=count, hue=partisanship, marker='o')
     plt.title('Partisanship Count Over Time')
     plt.show()
     # Bar plot
     sns.barplot(x=year, y=count, hue=partisanship)
     plt.title('Partisanship Count by Year')
     plt.show()
-    # Pivot the DataFrame for stacked bar plot
-    pivot_df = df.pivot(index=year, columns=partisanship, values=count)
 
-    # Stacked bar plot
-    pivot_df.plot(kind='bar', stacked=True)
-    plt.title('Stacked Bar Plot of Partisanship Counts by Year')
-    plt.ylabel('Count')
-    plt.show()
-    # Area plot
-    pivot_df.plot(kind='area', stacked=True)
-    plt.title('Area Plot of Partisanship Counts Over Time')
-    plt.ylabel('Count')
-    plt.show()
-    # Box plot
-    sns.boxplot(x='Year', y='Count', hue='Partisanship', data=df)
-    plt.title('Box Plot of Partisanship Counts by Year')
-    plt.show()
+    # # Pivot the DataFrame for stacked bar plot
+    # pivot_df = df.pivot(index=year, columns=partisanship, values=count)
+    #
+    # # Stacked bar plot
+    # pivot_df.plot(kind='bar', stacked=True)
+    # plt.title('Stacked Bar Plot of Partisanship Counts by Year')
+    # plt.ylabel('Count')
+    # plt.show()
+    # # Area plot
+    # pivot_df.plot(kind='area', stacked=True)
+    # plt.title('Area Plot of Partisanship Counts Over Time')
+    # plt.ylabel('Count')
+    # plt.show()
+    # # # Box plot
+    # sns.boxplot(x='Year', y='Count', hue='Partisanship', data=df)
+    # plt.title('Box Plot of Partisanship Counts by Year')
+    # plt.show()
     # Group by Year and sum the counts
     total_change = df.groupby('Year')['Count'].sum().reset_index()
 

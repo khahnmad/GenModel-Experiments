@@ -4,6 +4,47 @@ from collections import Counter
 import pandas as pd
 from itertools import product
 
+def fetch_narratives(part_a, part_b):
+    if isinstance(part_b, list):
+        dfs = []
+        part_a_raw = sf.import_json(f'../sampled_pooled_alphabetized2/{part_a}_data.json')
+        for b in part_b:
+            part_b_raw = sf.import_json(f'../sampled_pooled_alphabetized2/{b}_data.json')
+            file = f'../cleaned_data_end_april_monthbins/{part_a}_combo_hero, villain, victim_{b}.csv'
+            data = sf.import_csv(file)
+            records = []
+            for row in data:
+                narrative = row[0]
+                part_a_narrs = [x for x in part_a_raw if ".".join(x[:3]) == narrative]
+                part_b_narrs = [x for x in part_b_raw if ".".join(x[:3]) == narrative]
+                records.append({'narrative': narrative,
+                                f"{part_a} Count": len(part_a_narrs),
+                                f"{b} Count": len(part_b_narrs)})
+            dfs.append(pd.DataFrame(records))
+        df_a = dfs[0]
+        merged = df_a.merge(dfs[1], on=['narrative',f'{part_a} Count'])
+        if len(dfs) > 2:
+            for df_b in dfs[2:]:
+                merged = merged.merge(df_b, on=['narrative',f"{part_a} Count"])
+        return merged
+
+    else:
+        file = f'../cleaned_data_end_april_monthbins/{part_a}_combo_hero, villain, victim_{part_b}.csv'
+        data = sf.import_csv(file)
+
+        part_a_raw = sf.import_json(f'../sampled_pooled_alphabetized2/{part_a}_data.json')
+        part_b_raw = sf.import_json(f'../sampled_pooled_alphabetized2/{part_b}_data.json')
+        records = []
+        for row in data:
+            narrative = row[0]
+            part_a_narrs = [x for x in part_a_raw if ".".join(x[:3])==narrative]
+            part_b_narrs = [x for x in part_b_raw if ".".join(x[:3]) == narrative]
+            records.append({'narrative':narrative,
+                            f"{part_a} Count": len(part_a_narrs),
+                            f"{part_b} Count": len(part_b_narrs)})
+
+        return pd.DataFrame(records)
+
 def fetch_characters(partisanship, hvv=None, hvv_tuple=None,whole_hvv=None, unordered=None):
     file = f'../sampled_pooled_alphabetized2/{partisanship}_data.json'
 
@@ -169,6 +210,27 @@ def plot_most_common_unordered_narratives(parts):
     plt.tight_layout()
     plt.show()
     return list(sorted_[:threshold]['character'].values)
+
+def plot_most_common_influence_narratives(part_a, part_b):
+
+    narr_df = fetch_narratives(part_a, part_b)
+    narr_df['sum'] = narr_df.iloc[:, 1:].sum(axis=1)
+    sorted_ = narr_df.sort_values(by='sum', ascending=False)
+    if len(sorted_)==0:
+        return 'None shared'
+    sorted_.plot.bar()
+    plt.xticks(ticks=list(range(len(sorted_['narrative'].values))),
+               labels=list(sorted_['narrative'].values))
+    if isinstance(part_b,list):
+        plt.title(
+            f"Narratives that show evidence of {part_a} to {' and '.join(part_b)} influence, ranked by the number of documents in which they appear")
+
+    else:
+        plt.title(f"Narratives that show evidence of {part_a} to {part_b} influence, ranked by the number of documents in which they appear")
+    plt.tight_layout()
+    plt.show()
+
+
 # Plot most common characters shared be each partisanship intersection
 combos = [['FarRight','FarLeft'],
           sf.PARTISANSHIPS,
@@ -180,14 +242,21 @@ combos = [['FarRight','FarLeft'],
 #     top_char = plot_most_common_shared_characters(combo)
 #     plot_common_characters_over_time(parts=combo, top_chars=top_char)
 
-# for combo,hvv in product(combos, ['hero','villain','victim']):
-#     plot_most_common_shared_archetypes(combo, hvv)
+for combo,hvv in product(combos, ['hero','villain','victim']):
+    plot_most_common_shared_archetypes(combo, hvv)
 
 # for combo, hvv_a, hvv_b in product(combos, ['hero','villain','victim'], ['hero','villain','victim']):
 #     if hvv_a==hvv_b:
 #         continue
 #     plot_most_common_partial_narratives(combo, hvv_a, hvv_b)
 
-for combo in combos:
+# for combo in combos:
     # plot_most_common_complete_narratives(combo)
-    plot_most_common_unordered_narratives(combo)
+    # plot_most_common_unordered_narratives(combo)
+
+for p_a, p_b in [('FarRight',['CenterRight','Center','CenterLeft']),
+('FarLeft',['CenterRight','Center','CenterLeft']),
+('FarRight',['Right','CenterRight']),
+('FarLeft',['Left','CenterLeft']),
+    ('FarRight','FarLeft'),('FarLeft','FarRight')]:
+    plot_most_common_influence_narratives(p_a,p_b)
